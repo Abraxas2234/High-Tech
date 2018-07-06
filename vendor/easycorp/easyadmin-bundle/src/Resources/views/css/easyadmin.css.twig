@@ -59,6 +59,11 @@
    ------------------------------------------------------------------------- #}
 body {
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
 {# Links
@@ -411,6 +416,17 @@ button.btn:active {
     padding-bottom: 45px;
 {% endif %}
     z-index: 9999;
+}
+
+.field-group .box-header a i {
+    font-size: 21px;
+}
+
+.field-group .box-header a[aria-expanded=true] .fa-plus-square-o {
+   display: none;
+}
+.field-group .box-header a[aria-expanded=false] .fa-minus-square-o {
+   display: none;
 }
 
 {# Field: collection
@@ -852,17 +868,6 @@ button.btn:active {
 }
 .sidebar-menu .treeview-menu {
     padding: 0;
-}
-
-{# icon displayed for collapsed submenus #}
-.sidebar-menu li > a > .pull-right {
-    font-weight: bold;
-    text-align: right;
-}
-{# icon displayed for revealed submenus #}
-.sidebar-menu li.active > a > .fa-angle-left {
-    top: 30px;
-    right: 0;
 }
 
 {# when the sidebar is collapsed #}
