@@ -75,6 +75,6 @@ class __TwigTemplate_c0c65cb86b6371af580c69c3596765f2146cf7973764d987e64526af93b
     c-0.4-0.4-1.1-1.4-0.7-2.6C6.3,9,6.6,8.6,6.9,8.2c0.9-0.6,1.8-0.7,2.8-0.6c1.2,0.4,1.8,1.1,2.6,1.8c0.5-1.2,1-2.4,1.8-3.5
     C15,5,16,4.3,17.2,4.2c1.3,0.2,2.2,0.7,2.2,1.6C19.4,6.2,19.2,6.9,18.5,6.9z\"/>
 </svg>
-", "@WebProfiler/Icon/symfony.svg", "/opt/lampp/htdocs/high-tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/symfony.svg");
+", "@WebProfiler/Icon/symfony.svg", "/Users/amel/rendu/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Icon/symfony.svg");
     }
 }

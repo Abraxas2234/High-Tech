@@ -168,6 +168,6 @@ class __TwigTemplate_931428138935c9a7711ac537a161bd273102713332b8554e29de9a4e1ec
         {% block javascripts %}{% endblock %}
     </body>
 </html>
-", "base.html.twig", "/opt/lampp/htdocs/high-tech/app/Resources/views/base.html.twig");
+", "base.html.twig", "/Users/amel/rendu/High-Tech/app/Resources/views/base.html.twig");
     }
 }

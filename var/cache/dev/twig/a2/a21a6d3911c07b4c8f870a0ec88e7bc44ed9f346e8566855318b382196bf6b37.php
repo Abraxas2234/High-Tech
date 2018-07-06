@@ -149,6 +149,6 @@ class __TwigTemplate_80afd7060963f41089f67aa1eeddcaf5c1cbc3467efe835ce269b52e0e8
 
     {{ include('@WebProfiler/Profiler/toolbar_item.html.twig', { link: profiler_url, name: 'time', status: status_color }) }}
 {% endblock %}
-", "@WebProfiler/Collector/memory.html.twig", "/opt/lampp/htdocs/high-tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/memory.html.twig");
+", "@WebProfiler/Collector/memory.html.twig", "/Users/amel/rendu/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Collector/memory.html.twig");
     }
 }

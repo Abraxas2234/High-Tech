@@ -1669,6 +1669,6 @@ class __TwigTemplate_d3cfe101b751b302280ede2943aefbbafca29c37a0b7030f765c52533a9
         </tbody>
     </table>
 {% endmacro %}
-", "@Doctrine/Collector/db.html.twig", "/opt/lampp/htdocs/high-tech/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
+", "@Doctrine/Collector/db.html.twig", "/Users/amel/rendu/High-Tech/vendor/doctrine/doctrine-bundle/Resources/views/Collector/db.html.twig");
     }
 }

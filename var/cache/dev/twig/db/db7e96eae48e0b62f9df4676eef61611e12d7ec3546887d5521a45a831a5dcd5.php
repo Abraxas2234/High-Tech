@@ -88,7 +88,7 @@ class __TwigTemplate_df253c2b6c5ce97516dd9a8ed2788dc75f567b3e04edd536942919fb6db
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 23
             echo "  <div class=\"productbox\">
-  <a href=\"http://localhost/high-tech/web/app_dev.php/catalog/";
+  <a href=\"http://localhost:8888/High-Tech/web/app_dev.php/catalog/";
             // line 24
             echo twig_escape_filter($this->env, $this->getAttribute($context["categorie"], "id", array()), "html", null, true);
             echo "\">";
@@ -159,10 +159,10 @@ class __TwigTemplate_df253c2b6c5ce97516dd9a8ed2788dc75f567b3e04edd536942919fb6db
   <div id=\"quizbox\">
   {% for categorie in categories %}
   <div class=\"productbox\">
-  <a href=\"http://localhost/high-tech/web/app_dev.php/catalog/{{ categorie.id }}\">{{ categorie.name }}</a><br>
+  <a href=\"http://localhost:8888/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}\">{{ categorie.name }}</a><br>
   </div>
   {% endfor %}<br>
 {% endblock %}
-", "catalog/index.html.twig", "/opt/lampp/htdocs/high-tech/app/Resources/views/catalog/index.html.twig");
+", "catalog/index.html.twig", "/Users/amel/rendu/High-Tech/app/Resources/views/catalog/index.html.twig");
     }
 }
