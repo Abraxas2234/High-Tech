@@ -496,6 +496,6 @@ class __TwigTemplate_ddc6064ebe827b6d793efee92b04ab16749e5a6c436c603c8433cb66841
     </ul>
 
 {% endblock %}
-", "@EasyAdmin/data_collector/easyadmin.html.twig", "/opt/lampp/htdocs/high-tech/vendor/easycorp/easyadmin-bundle/src/Resources/views/data_collector/easyadmin.html.twig");
+", "@EasyAdmin/data_collector/easyadmin.html.twig", "/Users/amel/rendu/High-Tech/vendor/easycorp/easyadmin-bundle/src/Resources/views/data_collector/easyadmin.html.twig");
     }
 }
