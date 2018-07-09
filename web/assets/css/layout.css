@@ -1,0 +1,118 @@
+.body {
+  font-family: "Roboto", sans-serif; }
+
+h5 {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem; }
+
+.nav-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem; }
+
+.resize-input {
+  height: 30px;
+  width: 350px; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  line-height: 60px;
+  background-color: #f5f5f5; }
+
+.text-bar {
+  height: 50px;
+  background-color: #D3D3D3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.return-top {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem; }
+
+.container-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .about-us a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem; }
+
+.sellout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .sellout a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem; }
+
+.howtopay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .howtopay a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem; }
+
+.help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .help a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem; }

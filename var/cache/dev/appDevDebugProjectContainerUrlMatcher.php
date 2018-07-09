@@ -142,6 +142,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         }
         not_homepage:
 
+        // home
+        if ('/index' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\HomeController::indexAction',  '_route' => 'home',);
+        }
+
         if (0 === strpos($pathinfo, '/admin')) {
             // easyadmin
             if ('/admin' === $trimmedPathinfo) {

@@ -1,0 +1,75 @@
+{% extends 'homepage/layout.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+    <div id="welcome pcmr" class="pcmr">
+        <h1 class="ntm" id="pcmr">Soldes d'été~~~~~~~~~~~~~~~~~~~~</h1>
+    </div>
+    <div class="divider">
+    </div>
+    <div class="background">
+        <div class="container">
+            <div class="box" id="mobo">
+                Motherboards
+            </div>
+
+            <div class="box" id="proco">
+                Processors
+            </div>
+
+            <div class="box" id="cg">
+                Graphic Cards
+            </div>
+
+            <div class="box" id="case">
+                Case
+            </div>
+
+            <div class="box" id="psu">
+                Power supplies
+            </div>
+
+            <div class="box" id="ram">
+                RAM
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+
+        html { font-family: roboto; }
+        #welcome { display: flex; justify-content: center; align-items: center; }
+        .ntm { height: 600px; padding: 250px 0; font-family: raleway; color: white; align-self: center; padding-left: 500px; }
+
+        .box { height: 150px; display: flex; justify-content: space-evenly; font-size: 25px; padding-top: 80px; padding-bottom: 130px; color: white; }
+
+        .background { background-color: #0084b4; }
+
+        #mobo { background-image: url({{ asset('assets/img/mobo_wallpaper.jpg') }}); background-position: center; }
+        #proco { background-image: url({{ asset('assets/img/proco_wallpaper.jpg') }}); background-position: center; }
+        #cg { background-image: url({{ asset('assets/img/cg_wallpaper.jpg') }}); background-position: center; }
+        #case { background-image: url({{ asset('assets/img/case_wallpaper.jpg') }}); background-repeat: no-repeat;
+             background-position: left; }
+        #psu { background-image: url({{ asset('assets/img/psu_wallpaper.jpg') }}); background-position: center; }
+        #ram { background-image: url({{ asset('assets/img/ram_wallpaper.png') }}); background-position: right; background-repeat: no-repeat; }
+        #pcmr { background-image: url({{ asset('assets/img/pcmr_wallpaper.jpg') }}); }
+
+        .divider { height: 100px; background-color: #0084b4; margin-top: -8px; }
+
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
