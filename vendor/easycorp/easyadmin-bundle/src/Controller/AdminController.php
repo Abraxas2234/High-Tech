@@ -32,6 +32,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\PropertyAccess\PropertyAccess;
 
 /**
  * The controller used to render all the default EasyAdmin actions.
@@ -61,6 +62,10 @@ class AdminController extends Controller
      */
     public function indexAction(Request $request)
     {
+        if ('admin' === $request->attributes->get('_route')) {
+            trigger_error(sprintf('The "admin" route is deprecated since version 1.8.0 and it will be removed in 2.0. Use the "easyadmin" route instead.'), E_USER_DEPRECATED);
+        }
+
         $this->initialize($request);
 
         if (null === $request->query->get('entity')) {
@@ -210,7 +215,7 @@ class AdminController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $this->dispatch(EasyAdminEvents::PRE_UPDATE, array('entity' => $entity));
 
-            $this->executeDynamicMethod('preUpdate<EntityName>Entity', array($entity));
+            $this->executeDynamicMethod('preUpdate<EntityName>Entity', array($entity, true));
             $this->executeDynamicMethod('update<EntityName>Entity', array($entity));
 
             $this->dispatch(EasyAdminEvents::POST_UPDATE, array('entity' => $entity));
@@ -284,7 +289,7 @@ class AdminController extends Controller
         if ($newForm->isSubmitted() && $newForm->isValid()) {
             $this->dispatch(EasyAdminEvents::PRE_PERSIST, array('entity' => $entity));
 
-            $this->executeDynamicMethod('prePersist<EntityName>Entity', array($entity));
+            $this->executeDynamicMethod('prePersist<EntityName>Entity', array($entity, true));
             $this->executeDynamicMethod('persist<EntityName>Entity', array($entity));
 
             $this->dispatch(EasyAdminEvents::POST_PERSIST, array('entity' => $entity));
@@ -331,7 +336,7 @@ class AdminController extends Controller
 
             $this->dispatch(EasyAdminEvents::PRE_REMOVE, array('entity' => $entity));
 
-            $this->executeDynamicMethod('preRemove<EntityName>Entity', array($entity));
+            $this->executeDynamicMethod('preRemove<EntityName>Entity', array($entity, true));
 
             try {
                 $this->executeDynamicMethod('remove<EntityName>Entity', array($entity));
@@ -413,7 +418,7 @@ class AdminController extends Controller
         $this->dispatch(EasyAdminEvents::PRE_UPDATE, array('entity' => $entity, 'newValue' => $value));
 
         $this->get('easy_admin.property_accessor')->setValue($entity, $property, $value);
-        $this->executeDynamicMethod('preUpdate<EntityName>Entity', array($entity));
+        $this->executeDynamicMethod('preUpdate<EntityName>Entity', array($entity, true));
 
         $this->em->persist($entity);
         $this->em->flush();
@@ -442,8 +447,13 @@ class AdminController extends Controller
      *
      * @param object $entity
      */
-    protected function prePersistEntity($entity)
+    protected function prePersistEntity($entity /*, bool $ignoreDeprecations = false */)
     {
+        if (func_num_args() > 1 && true === func_get_arg(1)) {
+            return;
+        }
+
+        @trigger_error(sprintf('The %s method is deprecated since EasyAdmin 1.x and will be removed in 2.0. Use persistEntity() instead', __METHOD__), E_USER_DEPRECATED);
     }
 
     /**
@@ -464,8 +474,13 @@ class AdminController extends Controller
      *
      * @param object $entity
      */
-    protected function preUpdateEntity($entity)
+    protected function preUpdateEntity($entity /*, bool $ignoreDeprecations = false */)
     {
+        if (func_num_args() > 1 && true === func_get_arg(1)) {
+            return;
+        }
+
+        @trigger_error(sprintf('The %s method is deprecated since EasyAdmin 1.x and will be removed in 2.0. Use updateEntity() instead', __METHOD__), E_USER_DEPRECATED);
     }
 
     /**
@@ -485,8 +500,13 @@ class AdminController extends Controller
      *
      * @param object $entity
      */
-    protected function preRemoveEntity($entity)
+    protected function preRemoveEntity($entity /*, bool $ignoreDeprecations = false */)
     {
+        if (func_num_args() > 1 && true === func_get_arg(1)) {
+            return;
+        }
+
+        @trigger_error(sprintf('The %s method is deprecated since EasyAdmin 1.x and will be removed in 2.0. Use removeEntity() instead', __METHOD__), E_USER_DEPRECATED);
     }
 
     /**
@@ -761,6 +781,12 @@ class AdminController extends Controller
             $methodName = str_replace('<EntityName>', '', $methodNamePattern);
         }
 
+        $isDeprecatedMethod = 0 === strpos($methodName, 'prePersist') || 0 === strpos($methodName, 'preUpdate') || 0 === strpos($methodName, 'preRemove');
+        if ($isDeprecatedMethod && isset($arguments[1]) && true !== $arguments[1]) {
+            $newMethodName = strtolower(substr($methodName, 3));
+            @trigger_error(sprintf('The %s method is deprecated since EasyAdmin 1.x and will be removed in 2.0. Use %s() instead', $methodName, $newMethodName), E_USER_DEPRECATED);
+        }
+
         return call_user_func_array(array($this, $methodName), $arguments);
     }
 
@@ -787,6 +813,7 @@ class AdminController extends Controller
      */
     public function renderCssAction()
     {
+        @trigger_error('The %s method is deprecated since EasyAdmin 1.x and will be removed in 2.0. Processed styles are available in the "easyadmin.config._internal.custom_css" container parameter.', E_USER_DEPRECATED);
     }
 
     /**
@@ -794,16 +821,44 @@ class AdminController extends Controller
      */
     protected function redirectToReferrer()
     {
-        $referrerUrl = $this->request->query->get('referer', '');
+        $refererUrl = $this->request->query->get('referer', '');
+        $refererAction = $this->request->query->get('action');
 
-        if (!empty($referrerUrl)) {
-            return $this->redirect(urldecode($referrerUrl));
+        // 1. redirect to list if possible
+        if ($this->isActionAllowed('list')) {
+            if (!empty($refererUrl)) {
+                return $this->redirect(urldecode($refererUrl));
+            }
+
+            return $this->redirectToRoute('easyadmin', array(
+                'action' => 'list',
+                'entity' => $this->entity['name'],
+                'menuIndex' => $this->request->query->get('menuIndex'),
+                'submenuIndex' => $this->request->query->get('submenuIndex'),
+            ));
         }
 
-        if ($this->isActionAllowed('list')) {
-            return $this->redirect($this->generateUrl('easyadmin', array(
-                'action' => 'list', 'entity' => $this->entity['name'],
-            )));
+        // 2. from new|edit action, redirect to edit if possible
+        if (in_array($refererAction, array('new', 'edit')) && $this->isActionAllowed('edit')) {
+            return $this->redirectToRoute('easyadmin', array(
+                'action' => 'edit',
+                'entity' => $this->entity['name'],
+                'menuIndex' => $this->request->query->get('menuIndex'),
+                'submenuIndex' => $this->request->query->get('submenuIndex'),
+                'id' => ('new' === $refererAction)
+                    ? PropertyAccess::createPropertyAccessor()->getValue($this->request->attributes->get('easyadmin')['item'], $this->entity['primary_key_field_name'])
+                    : $this->request->query->get('id'),
+            ));
+        }
+
+        // 3. from new action, redirect to new if possible
+        if ('new' === $refererAction && $this->isActionAllowed('new')) {
+            return $this->redirectToRoute('easyadmin', array(
+                'action' => 'new',
+                'entity' => $this->entity['name'],
+                'menuIndex' => $this->request->query->get('menuIndex'),
+                'submenuIndex' => $this->request->query->get('submenuIndex'),
+            ));
         }
 
         return $this->redirectToBackendHomepage();
