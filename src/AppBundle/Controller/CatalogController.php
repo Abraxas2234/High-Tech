@@ -9,20 +9,20 @@ use Symfony\Component\HttpFoundation\Request;
 class CatalogController extends Controller
 {
     /**
-     * @Route("/", name="/catalog")
+     * @Route("/", name="catalog")
      */
     public function indexAction(Request $request)
     {
       $em = $this->getDoctrine()->getManager();
       $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
-        // replace this example code with whatever you need
         return $this->render('catalog/index.html.twig', [
             'categories' => $categories
         ]);
     }
+
     /**
-     * @Route("catalog/{id}", name="category")
+     * @Route("category/{id}", name="category")
      */
     public function showAction($id)
     {
@@ -32,9 +32,23 @@ class CatalogController extends Controller
       $products = $em->getRepository('AppBundle:Product')
         ->findAll();
 
-        // replace this example code with whatever you need
         return $this->render('catalog/category.html.twig', [
             'categories' => $categories,
+            'products' => $products,
+            'id' => $id
+        ]);
+    }
+
+    /**
+     * @Route("product/{id}", name="product")
+     */
+    public function showProduct($id)
+    {
+      $em = $this->getDoctrine()->getManager();
+      $products = $em->getRepository('AppBundle:Product')
+        ->findAll();
+
+        return $this->render('catalog/product.html.twig', [
             'products' => $products,
             'id' => $id
         ]);

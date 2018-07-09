@@ -23,7 +23,7 @@
   <div id="quizbox">
   {% for product in products if product.idCategorie == id %}
   <div class="productbox">
-      {{ product.name }}<br>
+  <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a><br>
   </div>
   {% endfor %}
   </div>

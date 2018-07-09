@@ -176,6 +176,17 @@ class User extends \AppBundle\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
+    public function getEnabled()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEnabled', []);
+
+        return parent::getEnabled();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function __toString()
     {
 

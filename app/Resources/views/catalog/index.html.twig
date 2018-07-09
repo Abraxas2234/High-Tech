@@ -21,7 +21,7 @@
   <div id="quizbox">
   {% for categorie in categories %}
   <div class="productbox">
-  <a href="http://localhost:8888/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a><br>
+  <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a><br>
   </div>
   {% endfor %}<br>
 {% endblock %}
