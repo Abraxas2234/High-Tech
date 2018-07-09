@@ -1,12 +1,3 @@
-e33437,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/login,1530863671,,200
-2b3e60,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/login,1530863757,,200
-151e3f,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/login,1530863788,,200
-dadf26,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/login,1530863802,,200
-766067,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register,1530863807,,301
-2745c1,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register/,1530863808,,200
-415f10,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/login,1530863818,,200
-cfd2a0,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register,1530863912,,301
-3a96f7,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register/,1530863912,,200
-6fce54,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/,1530863943,,200
-dac918,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register,1530864038,,301
-362434,::1,GET,http://localhost:8888/High-Tech/web/app_dev.php/register/,1530864038,,200
+e41c3b,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/register/,1530868465,,200
+9bf959,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/6,1530868512,,200
+33d52f,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/,1530869095,,200
