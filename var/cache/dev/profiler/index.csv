@@ -1,3 +1,8 @@
 e41c3b,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/register/,1530868465,,200
 9bf959,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/6,1530868512,,200
 33d52f,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/,1530869095,,200
+7fe89a,127.0.0.1,GET,http://127.0.0.1:8000/,1530869610,,200
+10f538,127.0.0.1,GET,http://127.0.0.1:8000/register,1530869636,,301
+f60132,127.0.0.1,GET,http://127.0.0.1:8000/register/,1530869636,,200
+6955e7,127.0.0.1,GET,http://127.0.0.1:8000/web,1530869647,171297,200
+171297,127.0.0.1,GET,http://127.0.0.1:8000/web,1530869647,,404
