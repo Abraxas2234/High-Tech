@@ -1,0 +1,71 @@
+AppBundle\Entity\Clients:
+    type: entity
+    table: clients
+    id:
+        clientId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: client_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        clientName:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_name
+        clientFirstname:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_firstname
+        clientPassword:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_password
+        clientPhone:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_phone
+        clientAdress:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_adress
+        clientZipCode:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_zip_code
+        clientCity:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_city
+        clientCountry:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_country
+    lifecycleCallbacks: {  }

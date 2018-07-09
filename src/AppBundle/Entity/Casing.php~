@@ -1,0 +1,47 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Casing
+ *
+ * @ORM\Table(name="casing")
+ * @ORM\Entity
+ */
+class Casing
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="casing_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $casingId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="casing_format", type="string", length=255, nullable=false)
+     */
+    private $casingFormat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="casing_color", type="string", length=255, nullable=false)
+     */
+    private $casingColor;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="casing_material", type="string", length=255, nullable=false)
+     */
+    private $casingMaterial;
+
+
+}
+
