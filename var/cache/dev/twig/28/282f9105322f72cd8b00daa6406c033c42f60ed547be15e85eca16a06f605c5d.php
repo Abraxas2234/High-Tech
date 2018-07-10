@@ -76,30 +76,44 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
-        echo "  <div>
-  </div>
-  <div id=\"quizbox\">
-  ";
-        // line 12
+        echo "    <div class=\"container\">
+        ";
+        // line 10
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new Twig_Error_Runtime('Variable "products" does not exist.', 12, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new Twig_Error_Runtime('Variable "products" does not exist.', 10, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            if ((twig_get_attribute($this->env, $this->source, $context["product"], "idCategorie", array()) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 12, $this->source); })()))) {
-                // line 13
-                echo "  <div class=\"productbox\">
-      ";
-                // line 14
+            if ((twig_get_attribute($this->env, $this->source, $context["product"], "idCategorie", array()) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 10, $this->source); })()))) {
+                // line 11
+                echo "            <div class=\"row\">
+                <div class=\"productbox\">
+                    <div class=\"product-img col-lg-2\">
+                        Image
+                    </div>
+                    <div class=\"product-name col-lg-10\">
+                        <div class=\"name\">
+                            <a href=\"#\">
+                                ";
+                // line 19
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", array()), "html", null, true);
-                echo "<br>
-  </div>
-  ";
+                echo "
+                            </a>
+                        </div>
+                        <div class=\"product-price\">
+                            <span class=\"reduction\">19.99 EUR </span><span class=\"fullprice\">39.99 EUR</span><br>
+                            <span class=\"livraison\">Livraison gratuite possible (voir fiche produit).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=\"spacer\"></div>
+        ";
             }
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
-        echo "  </div>
+        // line 31
+        echo "    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -121,7 +135,7 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
 
     public function getDebugInfo()
     {
-        return array (  102 => 17,  92 => 14,  89 => 13,  84 => 12,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
+        return array (  116 => 31,  97 => 19,  87 => 11,  82 => 10,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -134,15 +148,29 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
 {% endblock %}
 
 {% block body %}
-  <div>
-  </div>
-  <div id=\"quizbox\">
-  {% for product in products if product.idCategorie == id %}
-  <div class=\"productbox\">
-      {{ product.name }}<br>
-  </div>
-  {% endfor %}
-  </div>
+    <div class=\"container\">
+        {% for product in products if product.idCategorie == id %}
+            <div class=\"row\">
+                <div class=\"productbox\">
+                    <div class=\"product-img col-lg-2\">
+                        Image
+                    </div>
+                    <div class=\"product-name col-lg-10\">
+                        <div class=\"name\">
+                            <a href=\"#\">
+                                {{ product.name }}
+                            </a>
+                        </div>
+                        <div class=\"product-price\">
+                            <span class=\"reduction\">19.99 EUR </span><span class=\"fullprice\">39.99 EUR</span><br>
+                            <span class=\"livraison\">Livraison gratuite possible (voir fiche produit).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=\"spacer\"></div>
+        {% endfor %}
+    </div>
 {% endblock %}
 ", "catalog/category.html.twig", "/Users/dukeshow/rendu/Projets-en-cours/High-Tech/app/Resources/views/catalog/category.html.twig");
     }

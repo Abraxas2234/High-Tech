@@ -6,13 +6,27 @@
 {% endblock %}
 
 {% block body %}
-  <div>
-  </div>
-  <div id="quizbox">
-  {% for product in products if product.idCategorie == id %}
-  <div class="productbox">
-      {{ product.name }}<br>
-  </div>
-  {% endfor %}
-  </div>
+    <div class="container">
+        {% for product in products if product.idCategorie == id %}
+            <div class="row">
+                <div class="productbox">
+                    <div class="product-img col-lg-2">
+                        Image
+                    </div>
+                    <div class="product-name col-lg-10">
+                        <div class="name">
+                            <a href="#">
+                                {{ product.name }}
+                            </a>
+                        </div>
+                        <div class="product-price">
+                            <span class="reduction">19.99 EUR </span><span class="fullprice">39.99 EUR</span><br>
+                            <span class="livraison">Livraison gratuite possible (voir fiche produit).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+        {% endfor %}
+    </div>
 {% endblock %}
