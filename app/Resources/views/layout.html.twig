@@ -33,12 +33,9 @@
                                 Catégorie
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Cartes Mères</a>
-                                <a class="dropdown-item" href="#">Processeurs</a>
-                                <a class="dropdown-item" href="#">Cartes Graphiques</a>
-                                <a class="dropdown-item" href="#">Barrettes Mémoires</a>
-                                <a class="dropdown-item" href="#">Alimentations</a>
-                                <a class="dropdown-item" href="#">Boîtiers PC</a>
+                                {% for categorie in categories %}
+                                    <a class="dropdown-item" href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
+		                        {% endfor %}
                             </div>
                         </li>
                     </ul>
