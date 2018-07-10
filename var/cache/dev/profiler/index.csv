@@ -1,7 +1,11 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 974f2a,::1,GET,http://localhost/High-Tech/web/app_dev.php/,1531241086,,200
 414a98,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/1,1531241091,,200
 31390b,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/2,1531241097,,200
+=======
+4b1621,::1,GET,http://localhost/High-Tech/web/app_dev.php/,1531240835,,200
+>>>>>>> Stashed changes
 =======
 4b1621,::1,GET,http://localhost/High-Tech/web/app_dev.php/,1531240835,,200
 >>>>>>> Stashed changes

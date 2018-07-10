@@ -15,15 +15,21 @@ if (!\class_exists(appProdProjectContainer::class, false)) {
 }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 return new \Container5xevlke\appProdProjectContainer(array(
     'container.build_hash' => '5xevlke',
     'container.build_id' => '2a8b9d31',
     'container.build_time' => 1531241163,
 ), __DIR__.\DIRECTORY_SEPARATOR.'Container5xevlke');
 =======
+=======
+>>>>>>> Stashed changes
 return new \ContainerPrqmjx9\appProdProjectContainer(array(
     'container.build_hash' => 'Prqmjx9',
     'container.build_id' => 'e9ce3fe3',
     'container.build_time' => 1531234000,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerPrqmjx9');
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
