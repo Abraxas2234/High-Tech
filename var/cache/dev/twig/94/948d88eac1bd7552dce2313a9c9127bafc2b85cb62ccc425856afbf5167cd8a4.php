@@ -1252,6 +1252,6 @@ class __TwigTemplate_a41ea59f00f16f4332d1cf4a01dda95d2645c50aebb26a02e13655d51d7
         display: none;
     }
 }
-", "@WebProfiler/Profiler/toolbar.css.twig", "/Users/amel/rendu/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
+", "@WebProfiler/Profiler/toolbar.css.twig", "/opt/lampp/htdocs/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/toolbar.css.twig");
     }
 }
