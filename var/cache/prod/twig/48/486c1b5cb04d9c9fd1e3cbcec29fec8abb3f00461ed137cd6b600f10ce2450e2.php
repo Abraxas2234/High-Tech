@@ -29,20 +29,20 @@ class __TwigTemplate_d250a1f1a103a8ed231f8b42b545077ad0ad6b9bd02a0fbf6d98eb97e71
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 4
-        echo "<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+        echo "  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
 ";
     }
 
@@ -50,31 +50,44 @@ class __TwigTemplate_d250a1f1a103a8ed231f8b42b545077ad0ad6b9bd02a0fbf6d98eb97e71
     public function block_body($context, array $blocks = array())
     {
         // line 21
-        echo "  <div>
-  </div>
+        echo "  <div></div>
   <div id=\"quizbox\">
-  ";
-        // line 24
+    ";
+        // line 23
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             if (($this->getAttribute($context["product"], "idCategorie", array()) == ($context["id"] ?? null))) {
+                // line 24
+                echo "      <div class=\"productbox\">
+        <img src=\"";
                 // line 25
-                echo "  <div class=\"productbox\">
-  <a href=\"";
+                echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl(("assets/img/" . $this->getAttribute($context["product"], "getProductBrand", array()))), "html", null, true);
+                echo "\"/><br>
+        <a href=\"";
                 // line 26
                 echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("product", array("id" => $this->getAttribute($context["product"], "id", array()))), "html", null, true);
                 echo "\">";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "name", array()), "html", null, true);
                 echo "</a><br>
-  </div>
-  ";
+        <p>Stock:
+          ";
+                // line 28
+                echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "productStock", array()), "html", null, true);
+                echo "</p>
+        <p>Prix:
+          ";
+                // line 30
+                echo twig_escape_filter($this->env, $this->getAttribute($context["product"], "productPrice", array()), "html", null, true);
+                echo "</p>
+      </div>
+    ";
             }
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 33
         echo "  </div>
 ";
     }
@@ -91,7 +104,7 @@ class __TwigTemplate_d250a1f1a103a8ed231f8b42b545077ad0ad6b9bd02a0fbf6d98eb97e71
 
     public function getDebugInfo()
     {
-        return array (  78 => 29,  66 => 26,  63 => 25,  58 => 24,  53 => 21,  50 => 20,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  91 => 33,  81 => 30,  76 => 28,  69 => 26,  65 => 25,  62 => 24,  57 => 23,  53 => 21,  50 => 20,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
