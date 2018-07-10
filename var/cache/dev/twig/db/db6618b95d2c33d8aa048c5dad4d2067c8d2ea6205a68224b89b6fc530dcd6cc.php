@@ -1160,6 +1160,6 @@ class __TwigTemplate_f5b37abd26bb7ae1cefc2e2d92a6638d7dfb6065a128175bf5d54ed755c
         </table>
     {% endif %}
 {% endblock %}
-", "@Security/Collector/security.html.twig", "/Users/amel/rendu/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/security.html.twig");
+", "@Security/Collector/security.html.twig", "/opt/lampp/htdocs/High-Tech/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views/Collector/security.html.twig");
     }
 }

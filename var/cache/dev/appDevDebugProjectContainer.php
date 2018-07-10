@@ -33,7 +33,7 @@ return new \ContainerQlpruns\appDevDebugProjectContainer(array(
 
 return new \ContainerMpwvkw0\appDevDebugProjectContainer(array(
     'container.build_hash' => 'Mpwvkw0',
-    'container.build_id' => '0f776825',
-    'container.build_time' => 1531124868,
+    'container.build_id' => '6ac2b347',
+    'container.build_time' => 1531241086,
 ), __DIR__.\DIRECTORY_SEPARATOR.'ContainerMpwvkw0');
 >>>>>>> Auto stash before merge of "master" and "origin/fos-user-front"
