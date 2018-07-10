@@ -12,7 +12,7 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "catalog/category.html.twig", 1);
+        $this->parent = $this->loadTemplate("layout.html.twig", "catalog/category.html.twig", 1);
         $this->blocks = array(
             'stylesheets' => array($this, 'block_stylesheets'),
             'body' => array($this, 'block_body'),
@@ -21,7 +21,7 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -51,20 +51,12 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
-        echo "<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+  <link rel=\"stylesheet\" href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/items.css"), "html", null, true);
+        echo "\">
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -74,7 +66,7 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
 
     }
 
-    // line 20
+    // line 8
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -83,20 +75,20 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 21
+        // line 9
         echo "  <div>
   </div>
   <div id=\"quizbox\">
   ";
-        // line 24
+        // line 12
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new Twig_Error_Runtime('Variable "products" does not exist.', 24, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["products"]) || array_key_exists("products", $context) ? $context["products"] : (function () { throw new Twig_Error_Runtime('Variable "products" does not exist.', 12, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
-            if ((twig_get_attribute($this->env, $this->source, $context["product"], "idCategorie", array()) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 24, $this->source); })()))) {
-                // line 25
+            if ((twig_get_attribute($this->env, $this->source, $context["product"], "idCategorie", array()) == (isset($context["id"]) || array_key_exists("id", $context) ? $context["id"] : (function () { throw new Twig_Error_Runtime('Variable "id" does not exist.', 12, $this->source); })()))) {
+                // line 13
                 echo "  <div class=\"productbox\">
       ";
-                // line 26
+                // line 14
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["product"], "name", array()), "html", null, true);
                 echo "<br>
   </div>
@@ -106,7 +98,7 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['product'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 17
         echo "  </div>
 ";
         
@@ -129,28 +121,16 @@ class __TwigTemplate_af1d111521b356320bc6a2a1b69eb6955992bb2c4acbff3d8539c1d16d2
 
     public function getDebugInfo()
     {
-        return array (  110 => 29,  100 => 26,  97 => 25,  92 => 24,  87 => 21,  78 => 20,  54 => 4,  45 => 3,  15 => 1,);
+        return array (  102 => 17,  92 => 14,  89 => 13,  84 => 12,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends 'base.html.twig' %}
+        return new Twig_Source("{% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
-<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+{{ parent() }}
+  <link rel=\"stylesheet\" href=\"{{ asset('assets/css/items.css') }}\">
 {% endblock %}
 
 {% block body %}

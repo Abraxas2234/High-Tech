@@ -12,7 +12,7 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "catalog/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("layout.html.twig", "catalog/index.html.twig", 1);
         $this->blocks = array(
             'stylesheets' => array($this, 'block_stylesheets'),
             'body' => array($this, 'block_body'),
@@ -21,7 +21,7 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -51,20 +51,12 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
-        echo "<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+        $this->displayParentBlock("stylesheets", $context, $blocks);
+        echo "
+\t<link rel=\"stylesheet\" href=\"";
+        // line 5
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/css/categories.css"), "html", null, true);
+        echo "\">
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -74,7 +66,7 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
 
     }
 
-    // line 20
+    // line 8
     public function block_body($context, array $blocks = array())
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -83,29 +75,52 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        // line 21
-        echo "  <div id=\"quizbox\">
-  ";
-        // line 22
+        // line 9
+        echo "    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
+        <div class=\"carousel-inner\">
+            <div class=\"carousel-item active\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"First slide\">
+            </div>
+            <div class=\"carousel-item\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Second slide\">
+            </div>
+            <div class=\"carousel-item\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Third slide\">
+            </div>
+        </div>
+        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
+            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+            <span class=\"sr-only\">Previous</span>
+        </a>
+        <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">
+            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+            <span class=\"sr-only\">Next</span>
+        </a>
+    </div>
+\t<div id=\"quizbox\">
+\t\t";
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new Twig_Error_Runtime('Variable "categories" does not exist.', 22, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["categories"]) || array_key_exists("categories", $context) ? $context["categories"] : (function () { throw new Twig_Error_Runtime('Variable "categories" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 23
-            echo "  <div class=\"productbox\">
-  <a href=\"http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/";
-            // line 24
+            // line 32
+            echo "            <div class=\"categories\">
+                <div class=\"productbox\">
+                    <a href=\"http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/";
+            // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "id", array()), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "name", array()), "html", null, true);
-            echo "</a><br>
-  </div>
-  ";
+            echo "</a>
+                </div>
+            </div>
+\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
-        echo "<br>
+        // line 38
+        echo "    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -127,37 +142,49 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
 
     public function getDebugInfo()
     {
-        return array (  108 => 26,  97 => 24,  94 => 23,  90 => 22,  87 => 21,  78 => 20,  54 => 4,  45 => 3,  15 => 1,);
+        return array (  123 => 38,  111 => 34,  107 => 32,  103 => 31,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Twig_Source("{% extends 'base.html.twig' %}
+        return new Twig_Source("{% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
-<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+{{ parent() }}
+\t<link rel=\"stylesheet\" href=\"{{ asset('assets/css/categories.css') }}\">
 {% endblock %}
 
 {% block body %}
-  <div id=\"quizbox\">
-  {% for categorie in categories %}
-  <div class=\"productbox\">
-  <a href=\"http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}\">{{ categorie.name }}</a><br>
-  </div>
-  {% endfor %}<br>
+    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
+        <div class=\"carousel-inner\">
+            <div class=\"carousel-item active\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"First slide\">
+            </div>
+            <div class=\"carousel-item\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Second slide\">
+            </div>
+            <div class=\"carousel-item\">
+                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Third slide\">
+            </div>
+        </div>
+        <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
+            <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>
+            <span class=\"sr-only\">Previous</span>
+        </a>
+        <a class=\"carousel-control-next\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"next\">
+            <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>
+            <span class=\"sr-only\">Next</span>
+        </a>
+    </div>
+\t<div id=\"quizbox\">
+\t\t{% for categorie in categories %}
+            <div class=\"categories\">
+                <div class=\"productbox\">
+                    <a href=\"http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}\">{{ categorie.name }}</a>
+                </div>
+            </div>
+\t\t{% endfor %}
+    </div>
 {% endblock %}
 ", "catalog/index.html.twig", "/Users/dukeshow/rendu/Projets-en-cours/High-Tech/app/Resources/views/catalog/index.html.twig");
     }
