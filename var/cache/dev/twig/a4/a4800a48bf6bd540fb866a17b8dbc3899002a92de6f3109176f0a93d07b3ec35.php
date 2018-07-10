@@ -79,13 +79,22 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
         echo "    <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
         <div class=\"carousel-inner\">
             <div class=\"carousel-item active\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"First slide\">
+                <img class=\"d-block w-100\" src=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/soldes.png"), "html", null, true);
+        echo "\" alt=\"First slide\">
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Second slide\">
+                <img class=\"d-block w-100\" src=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/soldes.png"), "html", null, true);
+        echo "\" alt=\"Second slide\">
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Third slide\">
+                <img class=\"d-block w-100\" src=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/img/soldes.png"), "html", null, true);
+        echo "\" alt=\"Third slide\">
             </div>
         </div>
         <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
@@ -142,7 +151,7 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
 
     public function getDebugInfo()
     {
-        return array (  123 => 38,  111 => 34,  107 => 32,  103 => 31,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
+        return array (  132 => 38,  120 => 34,  116 => 32,  112 => 31,  96 => 18,  90 => 15,  84 => 12,  79 => 9,  70 => 8,  58 => 5,  54 => 4,  45 => 3,  15 => 1,);
     }
 
     public function getSourceContext()
@@ -158,13 +167,13 @@ class __TwigTemplate_0a1d3ee39a01c4e5543a817833b3f845268b28a217cfab5eb3cc0669575
     <div id=\"carouselExampleControls\" class=\"carousel slide\" data-ride=\"carousel\">
         <div class=\"carousel-inner\">
             <div class=\"carousel-item active\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"First slide\">
+                <img class=\"d-block w-100\" src=\"{{ asset('assets/img/soldes.png') }}\" alt=\"First slide\">
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Second slide\">
+                <img class=\"d-block w-100\" src=\"{{ asset('assets/img/soldes.png') }}\" alt=\"Second slide\">
             </div>
             <div class=\"carousel-item\">
-                <img class=\"d-block w-100\" src=\"assets/img/test.png\" alt=\"Third slide\">
+                <img class=\"d-block w-100\" src=\"{{ asset('assets/img/soldes.png') }}\" alt=\"Third slide\">
             </div>
         </div>
         <a class=\"carousel-control-prev\" href=\"#carouselExampleControls\" role=\"button\" data-slide=\"prev\">
