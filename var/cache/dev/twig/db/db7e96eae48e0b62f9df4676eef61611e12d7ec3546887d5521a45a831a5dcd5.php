@@ -47,20 +47,20 @@ class __TwigTemplate_df253c2b6c5ce97516dd9a8ed2788dc75f567b3e04edd536942919fb6db
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 4
-        echo "<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+        echo "  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -81,28 +81,29 @@ class __TwigTemplate_df253c2b6c5ce97516dd9a8ed2788dc75f567b3e04edd536942919fb6db
 
         // line 21
         echo "  <div id=\"quizbox\">
-  ";
+    ";
         // line 22
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? $this->getContext($context, "categories")));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 23
-            echo "  <div class=\"productbox\">
-  <a href=\"";
+            echo "      <div class=\"productbox\">
+        <a href=\"";
             // line 24
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("category", array("id" => $this->getAttribute($context["categorie"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["categorie"], "name", array()), "html", null, true);
             echo "</a><br>
-  </div>
-  ";
+      </div>
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 26
         echo "<br>
-";
+
+  ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -139,30 +140,30 @@ class __TwigTemplate_df253c2b6c5ce97516dd9a8ed2788dc75f567b3e04edd536942919fb6db
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block stylesheets %}
-<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
 {% endblock %}
 
 {% block body %}
   <div id=\"quizbox\">
-  {% for categorie in categories %}
-  <div class=\"productbox\">
-  <a href=\"{{ path('category', {'id': categorie.id}) }}\">{{ categorie.name }}</a><br>
-  </div>
-  {% endfor %}<br>
-{% endblock %}
-", "catalog/index.html.twig", "/opt/lampp/htdocs/High-Tech/app/Resources/views/catalog/index.html.twig");
+    {% for categorie in categories %}
+      <div class=\"productbox\">
+        <a href=\"{{ path('category', {'id': categorie.id}) }}\">{{ categorie.name }}</a><br>
+      </div>
+    {% endfor %}<br>
+
+  {% endblock %}", "catalog/index.html.twig", "/opt/lampp/htdocs/High-Tech/app/Resources/views/catalog/index.html.twig");
     }
 }

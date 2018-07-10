@@ -1,5 +1,6 @@
 <<<<<<< master
 <<<<<<< master
+<<<<<<< master
 e41c3b,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/register/,1530868465,,200
 9bf959,::1,GET,http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/6,1530868512,,200
 =======
@@ -213,3 +214,12 @@ b257cf,::1,GET,http://localhost/High-Tech/web/app_dev.php/product/34,1531125832,
 414a98,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/1,1531241091,,200
 31390b,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/2,1531241097,,200
 >>>>>>> Real Database
+=======
+<<<<<<< Updated upstream
+974f2a,::1,GET,http://localhost/High-Tech/web/app_dev.php/,1531241086,,200
+414a98,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/1,1531241091,,200
+31390b,::1,GET,http://localhost/High-Tech/web/app_dev.php/category/2,1531241097,,200
+=======
+4b1621,::1,GET,http://localhost/High-Tech/web/app_dev.php/,1531240835,,200
+>>>>>>> Stashed changes
+>>>>>>> Auto stash before merge of "product-views" and "origin/product-views"

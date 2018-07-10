@@ -29,20 +29,20 @@ class __TwigTemplate_3ca7663008604db7c6eb32f50f176541304dcf2b466c83f022266d994f2
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 4
-        echo "<style>
-  .productbox {
-    margin: 10px 10px 10px 10px;
-    padding: 20px 7px 20px 7px;
-    text-align: center;
-    border: 2px black solid;
-    border-radius: 9px;
-  }
-  button {
-    border-radius: 9px;
-    margin: 15px 7px 7px 7px;
-    padding: 5px 5px 5px 5px;
-  }
-</style>
+        echo "  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
 ";
     }
 
@@ -51,28 +51,29 @@ class __TwigTemplate_3ca7663008604db7c6eb32f50f176541304dcf2b466c83f022266d994f2
     {
         // line 21
         echo "  <div id=\"quizbox\">
-  ";
+    ";
         // line 22
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 23
-            echo "  <div class=\"productbox\">
-  <a href=\"";
+            echo "      <div class=\"productbox\">
+        <a href=\"";
             // line 24
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("category", array("id" => $this->getAttribute($context["categorie"], "id", array()))), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["categorie"], "name", array()), "html", null, true);
             echo "</a><br>
-  </div>
-  ";
+      </div>
+    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 26
         echo "<br>
-";
+
+  ";
     }
 
     public function getTemplateName()

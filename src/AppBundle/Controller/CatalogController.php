@@ -47,9 +47,27 @@ class CatalogController extends Controller
       $em = $this->getDoctrine()->getManager();
       $products = $em->getRepository('AppBundle:Product')
         ->findAll();
+      $casings = $em->getRepository('AppBundle:Casing')
+        ->findAll();
+      $cpus = $em->getRepository('AppBundle:Cpu')
+        ->findAll();
+      $gpus = $em->getRepository('AppBundle:Gpu')
+        ->findAll();
+      $motherboards = $em->getRepository('AppBundle:Motherboard')
+        ->findAll();
+      $powers = $em->getRepository('AppBundle:PowerSupply')
+        ->findAll();
+      $rams = $em->getRepository('AppBundle:Ram')
+        ->findAll();
 
         return $this->render('catalog/product.html.twig', [
             'products' => $products,
+            'casings' => $casings,
+            'cpus' => $cpus,
+            'gpus' => $gpus,
+            'motherboards' => $motherboards,
+            'powers' => $powers,
+            'rams' => $rams,
             'id' => $id
         ]);
     }
