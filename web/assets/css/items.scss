@@ -29,6 +29,10 @@ $textFont: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
+.perso {
+    display: flex;
+}
+
 .productbox {
     width: 100%;
     display: flex;
@@ -40,8 +44,8 @@ $textFont: 'Roboto', sans-serif;
 }
 
 .img-product {
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
 }
 
 .product-name {
@@ -102,4 +106,42 @@ $textFont: 'Roboto', sans-serif;
     height: 1px;
     width: 100%;
     background-color: $lightGrey;
+}
+
+.sidenav {
+    width: 150px;
+    z-index: 1;
+    background-color: $white;
+    overflow-x: hidden;
+    border-right: 1px solid lightgrey;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }

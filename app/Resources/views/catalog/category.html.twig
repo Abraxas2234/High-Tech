@@ -6,6 +6,13 @@
 {% endblock %}
 
 {% block body %}
+<div class="perso">
+    <div id="mySidenav" class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
     <div class="container">
         {% for product in products if product.idCategorie == id %}
             <div class="row">
@@ -32,4 +39,5 @@
             <div class="spacer"></div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
