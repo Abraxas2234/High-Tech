@@ -42,3 +42,10 @@
 
 #Parameters
 /app/config/parameters.yml
+
+#IDE
+.idea
+.vscode/*
+
+#SCSS
+/prepros-6.config
