@@ -19,18 +19,7 @@
 
 {% block body %}
   <div id="quizbox">
-<<<<<<< master
-  {% for categorie in categories %}
-  <div class="productbox">
-<<<<<<< master
-  <a href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a><br>
-=======
-  <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a><br>
->>>>>>> Auto stash before merge of "master" and "origin/fos-user-front"
-  </div>
-  {% endfor %}<br>
-{% endblock %}
-=======
+
     {% for categorie in categories %}
       <div class="productbox">
         <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a><br>
@@ -38,4 +27,3 @@
     {% endfor %}<br>
 
   {% endblock %}
->>>>>>> Auto stash before merge of "product-views" and "origin/product-views"
