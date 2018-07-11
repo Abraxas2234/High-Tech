@@ -43,7 +43,7 @@
     -webkit-transition: ease .3s;
     -o-transition: ease .3s;
     transition: ease .3s;
-    font-size: 21px; }
+    font-size: 18px; }
     .name a:hover {
       color: #CE0234;
       text-decoration: none;
@@ -55,11 +55,12 @@
   margin: 20px; }
 
 .reduction {
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 700;
   color: #CE0234; }
 
 .fullprice {
+  font-size: 14px;
   text-decoration: line-through;
   color: #555;
   opacity: 0.8; }
@@ -74,7 +75,8 @@
   flex-direction: column; }
 
 .livraison {
-  color: #555; }
+  color: #555;
+  font-size: 14px; }
 
 .stock {
   color: #555;

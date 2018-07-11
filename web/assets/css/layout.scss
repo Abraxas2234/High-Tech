@@ -37,6 +37,51 @@ h5 {
 //NAVBAR -----------------------------------
 .navbar {
     background-color: $darkblue;
+
+    a {
+        border: 1px solid transparent;
+        transition: ease 0.3s;
+
+        &:hover {
+            border: 1px solid $red;
+            transition: ease 0.3s;
+        }
+    }
+}
+
+.form-control {
+    border-radius: 0px;
+
+    &:focus {
+        color: #555;
+        background-color: #fff;
+        border-color: $red;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(206, 2, 53,.25);
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $white;
+    margin: 10px;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.btn-outline-primary {
+    color: $red;
+    background-color: transparent;
+    background-image: none;
+    border-color: $red;
+    border-radius: 0px;    
+
+    &:hover {
+        color: $white;
+        border-color: $red;
+        background-color: $red;
+    }
 }
 
 .nav-link {
