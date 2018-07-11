@@ -36,12 +36,12 @@ $textFont: 'Roboto', sans-serif;
 }
 
 .product-img {
-    height: 200px;
-    width: 200px;
-    display: flex;
-    justify-content: center;
-    background-color: $lightBlue;
     margin: 20px;
+}
+
+.img-product {
+    width: 200px;
+    height: 200px;
 }
 
 .product-name {

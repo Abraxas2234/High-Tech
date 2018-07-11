@@ -13,16 +13,11 @@
   flex-direction: row; }
 
 .product-img {
-  height: 200px;
-  width: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  background-color: #c0deed;
   margin: 20px; }
+
+.img-product {
+  width: 200px;
+  height: 200px; }
 
 .product-name {
   display: -webkit-box;
