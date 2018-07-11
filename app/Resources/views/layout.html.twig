@@ -33,9 +33,11 @@
                                 Catégorie
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if categories is defined %}
                                 {% for categorie in categories %}
-                                    <a class="dropdown-item" href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
+                                    <a class="dropdown-item" href="http://localhost:8888/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
 		                        {% endfor %}
+                            {% endif %}
                             </div>
                         </li>
                     </ul>

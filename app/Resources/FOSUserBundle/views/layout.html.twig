@@ -1,20 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8" />
-    <title>{% block title %}High-Tech{% endblock %}</title>
-    <!-- CSS
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />-->
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js" rel="stylesheet">
-    {% block stylesheets %}
-    {% endblock %}
+{% extends 'layout.html.twig' %}
+
+{# <title>{% block title %}High-Tech{% endblock %}</title> #}
+{% block stylesheets %}
+{{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <style>
         body { 
             font-family: 'Raleway', sans-serif; 
@@ -22,18 +12,76 @@
             background: -webkit-linear-gradient(to right, #E2E2E2, #dbdfeb);  /* Chrome 10-25, Safari 5.1-6 */
             background: linear-gradient(to right, #E2E2E2, #dbdfeb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */            
         }
-        a { color: #0000F0; }
         a:hover { text-decoration: none; }
-        #wrapper { background: #f8f9fa; margin: 2em auto; max-width: 500px; width: 95%; }
-        #container { padding: 1em; text-align: justify; }
-    </style>
-</head>
+        #wrapper {
+            border-radius: 4px;
+            border: 1px #ddd solid;
+            background-color: #fff; 
+            margin: 2em auto; 
+            max-width: 500px; 
+            width: 95%; 
+            }
 
-<body>
+        #container { 
+            padding: 1em; 
+            text-align: justify; 
+        }
+
+        #box-form {
+            border-radius: 4px;
+            border: 1px #ddd solid;
+            background-color: #fff;
+            padding: 14px 18px;
+            max-width: 500px;
+            margin: 2em auto; 
+            max-width: 350px; 
+            width: 95%;
+        }
+
+        #box-title {
+            color: #555;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        #box-label {
+            color: #555;
+            padding-left: 2px;
+            padding-bottom: 2px;
+            font-weight: 600;
+            margin-bottom: .0rem;
+        }
+
+        #box-alert {
+            color: #575555;
+            margin-bottom: .5rem;
+            text-align: left;
+            font-size: 12px;
+            line-height: 15px;
+        }
+
+        #box-legal {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-top: 13px;
+        }
+    </style>
+{% endblock %}
+
+{% block header %}
+{{parent()}}
+{% endblock %}
+
 {% block body %}
+{{parent()}}
     {% block fos_user_content %}
     {% endblock fos_user_content %}
 {% endblock %}
-{% block javascripts %}{% endblock %}
-</body>
-</html>
+
+{% block footer %} {{parent()}}
+{% endblock %}
+
+
+{% block javascripts %}{{parent()}}{% endblock %}
