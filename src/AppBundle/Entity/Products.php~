@@ -85,4 +85,230 @@ class Products
     private $productDescription;
 
 
+
+    /**
+     * Get productId.
+     *
+     * @return int
+     */
+    public function getProductId()
+    {
+        return $this->productId;
+    }
+
+    /**
+     * Set productModel.
+     *
+     * @param string $productModel
+     *
+     * @return Products
+     */
+    public function setProductModel($productModel)
+    {
+        $this->productModel = $productModel;
+
+        return $this;
+    }
+
+    /**
+     * Get productModel.
+     *
+     * @return string
+     */
+    public function getProductModel()
+    {
+        return $this->productModel;
+    }
+
+    /**
+     * Set productReference.
+     *
+     * @param string $productReference
+     *
+     * @return Products
+     */
+    public function setProductReference($productReference)
+    {
+        $this->productReference = $productReference;
+
+        return $this;
+    }
+
+    /**
+     * Get productReference.
+     *
+     * @return string
+     */
+    public function getProductReference()
+    {
+        return $this->productReference;
+    }
+
+    /**
+     * Set productBrand.
+     *
+     * @param string $productBrand
+     *
+     * @return Products
+     */
+    public function setProductBrand($productBrand)
+    {
+        $this->productBrand = $productBrand;
+
+        return $this;
+    }
+
+    /**
+     * Get productBrand.
+     *
+     * @return string
+     */
+    public function getProductBrand()
+    {
+        return $this->productBrand;
+    }
+
+    /**
+     * Set productPrice.
+     *
+     * @param int $productPrice
+     *
+     * @return Products
+     */
+    public function setProductPrice($productPrice)
+    {
+        $this->productPrice = $productPrice;
+
+        return $this;
+    }
+
+    /**
+     * Get productPrice.
+     *
+     * @return int
+     */
+    public function getProductPrice()
+    {
+        return $this->productPrice;
+    }
+
+    /**
+     * Set productStock.
+     *
+     * @param int $productStock
+     *
+     * @return Products
+     */
+    public function setProductStock($productStock)
+    {
+        $this->productStock = $productStock;
+
+        return $this;
+    }
+
+    /**
+     * Get productStock.
+     *
+     * @return int
+     */
+    public function getProductStock()
+    {
+        return $this->productStock;
+    }
+
+    /**
+     * Set productWeight.
+     *
+     * @param string $productWeight
+     *
+     * @return Products
+     */
+    public function setProductWeight($productWeight)
+    {
+        $this->productWeight = $productWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get productWeight.
+     *
+     * @return string
+     */
+    public function getProductWeight()
+    {
+        return $this->productWeight;
+    }
+
+    /**
+     * Set productDimension.
+     *
+     * @param string $productDimension
+     *
+     * @return Products
+     */
+    public function setProductDimension($productDimension)
+    {
+        $this->productDimension = $productDimension;
+
+        return $this;
+    }
+
+    /**
+     * Get productDimension.
+     *
+     * @return string
+     */
+    public function getProductDimension()
+    {
+        return $this->productDimension;
+    }
+
+    /**
+     * Set productDiscount.
+     *
+     * @param int $productDiscount
+     *
+     * @return Products
+     */
+    public function setProductDiscount($productDiscount)
+    {
+        $this->productDiscount = $productDiscount;
+
+        return $this;
+    }
+
+    /**
+     * Get productDiscount.
+     *
+     * @return int
+     */
+    public function getProductDiscount()
+    {
+        return $this->productDiscount;
+    }
+
+    /**
+     * Set productDescription.
+     *
+     * @param string $productDescription
+     *
+     * @return Products
+     */
+    public function setProductDescription($productDescription)
+    {
+        $this->productDescription = $productDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get productDescription.
+     *
+     * @return string
+     */
+    public function getProductDescription()
+    {
+        return $this->productDescription;
+    }
 }
