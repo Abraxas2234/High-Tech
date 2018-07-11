@@ -28,6 +28,12 @@ $textFont: 'Roboto', sans-serif;
     font-family: $textFont;
 }
 
+.container-perso {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 h5 {
     color: $white;
     font-family: $titleFont;
@@ -47,6 +53,11 @@ h5 {
             transition: ease 0.3s;
         }
     }
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
 }
 
 .form-control {
@@ -159,9 +170,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -178,9 +192,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -197,9 +214,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -216,9 +236,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            text-decoration: none;
+            transition: ease .3s;
         }
     }
 }

@@ -1,6 +1,11 @@
 .body {
   font-family: "Roboto", sans-serif; }
 
+.container-perso {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px; }
+
 h5 {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
@@ -18,6 +23,10 @@ h5 {
       -webkit-transition: ease 0.3s;
       -o-transition: ease 0.3s;
       transition: ease 0.3s; }
+
+.logo {
+  width: 80px;
+  height: 80px; }
 
 .form-control {
   border-radius: 0px; }
@@ -128,9 +137,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .about-us a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .sellout {
   display: -webkit-box;
@@ -147,9 +163,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .sellout a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .howtopay {
   display: -webkit-box;
@@ -166,9 +189,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .howtopay a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .help {
   display: -webkit-box;
@@ -185,6 +215,13 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .help a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      text-decoration: none;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s; }
