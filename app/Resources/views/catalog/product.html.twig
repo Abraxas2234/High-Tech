@@ -97,7 +97,7 @@
         {% endfor %}
 
         {% for power in powers %}
-          {% if product.id == powersupply.powerSupplyId %}
+          {% if product.id == power.powerSupplyId %}
             <p>Puissance:
               {{ power.powerSupplyPower }}</p>
             <p>Modulaire:
