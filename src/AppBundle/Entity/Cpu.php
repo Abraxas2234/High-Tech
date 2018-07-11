@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Cpu
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="cpu_id", type="integer")
      * @ORM\Id
@@ -66,9 +66,9 @@ class Cpu
 
 
     /**
-     * Get cpuId
+     * Get cpuId.
      *
-     * @return integer
+     * @return int
      */
     public function getCpuId()
     {
@@ -76,7 +76,7 @@ class Cpu
     }
 
     /**
-     * Set cpuCoreNumber
+     * Set cpuCoreNumber.
      *
      * @param string $cpuCoreNumber
      *
@@ -90,7 +90,7 @@ class Cpu
     }
 
     /**
-     * Get cpuCoreNumber
+     * Get cpuCoreNumber.
      *
      * @return string
      */
@@ -100,7 +100,7 @@ class Cpu
     }
 
     /**
-     * Set cpuFrequency
+     * Set cpuFrequency.
      *
      * @param string $cpuFrequency
      *
@@ -114,7 +114,7 @@ class Cpu
     }
 
     /**
-     * Get cpuFrequency
+     * Get cpuFrequency.
      *
      * @return string
      */
@@ -124,7 +124,7 @@ class Cpu
     }
 
     /**
-     * Set cpuCache
+     * Set cpuCache.
      *
      * @param string $cpuCache
      *
@@ -138,7 +138,7 @@ class Cpu
     }
 
     /**
-     * Get cpuCache
+     * Get cpuCache.
      *
      * @return string
      */
@@ -148,7 +148,7 @@ class Cpu
     }
 
     /**
-     * Set cpuArchitecture
+     * Set cpuArchitecture.
      *
      * @param string $cpuArchitecture
      *
@@ -162,7 +162,7 @@ class Cpu
     }
 
     /**
-     * Get cpuArchitecture
+     * Get cpuArchitecture.
      *
      * @return string
      */
@@ -172,7 +172,7 @@ class Cpu
     }
 
     /**
-     * Set cpuSocket
+     * Set cpuSocket.
      *
      * @param string $cpuSocket
      *
@@ -186,7 +186,7 @@ class Cpu
     }
 
     /**
-     * Get cpuSocket
+     * Get cpuSocket.
      *
      * @return string
      */
@@ -196,7 +196,7 @@ class Cpu
     }
 
     /**
-     * Set cpuThermalDissipation
+     * Set cpuThermalDissipation.
      *
      * @param string $cpuThermalDissipation
      *
@@ -210,7 +210,7 @@ class Cpu
     }
 
     /**
-     * Get cpuThermalDissipation
+     * Get cpuThermalDissipation.
      *
      * @return string
      */

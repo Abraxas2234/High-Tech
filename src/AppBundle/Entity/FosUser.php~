@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class FosUser
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -50,14 +50,14 @@ class FosUser
     private $emailCanonical;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @ORM\Column(name="enabled", type="boolean", nullable=false)
      */
     private $enabled;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(name="salt", type="string", length=255, nullable=true)
      */
@@ -71,21 +71,21 @@ class FosUser
     private $password;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      *
      * @ORM\Column(name="last_login", type="datetime", nullable=true)
      */
     private $lastLogin;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(name="confirmation_token", type="string", length=180, nullable=true)
      */
     private $confirmationToken;
 
     /**
-     * @var \DateTime
+     * @var \DateTime|null
      *
      * @ORM\Column(name="password_requested_at", type="datetime", nullable=true)
      */
@@ -94,10 +94,9 @@ class FosUser
     /**
      * @var array
      *
-     * @ORM\Column(name="roles", type="array", nullable=false)
+     * @ORM\Column(name="roles", type="array", length=0, nullable=false)
      */
     private $roles;
 
 
 }
-

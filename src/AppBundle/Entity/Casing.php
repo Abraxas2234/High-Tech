@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Casing
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="casing_id", type="integer")
      * @ORM\Id
@@ -45,9 +45,9 @@ class Casing
 
 
     /**
-     * Get casingId
+     * Get casingId.
      *
-     * @return integer
+     * @return int
      */
     public function getCasingId()
     {
@@ -55,7 +55,7 @@ class Casing
     }
 
     /**
-     * Set casingFormat
+     * Set casingFormat.
      *
      * @param string $casingFormat
      *
@@ -69,7 +69,7 @@ class Casing
     }
 
     /**
-     * Get casingFormat
+     * Get casingFormat.
      *
      * @return string
      */
@@ -79,7 +79,7 @@ class Casing
     }
 
     /**
-     * Set casingColor
+     * Set casingColor.
      *
      * @param string $casingColor
      *
@@ -93,7 +93,7 @@ class Casing
     }
 
     /**
-     * Get casingColor
+     * Get casingColor.
      *
      * @return string
      */
@@ -103,7 +103,7 @@ class Casing
     }
 
     /**
-     * Set casingMaterial
+     * Set casingMaterial.
      *
      * @param string $casingMaterial
      *
@@ -117,7 +117,7 @@ class Casing
     }
 
     /**
-     * Get casingMaterial
+     * Get casingMaterial.
      *
      * @return string
      */

@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Billing
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="billing_id", type="integer")
      * @ORM\Id
@@ -22,7 +22,7 @@ class Billing
     private $billingId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="user_id", type="integer", nullable=false)
      */
@@ -58,4 +58,3 @@ class Billing
 
 
 }
-

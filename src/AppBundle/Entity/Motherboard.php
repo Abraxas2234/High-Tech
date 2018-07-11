@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Motherboard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="motherboard_id", type="integer")
      * @ORM\Id
@@ -59,9 +59,9 @@ class Motherboard
 
 
     /**
-     * Get motherboardId
+     * Get motherboardId.
      *
-     * @return integer
+     * @return int
      */
     public function getMotherboardId()
     {
@@ -69,7 +69,7 @@ class Motherboard
     }
 
     /**
-     * Set motherboardSocket
+     * Set motherboardSocket.
      *
      * @param string $motherboardSocket
      *
@@ -83,7 +83,7 @@ class Motherboard
     }
 
     /**
-     * Get motherboardSocket
+     * Get motherboardSocket.
      *
      * @return string
      */
@@ -93,7 +93,7 @@ class Motherboard
     }
 
     /**
-     * Set motherboardChipset
+     * Set motherboardChipset.
      *
      * @param string $motherboardChipset
      *
@@ -107,7 +107,7 @@ class Motherboard
     }
 
     /**
-     * Get motherboardChipset
+     * Get motherboardChipset.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class Motherboard
     }
 
     /**
-     * Set motherboardPorts
+     * Set motherboardPorts.
      *
      * @param string $motherboardPorts
      *
@@ -131,7 +131,7 @@ class Motherboard
     }
 
     /**
-     * Get motherboardPorts
+     * Get motherboardPorts.
      *
      * @return string
      */
@@ -141,7 +141,7 @@ class Motherboard
     }
 
     /**
-     * Set motherboardMaxFreq
+     * Set motherboardMaxFreq.
      *
      * @param string $motherboardMaxFreq
      *
@@ -155,7 +155,7 @@ class Motherboard
     }
 
     /**
-     * Get motherboardMaxFreq
+     * Get motherboardMaxFreq.
      *
      * @return string
      */
@@ -165,7 +165,7 @@ class Motherboard
     }
 
     /**
-     * Set motherboardSataController
+     * Set motherboardSataController.
      *
      * @param string $motherboardSataController
      *
@@ -179,7 +179,7 @@ class Motherboard
     }
 
     /**
-     * Get motherboardSataController
+     * Get motherboardSataController.
      *
      * @return string
      */

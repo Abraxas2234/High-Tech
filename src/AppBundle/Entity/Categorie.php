@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Categorie
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -31,9 +31,9 @@ class Categorie
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -41,7 +41,7 @@ class Categorie
     }
 
     /**
-     * Set name
+     * Set name.
      *
      * @param string $name
      *
@@ -55,7 +55,7 @@ class Categorie
     }
 
     /**
-     * Get name
+     * Get name.
      *
      * @return string
      */

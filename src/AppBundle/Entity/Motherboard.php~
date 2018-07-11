@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Motherboard
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="motherboard_id", type="integer")
      * @ORM\Id
@@ -58,4 +58,3 @@ class Motherboard
 
 
 }
-

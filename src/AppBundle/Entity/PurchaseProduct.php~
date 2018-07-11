@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class PurchaseProduct
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="purchase_id", type="integer")
      * @ORM\Id
@@ -22,21 +22,21 @@ class PurchaseProduct
     private $purchaseId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_id", type="integer", nullable=false)
      */
     private $productId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="products_number", type="integer", nullable=false)
      */
     private $productsNumber;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="total_price", type="integer", nullable=false)
      */
@@ -44,4 +44,3 @@ class PurchaseProduct
 
 
 }
-

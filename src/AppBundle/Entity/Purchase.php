@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Purchase
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="purchase_id", type="integer")
      * @ORM\Id
@@ -22,7 +22,7 @@ class Purchase
     private $purchaseId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="user_id", type="integer", nullable=false)
      */
@@ -38,9 +38,9 @@ class Purchase
 
 
     /**
-     * Get purchaseId
+     * Get purchaseId.
      *
-     * @return integer
+     * @return int
      */
     public function getPurchaseId()
     {
@@ -48,9 +48,9 @@ class Purchase
     }
 
     /**
-     * Set userId
+     * Set userId.
      *
-     * @param integer $userId
+     * @param int $userId
      *
      * @return Purchase
      */
@@ -62,9 +62,9 @@ class Purchase
     }
 
     /**
-     * Get userId
+     * Get userId.
      *
-     * @return integer
+     * @return int
      */
     public function getUserId()
     {
@@ -72,7 +72,7 @@ class Purchase
     }
 
     /**
-     * Set purchaseDate
+     * Set purchaseDate.
      *
      * @param \DateTime $purchaseDate
      *
@@ -86,7 +86,7 @@ class Purchase
     }
 
     /**
-     * Get purchaseDate
+     * Get purchaseDate.
      *
      * @return \DateTime
      */
