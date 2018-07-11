@@ -45,7 +45,9 @@ $textFont: 'Roboto', sans-serif;
 }
 
 .product-name {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .name {
@@ -68,6 +70,7 @@ $textFont: 'Roboto', sans-serif;
 }
 
 .reduction {
+    font-size: 21px;
     font-weight: 700;
     color: $red;
 }
@@ -78,8 +81,18 @@ $textFont: 'Roboto', sans-serif;
     opacity: 0.8;
 }
 
+.infos {
+    display: flex;
+    flex-direction: column;
+}
+
 .livraison {
     color: $black;
+}
+
+.stock {
+    color: $black;
+    font-size: 12px;
 }
 
 .spacer {
