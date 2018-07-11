@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Gpu
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="gpu_id", type="integer")
      * @ORM\Id
@@ -66,9 +66,9 @@ class Gpu
 
 
     /**
-     * Get gpuId
+     * Get gpuId.
      *
-     * @return integer
+     * @return int
      */
     public function getGpuId()
     {
@@ -76,7 +76,7 @@ class Gpu
     }
 
     /**
-     * Set gpuModel
+     * Set gpuModel.
      *
      * @param string $gpuModel
      *
@@ -90,7 +90,7 @@ class Gpu
     }
 
     /**
-     * Get gpuModel
+     * Get gpuModel.
      *
      * @return string
      */
@@ -100,7 +100,7 @@ class Gpu
     }
 
     /**
-     * Set gpuFrequency
+     * Set gpuFrequency.
      *
      * @param string $gpuFrequency
      *
@@ -114,7 +114,7 @@ class Gpu
     }
 
     /**
-     * Get gpuFrequency
+     * Get gpuFrequency.
      *
      * @return string
      */
@@ -124,7 +124,7 @@ class Gpu
     }
 
     /**
-     * Set gpuInterface
+     * Set gpuInterface.
      *
      * @param string $gpuInterface
      *
@@ -138,7 +138,7 @@ class Gpu
     }
 
     /**
-     * Get gpuInterface
+     * Get gpuInterface.
      *
      * @return string
      */
@@ -148,7 +148,7 @@ class Gpu
     }
 
     /**
-     * Set gpuMemory
+     * Set gpuMemory.
      *
      * @param string $gpuMemory
      *
@@ -162,7 +162,7 @@ class Gpu
     }
 
     /**
-     * Get gpuMemory
+     * Get gpuMemory.
      *
      * @return string
      */
@@ -172,7 +172,7 @@ class Gpu
     }
 
     /**
-     * Set gpuMemoryFrequency
+     * Set gpuMemoryFrequency.
      *
      * @param string $gpuMemoryFrequency
      *
@@ -186,7 +186,7 @@ class Gpu
     }
 
     /**
-     * Get gpuMemoryFrequency
+     * Get gpuMemoryFrequency.
      *
      * @return string
      */
@@ -196,7 +196,7 @@ class Gpu
     }
 
     /**
-     * Set gpuDetails
+     * Set gpuDetails.
      *
      * @param string $gpuDetails
      *
@@ -210,7 +210,7 @@ class Gpu
     }
 
     /**
-     * Get gpuDetails
+     * Get gpuDetails.
      *
      * @return string
      */

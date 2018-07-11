@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class PurchaseProduct
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="purchase_id", type="integer")
      * @ORM\Id
@@ -22,21 +22,21 @@ class PurchaseProduct
     private $purchaseId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_id", type="integer", nullable=false)
      */
     private $productId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="products_number", type="integer", nullable=false)
      */
     private $productsNumber;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="total_price", type="integer", nullable=false)
      */
@@ -45,9 +45,9 @@ class PurchaseProduct
 
 
     /**
-     * Get purchaseId
+     * Get purchaseId.
      *
-     * @return integer
+     * @return int
      */
     public function getPurchaseId()
     {
@@ -55,9 +55,9 @@ class PurchaseProduct
     }
 
     /**
-     * Set productId
+     * Set productId.
      *
-     * @param integer $productId
+     * @param int $productId
      *
      * @return PurchaseProduct
      */
@@ -69,9 +69,9 @@ class PurchaseProduct
     }
 
     /**
-     * Get productId
+     * Get productId.
      *
-     * @return integer
+     * @return int
      */
     public function getProductId()
     {
@@ -79,9 +79,9 @@ class PurchaseProduct
     }
 
     /**
-     * Set productsNumber
+     * Set productsNumber.
      *
-     * @param integer $productsNumber
+     * @param int $productsNumber
      *
      * @return PurchaseProduct
      */
@@ -93,9 +93,9 @@ class PurchaseProduct
     }
 
     /**
-     * Get productsNumber
+     * Get productsNumber.
      *
-     * @return integer
+     * @return int
      */
     public function getProductsNumber()
     {
@@ -103,9 +103,9 @@ class PurchaseProduct
     }
 
     /**
-     * Set totalPrice
+     * Set totalPrice.
      *
-     * @param integer $totalPrice
+     * @param int $totalPrice
      *
      * @return PurchaseProduct
      */
@@ -117,9 +117,9 @@ class PurchaseProduct
     }
 
     /**
-     * Get totalPrice
+     * Get totalPrice.
      *
-     * @return integer
+     * @return int
      */
     public function getTotalPrice()
     {

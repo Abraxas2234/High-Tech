@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Billing
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="billing_id", type="integer")
      * @ORM\Id
@@ -22,7 +22,7 @@ class Billing
     private $billingId;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="user_id", type="integer", nullable=false)
      */
@@ -59,9 +59,9 @@ class Billing
 
 
     /**
-     * Get billingId
+     * Get billingId.
      *
-     * @return integer
+     * @return int
      */
     public function getBillingId()
     {
@@ -69,9 +69,9 @@ class Billing
     }
 
     /**
-     * Set userId
+     * Set userId.
      *
-     * @param integer $userId
+     * @param int $userId
      *
      * @return Billing
      */
@@ -83,9 +83,9 @@ class Billing
     }
 
     /**
-     * Get userId
+     * Get userId.
      *
-     * @return integer
+     * @return int
      */
     public function getUserId()
     {
@@ -93,7 +93,7 @@ class Billing
     }
 
     /**
-     * Set billingAdress
+     * Set billingAdress.
      *
      * @param string $billingAdress
      *
@@ -107,7 +107,7 @@ class Billing
     }
 
     /**
-     * Get billingAdress
+     * Get billingAdress.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class Billing
     }
 
     /**
-     * Set billingZipCode
+     * Set billingZipCode.
      *
      * @param string $billingZipCode
      *
@@ -131,7 +131,7 @@ class Billing
     }
 
     /**
-     * Get billingZipCode
+     * Get billingZipCode.
      *
      * @return string
      */
@@ -141,7 +141,7 @@ class Billing
     }
 
     /**
-     * Set billingCity
+     * Set billingCity.
      *
      * @param string $billingCity
      *
@@ -155,7 +155,7 @@ class Billing
     }
 
     /**
-     * Get billingCity
+     * Get billingCity.
      *
      * @return string
      */
@@ -165,7 +165,7 @@ class Billing
     }
 
     /**
-     * Set billingCountry
+     * Set billingCountry.
      *
      * @param string $billingCountry
      *
@@ -179,7 +179,7 @@ class Billing
     }
 
     /**
-     * Get billingCountry
+     * Get billingCountry.
      *
      * @return string
      */

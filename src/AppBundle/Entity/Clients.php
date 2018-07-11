@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Clients
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="client_id", type="integer")
      * @ORM\Id
@@ -80,9 +80,9 @@ class Clients
 
 
     /**
-     * Get clientId
+     * Get clientId.
      *
-     * @return integer
+     * @return int
      */
     public function getClientId()
     {
@@ -90,7 +90,7 @@ class Clients
     }
 
     /**
-     * Set clientName
+     * Set clientName.
      *
      * @param string $clientName
      *
@@ -104,7 +104,7 @@ class Clients
     }
 
     /**
-     * Get clientName
+     * Get clientName.
      *
      * @return string
      */
@@ -114,7 +114,7 @@ class Clients
     }
 
     /**
-     * Set clientFirstname
+     * Set clientFirstname.
      *
      * @param string $clientFirstname
      *
@@ -128,7 +128,7 @@ class Clients
     }
 
     /**
-     * Get clientFirstname
+     * Get clientFirstname.
      *
      * @return string
      */
@@ -138,7 +138,7 @@ class Clients
     }
 
     /**
-     * Set clientPassword
+     * Set clientPassword.
      *
      * @param string $clientPassword
      *
@@ -152,7 +152,7 @@ class Clients
     }
 
     /**
-     * Get clientPassword
+     * Get clientPassword.
      *
      * @return string
      */
@@ -162,7 +162,7 @@ class Clients
     }
 
     /**
-     * Set clientPhone
+     * Set clientPhone.
      *
      * @param string $clientPhone
      *
@@ -176,7 +176,7 @@ class Clients
     }
 
     /**
-     * Get clientPhone
+     * Get clientPhone.
      *
      * @return string
      */
@@ -186,7 +186,7 @@ class Clients
     }
 
     /**
-     * Set clientAdress
+     * Set clientAdress.
      *
      * @param string $clientAdress
      *
@@ -200,7 +200,7 @@ class Clients
     }
 
     /**
-     * Get clientAdress
+     * Get clientAdress.
      *
      * @return string
      */
@@ -210,7 +210,7 @@ class Clients
     }
 
     /**
-     * Set clientZipCode
+     * Set clientZipCode.
      *
      * @param string $clientZipCode
      *
@@ -224,7 +224,7 @@ class Clients
     }
 
     /**
-     * Get clientZipCode
+     * Get clientZipCode.
      *
      * @return string
      */
@@ -234,7 +234,7 @@ class Clients
     }
 
     /**
-     * Set clientCity
+     * Set clientCity.
      *
      * @param string $clientCity
      *
@@ -248,7 +248,7 @@ class Clients
     }
 
     /**
-     * Get clientCity
+     * Get clientCity.
      *
      * @return string
      */
@@ -258,7 +258,7 @@ class Clients
     }
 
     /**
-     * Set clientCountry
+     * Set clientCountry.
      *
      * @param string $clientCountry
      *
@@ -272,7 +272,7 @@ class Clients
     }
 
     /**
-     * Get clientCountry
+     * Get clientCountry.
      *
      * @return string
      */

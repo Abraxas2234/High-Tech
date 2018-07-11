@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Product
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="id", type="integer")
      * @ORM\Id
@@ -22,14 +22,14 @@ class Product
     private $id;
 
     /**
-     * @var integer
+     * @var int|null
      *
      * @ORM\Column(name="id_categorie", type="integer", nullable=true)
      */
     private $idCategorie;
 
     /**
-     * @var string
+     * @var string|null
      *
      * @ORM\Column(name="name", type="string", length=255, nullable=true)
      */
@@ -87,9 +87,9 @@ class Product
 
 
     /**
-     * Get id
+     * Get id.
      *
-     * @return integer
+     * @return int
      */
     public function getId()
     {
@@ -97,13 +97,13 @@ class Product
     }
 
     /**
-     * Set idCategorie
+     * Set idCategorie.
      *
-     * @param integer $idCategorie
+     * @param int|null $idCategorie
      *
      * @return Product
      */
-    public function setIdCategorie($idCategorie)
+    public function setIdCategorie($idCategorie = null)
     {
         $this->idCategorie = $idCategorie;
 
@@ -111,9 +111,9 @@ class Product
     }
 
     /**
-     * Get idCategorie
+     * Get idCategorie.
      *
-     * @return integer
+     * @return int|null
      */
     public function getIdCategorie()
     {
@@ -121,13 +121,13 @@ class Product
     }
 
     /**
-     * Set name
+     * Set name.
      *
-     * @param string $name
+     * @param string|null $name
      *
      * @return Product
      */
-    public function setName($name)
+    public function setName($name = null)
     {
         $this->name = $name;
 
@@ -135,9 +135,9 @@ class Product
     }
 
     /**
-     * Get name
+     * Get name.
      *
-     * @return string
+     * @return string|null
      */
     public function getName()
     {
@@ -145,7 +145,7 @@ class Product
     }
 
     /**
-     * Set productDescription
+     * Set productDescription.
      *
      * @param string $productDescription
      *
@@ -159,7 +159,7 @@ class Product
     }
 
     /**
-     * Get productDescription
+     * Get productDescription.
      *
      * @return string
      */
@@ -169,7 +169,7 @@ class Product
     }
 
     /**
-     * Set productBrand
+     * Set productBrand.
      *
      * @param string $productBrand
      *
@@ -183,7 +183,7 @@ class Product
     }
 
     /**
-     * Get productBrand
+     * Get productBrand.
      *
      * @return string
      */
@@ -193,7 +193,7 @@ class Product
     }
 
     /**
-     * Set productPrice
+     * Set productPrice.
      *
      * @param string $productPrice
      *
@@ -207,7 +207,7 @@ class Product
     }
 
     /**
-     * Get productPrice
+     * Get productPrice.
      *
      * @return string
      */
@@ -217,7 +217,7 @@ class Product
     }
 
     /**
-     * Set productStock
+     * Set productStock.
      *
      * @param string $productStock
      *
@@ -231,7 +231,7 @@ class Product
     }
 
     /**
-     * Get productStock
+     * Get productStock.
      *
      * @return string
      */
@@ -241,7 +241,7 @@ class Product
     }
 
     /**
-     * Set productWeight
+     * Set productWeight.
      *
      * @param string $productWeight
      *
@@ -255,7 +255,7 @@ class Product
     }
 
     /**
-     * Get productWeight
+     * Get productWeight.
      *
      * @return string
      */
@@ -265,7 +265,7 @@ class Product
     }
 
     /**
-     * Set productDimensions
+     * Set productDimensions.
      *
      * @param string $productDimensions
      *
@@ -279,7 +279,7 @@ class Product
     }
 
     /**
-     * Get productDimensions
+     * Get productDimensions.
      *
      * @return string
      */
@@ -289,7 +289,7 @@ class Product
     }
 
     /**
-     * Set productDiscount
+     * Set productDiscount.
      *
      * @param string $productDiscount
      *
@@ -303,7 +303,7 @@ class Product
     }
 
     /**
-     * Get productDiscount
+     * Get productDiscount.
      *
      * @return string
      */

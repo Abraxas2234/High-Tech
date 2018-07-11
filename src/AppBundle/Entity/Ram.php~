@@ -1,0 +1,60 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Ram
+ *
+ * @ORM\Table(name="ram")
+ * @ORM\Entity
+ */
+class Ram
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="ram_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $ramId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ram_type", type="string", length=255, nullable=false)
+     */
+    private $ramType;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ram_capacity", type="string", length=255, nullable=false)
+     */
+    private $ramCapacity;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ram_frequency", type="string", length=255, nullable=false)
+     */
+    private $ramFrequency;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ram_timings", type="string", length=255, nullable=false)
+     */
+    private $ramTimings;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ram_tension", type="string", length=255, nullable=false)
+     */
+    private $ramTension;
+
+
+}

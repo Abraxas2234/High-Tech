@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Ram
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="ram_id", type="integer")
      * @ORM\Id
@@ -59,9 +59,9 @@ class Ram
 
 
     /**
-     * Get ramId
+     * Get ramId.
      *
-     * @return integer
+     * @return int
      */
     public function getRamId()
     {
@@ -69,7 +69,7 @@ class Ram
     }
 
     /**
-     * Set ramType
+     * Set ramType.
      *
      * @param string $ramType
      *
@@ -83,7 +83,7 @@ class Ram
     }
 
     /**
-     * Get ramType
+     * Get ramType.
      *
      * @return string
      */
@@ -93,7 +93,7 @@ class Ram
     }
 
     /**
-     * Set ramCapacity
+     * Set ramCapacity.
      *
      * @param string $ramCapacity
      *
@@ -107,7 +107,7 @@ class Ram
     }
 
     /**
-     * Get ramCapacity
+     * Get ramCapacity.
      *
      * @return string
      */
@@ -117,7 +117,7 @@ class Ram
     }
 
     /**
-     * Set ramFrequency
+     * Set ramFrequency.
      *
      * @param string $ramFrequency
      *
@@ -131,7 +131,7 @@ class Ram
     }
 
     /**
-     * Get ramFrequency
+     * Get ramFrequency.
      *
      * @return string
      */
@@ -141,7 +141,7 @@ class Ram
     }
 
     /**
-     * Set ramTimings
+     * Set ramTimings.
      *
      * @param string $ramTimings
      *
@@ -155,7 +155,7 @@ class Ram
     }
 
     /**
-     * Get ramTimings
+     * Get ramTimings.
      *
      * @return string
      */
@@ -165,7 +165,7 @@ class Ram
     }
 
     /**
-     * Set ramTension
+     * Set ramTension.
      *
      * @param string $ramTension
      *
@@ -179,7 +179,7 @@ class Ram
     }
 
     /**
-     * Get ramTension
+     * Get ramTension.
      *
      * @return string
      */

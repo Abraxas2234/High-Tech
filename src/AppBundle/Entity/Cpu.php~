@@ -1,0 +1,67 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Cpu
+ *
+ * @ORM\Table(name="cpu")
+ * @ORM\Entity
+ */
+class Cpu
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="cpu_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $cpuId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_core_number", type="string", length=255, nullable=false)
+     */
+    private $cpuCoreNumber;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_frequency", type="string", length=255, nullable=false)
+     */
+    private $cpuFrequency;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_cache", type="string", length=255, nullable=false)
+     */
+    private $cpuCache;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_architecture", type="string", length=255, nullable=false)
+     */
+    private $cpuArchitecture;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_socket", type="string", length=255, nullable=false)
+     */
+    private $cpuSocket;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cpu_thermal_dissipation", type="string", length=255, nullable=false)
+     */
+    private $cpuThermalDissipation;
+
+
+}

@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Products
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_id", type="integer")
      * @ORM\Id
@@ -43,14 +43,14 @@ class Products
     private $productBrand;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_price", type="integer", nullable=false)
      */
     private $productPrice;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_stock", type="integer", nullable=false)
      */
@@ -71,7 +71,7 @@ class Products
     private $productDimension;
 
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="product_discount", type="integer", nullable=false)
      */
@@ -87,9 +87,9 @@ class Products
 
 
     /**
-     * Get productId
+     * Get productId.
      *
-     * @return integer
+     * @return int
      */
     public function getProductId()
     {
@@ -97,7 +97,7 @@ class Products
     }
 
     /**
-     * Set productModel
+     * Set productModel.
      *
      * @param string $productModel
      *
@@ -111,7 +111,7 @@ class Products
     }
 
     /**
-     * Get productModel
+     * Get productModel.
      *
      * @return string
      */
@@ -121,7 +121,7 @@ class Products
     }
 
     /**
-     * Set productReference
+     * Set productReference.
      *
      * @param string $productReference
      *
@@ -135,7 +135,7 @@ class Products
     }
 
     /**
-     * Get productReference
+     * Get productReference.
      *
      * @return string
      */
@@ -145,7 +145,7 @@ class Products
     }
 
     /**
-     * Set productBrand
+     * Set productBrand.
      *
      * @param string $productBrand
      *
@@ -159,7 +159,7 @@ class Products
     }
 
     /**
-     * Get productBrand
+     * Get productBrand.
      *
      * @return string
      */
@@ -169,9 +169,9 @@ class Products
     }
 
     /**
-     * Set productPrice
+     * Set productPrice.
      *
-     * @param integer $productPrice
+     * @param int $productPrice
      *
      * @return Products
      */
@@ -183,9 +183,9 @@ class Products
     }
 
     /**
-     * Get productPrice
+     * Get productPrice.
      *
-     * @return integer
+     * @return int
      */
     public function getProductPrice()
     {
@@ -193,9 +193,9 @@ class Products
     }
 
     /**
-     * Set productStock
+     * Set productStock.
      *
-     * @param integer $productStock
+     * @param int $productStock
      *
      * @return Products
      */
@@ -207,9 +207,9 @@ class Products
     }
 
     /**
-     * Get productStock
+     * Get productStock.
      *
-     * @return integer
+     * @return int
      */
     public function getProductStock()
     {
@@ -217,7 +217,7 @@ class Products
     }
 
     /**
-     * Set productWeight
+     * Set productWeight.
      *
      * @param string $productWeight
      *
@@ -231,7 +231,7 @@ class Products
     }
 
     /**
-     * Get productWeight
+     * Get productWeight.
      *
      * @return string
      */
@@ -241,7 +241,7 @@ class Products
     }
 
     /**
-     * Set productDimension
+     * Set productDimension.
      *
      * @param string $productDimension
      *
@@ -255,7 +255,7 @@ class Products
     }
 
     /**
-     * Get productDimension
+     * Get productDimension.
      *
      * @return string
      */
@@ -265,9 +265,9 @@ class Products
     }
 
     /**
-     * Set productDiscount
+     * Set productDiscount.
      *
-     * @param integer $productDiscount
+     * @param int $productDiscount
      *
      * @return Products
      */
@@ -279,9 +279,9 @@ class Products
     }
 
     /**
-     * Get productDiscount
+     * Get productDiscount.
      *
-     * @return integer
+     * @return int
      */
     public function getProductDiscount()
     {
@@ -289,7 +289,7 @@ class Products
     }
 
     /**
-     * Set productDescription
+     * Set productDescription.
      *
      * @param string $productDescription
      *
@@ -303,7 +303,7 @@ class Products
     }
 
     /**
-     * Get productDescription
+     * Get productDescription.
      *
      * @return string
      */

@@ -1,0 +1,46 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * PurchaseProduct
+ *
+ * @ORM\Table(name="purchase_product")
+ * @ORM\Entity
+ */
+class PurchaseProduct
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="purchase_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $purchaseId;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="product_id", type="integer", nullable=false)
+     */
+    private $productId;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="products_number", type="integer", nullable=false)
+     */
+    private $productsNumber;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="total_price", type="integer", nullable=false)
+     */
+    private $totalPrice;
+
+
+}

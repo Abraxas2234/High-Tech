@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class PowerSupply
 {
     /**
-     * @var integer
+     * @var int
      *
      * @ORM\Column(name="power_supply_id", type="integer")
      * @ORM\Id
@@ -45,9 +45,9 @@ class PowerSupply
 
 
     /**
-     * Get powerSupplyId
+     * Get powerSupplyId.
      *
-     * @return integer
+     * @return int
      */
     public function getPowerSupplyId()
     {
@@ -55,7 +55,7 @@ class PowerSupply
     }
 
     /**
-     * Set powerSupplyPower
+     * Set powerSupplyPower.
      *
      * @param string $powerSupplyPower
      *
@@ -69,7 +69,7 @@ class PowerSupply
     }
 
     /**
-     * Get powerSupplyPower
+     * Get powerSupplyPower.
      *
      * @return string
      */
@@ -79,7 +79,7 @@ class PowerSupply
     }
 
     /**
-     * Set powerSupplyModularity
+     * Set powerSupplyModularity.
      *
      * @param string $powerSupplyModularity
      *
@@ -93,7 +93,7 @@ class PowerSupply
     }
 
     /**
-     * Get powerSupplyModularity
+     * Get powerSupplyModularity.
      *
      * @return string
      */
@@ -103,7 +103,7 @@ class PowerSupply
     }
 
     /**
-     * Set powerSupplyCertification
+     * Set powerSupplyCertification.
      *
      * @param string $powerSupplyCertification
      *
@@ -117,7 +117,7 @@ class PowerSupply
     }
 
     /**
-     * Get powerSupplyCertification
+     * Get powerSupplyCertification.
      *
      * @return string
      */
