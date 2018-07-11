@@ -1,0 +1,89 @@
+// Variables fonts, colors and sizing
+
+//Colors
+$black: #555;
+$red: #CE0234;
+$blue: #0084b4;
+$rgbaBlue: rgba(0, 132, 180, 1);
+$midblue: #38475A;
+$darkblue: #232F3E;
+$lightBlue: #c0deed;
+$rgbaLightBlue: rgba(192, 222, 237, 1);
+$grey: #9B9B9B;
+$rgbaGrey: rgba(155, 155, 155, 1);
+$lightGrey: #DBDBDB;
+$rgbaLightGrey: rgba(219, 219, 219, 1);
+$white: #ffffff;
+$rgbaWhite: rgba(255, 255, 255, 1);
+
+//Fonts
+$titleFont: 'Raleway', sans-serif;
+$textFont: 'Roboto', sans-serif;
+// $titleThin
+// $titleFat
+// $textThin
+// $textFat
+
+.container {
+    font-family: $textFont;
+    font-weight: 400;
+}
+
+.productbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.product-img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: $lightBlue;
+    margin: 20px;
+}
+
+.product-name {
+    
+}
+
+.name {
+    margin: 20px;
+
+    a {
+        color: $blue;
+        transition: ease .3s;
+
+        &:hover {
+            color: $red;
+            text-decoration: none;
+            transition: ease .3s;
+        }
+    }
+}
+
+.product-price {
+    margin: 20px;
+}
+
+.reduction {
+    font-weight: 700;
+    color: $red;
+}
+
+.fullprice {
+    text-decoration: line-through;
+    color: $black;
+    opacity: 0.8;
+}
+
+.livraison {
+    color: $black;
+}
+
+.spacer {
+    height: 1px;
+    width: 100%;
+    background-color: $lightGrey;
+}

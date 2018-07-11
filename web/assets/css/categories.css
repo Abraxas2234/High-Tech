@@ -1,0 +1,46 @@
+body {
+  background-color: #ffffff; }
+
+.categories {
+  background-color: #efefef;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  height: 20vh; }
+  .categories:hover {
+    background-color: #232F3E;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+
+.productbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .productbox a {
+    color: #CE0234;
+    font-family: "Raleway", sans-serif;
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+    .productbox a:hover {
+      color: #ffffff;
+      text-decoration: none;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }

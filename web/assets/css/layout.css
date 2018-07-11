@@ -1,0 +1,153 @@
+.body {
+  font-family: "Roboto", sans-serif; }
+
+h5 {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem; }
+
+.navbar {
+  background-color: #232F3E; }
+
+.nav-link {
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem; }
+
+.dropdown-menu.show {
+  background-color: #DBDBDB;
+  opacity: 0.95;
+  width: 250px; }
+  .dropdown-menu.show .dropdown-item {
+    opacity: 1; }
+    .dropdown-menu.show .dropdown-item:hover {
+      background-color: #232F3E;
+      color: #ffffff; }
+
+.resize-input {
+  height: 30px;
+  width: 350px; }
+
+.footer {
+  width: 100%;
+  height: auto;
+  line-height: 60px;
+  background-color: #232F3E; }
+
+.text-bar {
+  height: 50px;
+  background-color: #38475A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+
+.return-top {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  width: 100%;
+  -webkit-transition: ease 0.3s;
+  -o-transition: ease 0.3s;
+  transition: ease 0.3s; }
+  .return-top:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #4F5E72;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+
+.container-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly; }
+
+.about-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .about-us a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5); }
+    .about-us a:hover {
+      color: rgba(255, 255, 255, 0.8); }
+
+.sellout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .sellout a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5); }
+    .sellout a:hover {
+      color: rgba(255, 255, 255, 0.8); }
+
+.howtopay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .howtopay a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5); }
+    .howtopay a:hover {
+      color: rgba(255, 255, 255, 0.8); }
+
+.help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+  .help a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5); }
+    .help a:hover {
+      color: rgba(255, 255, 255, 0.8); }

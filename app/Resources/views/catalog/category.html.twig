@@ -1,34 +1,31 @@
-{% extends 'base.html.twig' %}
+{% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
-  <style>
-    .productbox {
-      margin: 10px;
-      padding: 20px 7px;
-      text-align: center;
-      border: 2px black solid;
-      border-radius: 9px;
-    }
-    button {
-      border-radius: 9px;
-      margin: 15px 7px 7px;
-      padding: 5px;
-    }
-  </style>
+{{ parent() }}
+  <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}">
 {% endblock %}
 
 {% block body %}
-  <div></div>
-  <div id="quizbox">
-    {% for product in products if product.idCategorie == id %}
-      <div class="productbox">
-        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
-        <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a><br>
-        <p>Stock:
-          {{ product.productStock }}</p>
-        <p>Prix:
-          {{ product.productPrice }}</p>
-      </div>
-    {% endfor %}
-  </div>
+    <div class="container">
+        {% for product in products if product.idCategorie == id %}
+            <div class="row">
+                <div class="productbox">
+                    <div class="product-img col-lg-2">
+                        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/>
+                    </div>
+                    <div class="product-name col-lg-10">
+                        <div class="name">
+                            <a href="#">
+                                <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a>
+                            </a>
+                        </div>
+                        <div class="product-price">
+                            <span class="reduction">{{ product.productPrice }}{{ product.productStock }} </span><span class="fullprice">39.99 EUR</span><br>
+                            <span class="livraison">Livraison gratuite possible (voir fiche produit).</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer"></div>
+        {% endfor %}
 {% endblock %}
