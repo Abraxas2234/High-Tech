@@ -1,0 +1,61 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Motherboard
+ *
+ * @ORM\Table(name="motherboard")
+ * @ORM\Entity
+ */
+class Motherboard
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="motherboard_id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $motherboardId;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motherboard_socket", type="string", length=255, nullable=false)
+     */
+    private $motherboardSocket;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motherboard_chipset", type="string", length=255, nullable=false)
+     */
+    private $motherboardChipset;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motherboard_ports", type="string", length=255, nullable=false)
+     */
+    private $motherboardPorts;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motherboard_max_freq", type="string", length=255, nullable=false)
+     */
+    private $motherboardMaxFreq;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="motherboard_sata_controller", type="string", length=255, nullable=false)
+     */
+    private $motherboardSataController;
+
+
+}
+

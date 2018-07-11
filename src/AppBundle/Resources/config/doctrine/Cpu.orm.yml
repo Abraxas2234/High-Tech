@@ -1,75 +1,57 @@
-AppBundle\Entity\Product:
+AppBundle\Entity\Cpu:
     type: entity
-    table: product
+    table: cpu
     id:
-        id:
+        cpuId:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
+            column: cpu_id
             generator:
                 strategy: IDENTITY
     fields:
-        idCategorie:
-            type: integer
-            nullable: true
-            options:
-                unsigned: false
-            column: id_categorie
-        name:
-            type: string
-            nullable: true
-            length: 255
-            options:
-                fixed: false
-        productDescription:
+        cpuCoreNumber:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_description
-        productBrand:
+            column: cpu_core_number
+        cpuFrequency:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_brand
-        productPrice:
+            column: cpu_frequency
+        cpuCache:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_price
-        productStock:
+            column: cpu_cache
+        cpuArchitecture:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_stock
-        productWeight:
+            column: cpu_architecture
+        cpuSocket:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_weight
-        productDimensions:
+            column: cpu_socket
+        cpuThermalDissipation:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_dimensions
-        productDiscount:
-            type: string
-            nullable: false
-            length: 255
-            options:
-                fixed: false
-            column: product_discount
+            column: cpu_thermal_dissipation
     lifecycleCallbacks: {  }

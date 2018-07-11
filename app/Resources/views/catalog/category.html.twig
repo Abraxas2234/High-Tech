@@ -11,16 +11,16 @@
             <div class="row">
                 <div class="productbox">
                     <div class="product-img col-lg-2">
-                        Image
+                        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/>
                     </div>
                     <div class="product-name col-lg-10">
                         <div class="name">
                             <a href="#">
-                                {{ product.name }}
+                                <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a>
                             </a>
                         </div>
                         <div class="product-price">
-                            <span class="reduction">19.99 EUR </span><span class="fullprice">39.99 EUR</span><br>
+                            <span class="reduction">{{ product.productPrice }}{{ product.productStock }} </span><span class="fullprice">39.99 EUR</span><br>
                             <span class="livraison">Livraison gratuite possible (voir fiche produit).</span>
                         </div>
                     </div>
@@ -28,5 +28,4 @@
             </div>
             <div class="spacer"></div>
         {% endfor %}
-    </div>
 {% endblock %}

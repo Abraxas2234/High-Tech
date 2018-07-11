@@ -1,0 +1,128 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div></div>
+  <div id="quizbox">
+    {% for product in products if product.id == id %}
+      <div class="productbox">
+
+        <h3>{{ product.name }}</h3>
+        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
+        <p>{{ product.productDescription }}</p>
+        <p>Prix:
+          {{ product.productPrice }}
+          €</p>
+        <p>Stock:
+          {{ product.productStock }}</p>
+        <p>Poid:
+          {{ product.productWeight }}</p>
+        <p>Dimensions:
+          {{ product.productDimensions }}</p>
+        <p>Promo:
+          {{ product.productDiscount }}</p>
+
+        {% for casing in casings %}
+          {% if product.id == casing.casingId %}
+            <p>Format du boitier:
+              {{ casing.casingFormat }}</p>
+            <p>Couleur extérieure:
+              {{ casing.casingColor }}</p>
+            <p>Matériaux:
+              {{ casing.casingMaterial }}</p>
+          {% endif %}
+        {% endfor %}
+
+        {% for cpu in cpus if product.id == cpu.cpuId %}
+          <p>Nombre de coeurs:
+            {{ cpu.cpuCoreNumber }}</p>
+          <p>Fréquence:
+            {{ cpu.cpuFrequency }}</p>
+          <p>Cache total:
+            {{ cpu.cpuCache }}</p>
+          <p>Micro-architecture:
+            {{ cpu.cpuArchitecture }}</p>
+          <p>Socket:
+            {{ cpu.cpuSocket }}</p>
+          <p>Valeur de dissipation:
+            {{ cpu.cpuThermalDissipation }}</p>
+        {% endfor %}
+
+        {% for gpu in gpus %}
+          {% if product.id == gpu.gpuId %}
+            <p>Puce graphique:
+              {{ gpu.gpuModel }}</p>
+            <p>Fréquence:
+              {{ gpu.gpuFrequency }}</p>
+            <p>Interface:
+              {{ gpu.gpuInterface }}</p>
+            <p>Quantité mémoire:
+              {{ gpu.gpuMemory }}</p>
+            <p>Fréquence mémoire:
+              {{ gpu.gpuMemoryFrequency }}</p>
+            <p>Détails:
+              {{ gpu.gpuDetails }}</p>
+          {% endif %}
+        {% endfor %}
+
+        {% for motherboard in motherboards %}
+          {% if product.id == motherboard.motherboardId %}
+            <p>Socket:
+              {{ motherboard.motherboardSocket }}</p>
+            <p>Contrôleur principal:
+              {{ motherboard.motherboardChipset }}</p>
+            <p>Port(s) PCI-Express 16x:
+              {{ motherboard.motherboardPorts }}</p>
+            <p>Fréquence mémoire maximale:
+              {{ motherboard.motherboardMaxFreq }}</p>
+            <p>Vitesse du contrôleur Serial-ATA:
+              {{ motherboard.motherboardSataController }}</p>
+          {% endif %}
+        {% endfor %}
+
+        {% for power in powers %}
+          {% if product.id == power.powerSupplyId %}
+            <p>Puissance:
+              {{ power.powerSupplyPower }}</p>
+            <p>Modulaire:
+              {{ power.powerSupplyModularity }}</p>
+            <p>Certification 80+:
+              {{ power.powerSupplyCertification }}</p>
+          {% endif %}
+        {% endfor %}
+
+        {% for ram in rams %}
+          {% if product.id == ram.ramId %}
+            <p>Type:
+              {{ ram.ramType }}</p>
+            <p>Capacité totale:
+              {{ ram.ramCapacity }}</p>
+            <p>Fréquence:
+              {{ ram.ramFrequency }}</p>
+            <p>Timings:
+              {{ ram.ramTimings }}</p>
+            <p>Tension (certification):
+              {{ ram.ramTension }}</p>
+          {% endif %}
+        {% endfor %}
+
+      </div>
+    {% endfor %}
+  </div>
+{% endblock %}

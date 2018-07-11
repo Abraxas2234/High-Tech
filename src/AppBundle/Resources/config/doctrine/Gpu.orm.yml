@@ -1,75 +1,57 @@
-AppBundle\Entity\Product:
+AppBundle\Entity\Gpu:
     type: entity
-    table: product
+    table: gpu
     id:
-        id:
+        gpuId:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
+            column: gpu_id
             generator:
                 strategy: IDENTITY
     fields:
-        idCategorie:
-            type: integer
-            nullable: true
-            options:
-                unsigned: false
-            column: id_categorie
-        name:
-            type: string
-            nullable: true
-            length: 255
-            options:
-                fixed: false
-        productDescription:
+        gpuModel:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_description
-        productBrand:
+            column: gpu_model
+        gpuFrequency:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_brand
-        productPrice:
+            column: gpu_frequency
+        gpuInterface:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_price
-        productStock:
+            column: gpu_interface
+        gpuMemory:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_stock
-        productWeight:
+            column: gpu_memory
+        gpuMemoryFrequency:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_weight
-        productDimensions:
+            column: gpu_memory_frequency
+        gpuDetails:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_dimensions
-        productDiscount:
-            type: string
-            nullable: false
-            length: 255
-            options:
-                fixed: false
-            column: product_discount
+            column: gpu_details
     lifecycleCallbacks: {  }

@@ -1,75 +1,71 @@
-AppBundle\Entity\Product:
+AppBundle\Entity\Clients:
     type: entity
-    table: product
+    table: clients
     id:
-        id:
+        clientId:
             type: integer
             nullable: false
             options:
                 unsigned: false
             id: true
+            column: client_id
             generator:
                 strategy: IDENTITY
     fields:
-        idCategorie:
-            type: integer
-            nullable: true
-            options:
-                unsigned: false
-            column: id_categorie
-        name:
-            type: string
-            nullable: true
-            length: 255
-            options:
-                fixed: false
-        productDescription:
+        clientName:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_description
-        productBrand:
+            column: client_name
+        clientFirstname:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_brand
-        productPrice:
+            column: client_firstname
+        clientPassword:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_price
-        productStock:
+            column: client_password
+        clientPhone:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_stock
-        productWeight:
+            column: client_phone
+        clientAdress:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_weight
-        productDimensions:
+            column: client_adress
+        clientZipCode:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_dimensions
-        productDiscount:
+            column: client_zip_code
+        clientCity:
             type: string
             nullable: false
             length: 255
             options:
                 fixed: false
-            column: product_discount
+            column: client_city
+        clientCountry:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: client_country
     lifecycleCallbacks: {  }
