@@ -1,0 +1,50 @@
+AppBundle\Entity\Motherboard:
+    type: entity
+    table: motherboard
+    id:
+        motherboardId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: motherboard_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        motherboardSocket:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: motherboard_socket
+        motherboardChipset:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: motherboard_chipset
+        motherboardPorts:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: motherboard_ports
+        motherboardMaxFreq:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: motherboard_max_freq
+        motherboardSataController:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: motherboard_sata_controller
+    lifecycleCallbacks: {  }

@@ -1,0 +1,25 @@
+AppBundle\Entity\Purchase:
+    type: entity
+    table: purchase
+    id:
+        purchaseId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            column: purchase_id
+            generator:
+                strategy: IDENTITY
+    fields:
+        userId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: user_id
+        purchaseDate:
+            type: date
+            nullable: false
+            column: purchase_date
+    lifecycleCallbacks: {  }

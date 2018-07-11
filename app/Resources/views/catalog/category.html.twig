@@ -1,18 +1,39 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
+<<<<<<< HEAD
 {{ parent() }}
   <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}">
+=======
+  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
+>>>>>>> bdcc962d1b2810363977829e31b0f4b1cf11d74b
 {% endblock %}
 
 {% block body %}
-  <div>
-  </div>
+  <div></div>
   <div id="quizbox">
-  {% for product in products if product.idCategorie == id %}
-  <div class="productbox">
-      {{ product.name }}<br>
-  </div>
-  {% endfor %}
+    {% for product in products if product.idCategorie == id %}
+      <div class="productbox">
+        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
+        <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a><br>
+        <p>Stock:
+          {{ product.productStock }}</p>
+        <p>Prix:
+          {{ product.productPrice }}</p>
+      </div>
+    {% endfor %}
   </div>
 {% endblock %}

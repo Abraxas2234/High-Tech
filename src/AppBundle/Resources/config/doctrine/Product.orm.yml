@@ -23,4 +23,53 @@ AppBundle\Entity\Product:
             length: 255
             options:
                 fixed: false
+        productDescription:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_description
+        productBrand:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_brand
+        productPrice:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_price
+        productStock:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_stock
+        productWeight:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_weight
+        productDimensions:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_dimensions
+        productDiscount:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+            column: product_discount
     lifecycleCallbacks: {  }

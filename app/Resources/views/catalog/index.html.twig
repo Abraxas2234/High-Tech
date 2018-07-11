@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
+<<<<<<< HEAD
 {{ parent() }}
 	<link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}">
 {% endblock %}
@@ -37,3 +38,31 @@
 		{% endfor %}
     </div>
 {% endblock %}
+=======
+  <style>
+    .productbox {
+      margin: 10px;
+      padding: 20px 7px;
+      text-align: center;
+      border: 2px black solid;
+      border-radius: 9px;
+    }
+    button {
+      border-radius: 9px;
+      margin: 15px 7px 7px;
+      padding: 5px;
+    }
+  </style>
+{% endblock %}
+
+{% block body %}
+  <div id="quizbox">
+
+    {% for categorie in categories %}
+      <div class="productbox">
+        <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a><br>
+      </div>
+    {% endfor %}<br>
+
+  {% endblock %}
+>>>>>>> bdcc962d1b2810363977829e31b0f4b1cf11d74b
