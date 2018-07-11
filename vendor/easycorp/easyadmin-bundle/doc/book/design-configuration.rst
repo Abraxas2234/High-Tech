@@ -67,6 +67,12 @@ choice for admin applications. If you prefer a lighter alternative, add the
 .. image:: ../images/easyadmin-design-color-scheme-light.png
    :alt: The default backend homepage using the light color scheme
 
+.. caution::
+
+    The ``light`` color scheme is deprecated since 1.x version and it will be
+    removed in EasyAdmin 2.0. Always use ``dark`` as the value of the
+    ``color_scheme`` option.
+
 Adding Custom Web Assets
 ------------------------
 
@@ -186,3 +192,7 @@ locale of the application is ``ar`` (Arabic), ``fa`` (Persian) or ``he``
 .. _`Bootstrap 3`: https://github.com/twbs/bootstrap
 .. _`jQuery`: https://github.com/jquery/jquery
 .. _`Font Awesome icons`: https://github.com/FortAwesome/Font-Awesome
+
+-----
+
+Next chapter: :doc:`list-search-show-configuration`
