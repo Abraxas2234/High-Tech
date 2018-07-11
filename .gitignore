@@ -39,3 +39,6 @@
 
 # Vendor
 /vendor/*
+
+#Parameters
+/app/config/parameters.yml
