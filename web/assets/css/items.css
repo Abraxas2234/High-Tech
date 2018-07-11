@@ -42,7 +42,8 @@
     color: #0084b4;
     -webkit-transition: ease .3s;
     -o-transition: ease .3s;
-    transition: ease .3s; }
+    transition: ease .3s;
+    font-size: 21px; }
     .name a:hover {
       color: #CE0234;
       text-decoration: none;
