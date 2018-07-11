@@ -46,3 +46,6 @@
 #IDE
 .idea
 .vscode/*
+
+#SCSS
+/prepros-6.config
