@@ -9,12 +9,12 @@
 
 {% block header %}
     <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
+        <div class="container-perso">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-                <a class="navbar-brand" href="#">Logo</a>
+                <img class="logo" src="{{ asset('assets/img/logoessai1.png') }}">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Adresse<span class="sr-only"></span></a>
@@ -27,6 +27,17 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
+                <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Mon compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Souhaits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Panier</a>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -43,17 +54,6 @@
                     </ul>
                     <input class="form-control mr-sm-2 resize-input" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mon compte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Souhaits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Panier</a>
-                        </li>
-                    </ul>
                 </form>
             </div>
         </div>

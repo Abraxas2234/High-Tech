@@ -28,6 +28,12 @@ $textFont: 'Roboto', sans-serif;
     font-family: $textFont;
 }
 
+.container-perso {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 h5 {
     color: $white;
     font-family: $titleFont;
@@ -37,6 +43,56 @@ h5 {
 //NAVBAR -----------------------------------
 .navbar {
     background-color: $darkblue;
+
+    a {
+        border: 1px solid transparent;
+        transition: ease 0.3s;
+
+        &:hover {
+            border: 1px solid $red;
+            transition: ease 0.3s;
+        }
+    }
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+}
+
+.form-control {
+    border-radius: 0px;
+
+    &:focus {
+        color: #555;
+        background-color: #fff;
+        border-color: $red;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(206, 2, 53,.25);
+    }
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: $white;
+    margin: 10px;
+
+    &:hover {
+        color: $red;
+    }
+}
+
+.btn-outline-primary {
+    color: $red;
+    background-color: transparent;
+    background-image: none;
+    border-color: $red;
+    border-radius: 0px;    
+
+    &:hover {
+        color: $white;
+        border-color: $red;
+        background-color: $red;
+    }
 }
 
 .nav-link {
@@ -114,9 +170,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -133,9 +192,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -152,9 +214,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            transition: ease .3s;
+            text-decoration: none;
         }
     }
 }
@@ -171,9 +236,12 @@ h5 {
         font-family: $textFont;
         font-size: 0.9rem;
         color: rgba(255,255,255,.5);
+        transition: ease .3s;
 
         &:hover {
-            color: rgba(255,255,255,0.8);
+            color: $red;
+            text-decoration: none;
+            transition: ease .3s;
         }
     }
 }

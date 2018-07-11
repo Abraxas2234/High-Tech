@@ -1,6 +1,11 @@
 .body {
   font-family: "Roboto", sans-serif; }
 
+.container-perso {
+  width: 100%;
+  margin-left: 20px;
+  margin-right: 20px; }
+
 h5 {
   color: #ffffff;
   font-family: "Raleway", sans-serif;
@@ -8,6 +13,47 @@ h5 {
 
 .navbar {
   background-color: #232F3E; }
+  .navbar a {
+    border: 1px solid transparent;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+    .navbar a:hover {
+      border: 1px solid #CE0234;
+      -webkit-transition: ease 0.3s;
+      -o-transition: ease 0.3s;
+      transition: ease 0.3s; }
+
+.logo {
+  width: 80px;
+  height: 80px; }
+
+.form-control {
+  border-radius: 0px; }
+  .form-control:focus {
+    color: #555;
+    background-color: #fff;
+    border-color: #CE0234;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+  margin: 10px; }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #CE0234; }
+
+.btn-outline-primary {
+  color: #CE0234;
+  background-color: transparent;
+  background-image: none;
+  border-color: #CE0234;
+  border-radius: 0px; }
+  .btn-outline-primary:hover {
+    color: #ffffff;
+    border-color: #CE0234;
+    background-color: #CE0234; }
 
 .nav-link {
   font-family: "Raleway", sans-serif;
@@ -91,9 +137,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .about-us a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .sellout {
   display: -webkit-box;
@@ -110,9 +163,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .sellout a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .howtopay {
   display: -webkit-box;
@@ -129,9 +189,16 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .howtopay a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s;
+      text-decoration: none; }
 
 .help {
   display: -webkit-box;
@@ -148,6 +215,13 @@ h5 {
     margin-bottom: -15px;
     font-family: "Roboto", sans-serif;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
     .help a:hover {
-      color: rgba(255, 255, 255, 0.8); }
+      color: #CE0234;
+      text-decoration: none;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s; }
