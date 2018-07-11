@@ -37,4 +37,7 @@
 /composer.phar
 
 # Sessions
-var/sessions/*
+var/*
+
+# Vendor
+vendor/*
