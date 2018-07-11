@@ -43,4 +43,86 @@ class Casing
     private $casingMaterial;
 
 
+
+    /**
+     * Get casingId.
+     *
+     * @return int
+     */
+    public function getCasingId()
+    {
+        return $this->casingId;
+    }
+
+    /**
+     * Set casingFormat.
+     *
+     * @param string $casingFormat
+     *
+     * @return Casing
+     */
+    public function setCasingFormat($casingFormat)
+    {
+        $this->casingFormat = $casingFormat;
+
+        return $this;
+    }
+
+    /**
+     * Get casingFormat.
+     *
+     * @return string
+     */
+    public function getCasingFormat()
+    {
+        return $this->casingFormat;
+    }
+
+    /**
+     * Set casingColor.
+     *
+     * @param string $casingColor
+     *
+     * @return Casing
+     */
+    public function setCasingColor($casingColor)
+    {
+        $this->casingColor = $casingColor;
+
+        return $this;
+    }
+
+    /**
+     * Get casingColor.
+     *
+     * @return string
+     */
+    public function getCasingColor()
+    {
+        return $this->casingColor;
+    }
+
+    /**
+     * Set casingMaterial.
+     *
+     * @param string $casingMaterial
+     *
+     * @return Casing
+     */
+    public function setCasingMaterial($casingMaterial)
+    {
+        $this->casingMaterial = $casingMaterial;
+
+        return $this;
+    }
+
+    /**
+     * Get casingMaterial.
+     *
+     * @return string
+     */
+    public function getCasingMaterial()
+    {
+        return $this->casingMaterial;
+    }
 }

@@ -57,4 +57,134 @@ class Motherboard
     private $motherboardSataController;
 
 
+
+    /**
+     * Get motherboardId.
+     *
+     * @return int
+     */
+    public function getMotherboardId()
+    {
+        return $this->motherboardId;
+    }
+
+    /**
+     * Set motherboardSocket.
+     *
+     * @param string $motherboardSocket
+     *
+     * @return Motherboard
+     */
+    public function setMotherboardSocket($motherboardSocket)
+    {
+        $this->motherboardSocket = $motherboardSocket;
+
+        return $this;
+    }
+
+    /**
+     * Get motherboardSocket.
+     *
+     * @return string
+     */
+    public function getMotherboardSocket()
+    {
+        return $this->motherboardSocket;
+    }
+
+    /**
+     * Set motherboardChipset.
+     *
+     * @param string $motherboardChipset
+     *
+     * @return Motherboard
+     */
+    public function setMotherboardChipset($motherboardChipset)
+    {
+        $this->motherboardChipset = $motherboardChipset;
+
+        return $this;
+    }
+
+    /**
+     * Get motherboardChipset.
+     *
+     * @return string
+     */
+    public function getMotherboardChipset()
+    {
+        return $this->motherboardChipset;
+    }
+
+    /**
+     * Set motherboardPorts.
+     *
+     * @param string $motherboardPorts
+     *
+     * @return Motherboard
+     */
+    public function setMotherboardPorts($motherboardPorts)
+    {
+        $this->motherboardPorts = $motherboardPorts;
+
+        return $this;
+    }
+
+    /**
+     * Get motherboardPorts.
+     *
+     * @return string
+     */
+    public function getMotherboardPorts()
+    {
+        return $this->motherboardPorts;
+    }
+
+    /**
+     * Set motherboardMaxFreq.
+     *
+     * @param string $motherboardMaxFreq
+     *
+     * @return Motherboard
+     */
+    public function setMotherboardMaxFreq($motherboardMaxFreq)
+    {
+        $this->motherboardMaxFreq = $motherboardMaxFreq;
+
+        return $this;
+    }
+
+    /**
+     * Get motherboardMaxFreq.
+     *
+     * @return string
+     */
+    public function getMotherboardMaxFreq()
+    {
+        return $this->motherboardMaxFreq;
+    }
+
+    /**
+     * Set motherboardSataController.
+     *
+     * @param string $motherboardSataController
+     *
+     * @return Motherboard
+     */
+    public function setMotherboardSataController($motherboardSataController)
+    {
+        $this->motherboardSataController = $motherboardSataController;
+
+        return $this;
+    }
+
+    /**
+     * Get motherboardSataController.
+     *
+     * @return string
+     */
+    public function getMotherboardSataController()
+    {
+        return $this->motherboardSataController;
+    }
 }
