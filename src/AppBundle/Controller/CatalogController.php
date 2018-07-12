@@ -45,6 +45,7 @@ class CatalogController extends Controller
     public function showProduct($id)
     {
       $em = $this->getDoctrine()->getManager();
+      $categories = $em->getRepository("AppBundle:Categorie")->findAll();
       $products = $em->getRepository('AppBundle:Product')
         ->findAll();
       $casings = $em->getRepository('AppBundle:Casing')
@@ -61,6 +62,7 @@ class CatalogController extends Controller
         ->findAll();
 
         return $this->render('catalog/product.html.twig', [
+            'categories' => $categories,
             'products' => $products,
             'casings' => $casings,
             'cpus' => $cpus,

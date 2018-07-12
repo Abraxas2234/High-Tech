@@ -6,25 +6,38 @@
 {% endblock %}
 
 {% block body %}
-  <div></div>
-  <div id="quizbox">
-    {% for product in products if product.id == id %}
-      <div class="productbox">
+    <div class="container">
+        {% for product in products if product.id == id %}
+            <div class="title">
+                <h1>{{ product.name }}</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
+                </div>
+                <div class="col-lg-6">
+                    <p>{{ product.productDescription }}</p>
+                    <p>Poid:
+                        {{ product.productWeight }}</p>
+                    <p>Dimensions:
+                        {{ product.productDimensions }}</p>
+                </div>
+                <div class="col-lg-2">
+                    <p>Prix:
+                        {{ product.productPrice }}€
+                    </p>
+                    <p>Stock:
+                        {{ product.productStock }}</p>
+                        <p>Promo:
+                        {{ product.productDiscount }}</p>
+                </div>
+            </div>
 
-        <h3>{{ product.name }}</h3>
-        <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
-        <p>{{ product.productDescription }}</p>
-        <p>Prix:
-          {{ product.productPrice }}
-          €</p>
-        <p>Stock:
-          {{ product.productStock }}</p>
-        <p>Poid:
-          {{ product.productWeight }}</p>
-        <p>Dimensions:
-          {{ product.productDimensions }}</p>
-        <p>Promo:
-          {{ product.productDiscount }}</p>
+
+
+        
+
+        
 
         {% for casing in casings %}
           {% if product.id == casing.casingId %}
@@ -109,8 +122,6 @@
               {{ ram.ramTension }}</p>
           {% endif %}
         {% endfor %}
-
-      </div>
     {% endfor %}
-  </div>
+    </div>
 {% endblock %}
