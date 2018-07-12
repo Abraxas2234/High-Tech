@@ -5,11 +5,11 @@
 <form action="{{ path('fos_user_registration_register') }}" method="POST">
 <div class="form-group" id="fos_user_registration_form">
     <label id="box-label">Votre nom</label>
-    <input style="margin-bottom: 0.5rem; font-size: 15px;" {{ form_widget(form.email, { 'attr': {'class': 'form-control'} }) }}
+    <input style="margin-bottom: 0.5rem; font-size: 15px;" {{ form_widget(form.username, { 'attr': {'class': 'form-control'} }) }}
     {{ form_errors(form.email) }}
 
     <label id="box-label">E-mail</label>
-    <input style="margin-bottom: 0.5rem; font-size: 15px;" {{ form_widget(form.username, { 'attr': {'class': 'form-control' } }) }}
+    <input style="margin-bottom: 0.5rem; font-size: 15px;" {{ form_widget(form.email, { 'attr': {'class': 'form-control' } }) }}
     {{ form_errors(form.username) }}
 
     <label id="box-label">Mot de passe</label>
