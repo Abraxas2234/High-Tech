@@ -12,6 +12,13 @@
         <a href="#">Services</a>
         <a href="#">Clients</a>
         <a href="#">Contact</a>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider"></div>
+        {% for categorie in categories %}
+            <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+        {% endfor %}
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider"></div>
     </div>
     <div class="container">
         {% for product in products if product.idCategorie == id %}

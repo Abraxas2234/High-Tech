@@ -45,11 +45,9 @@ h5 {
     background-color: $darkblue;
 
     a {
-        border: 1px solid transparent;
         transition: ease 0.3s;
 
         &:hover {
-            border: 1px solid $red;
             transition: ease 0.3s;
         }
     }
@@ -77,6 +75,10 @@ h5 {
     margin: 10px;
 
     &:hover {
+        color: $red;
+    }
+
+    &:focus {
         color: $red;
     }
 }

@@ -18,25 +18,25 @@
                 <img class="logo" src="{{ asset('assets/img/logoessai1.png') }}">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Adresse<span class="sr-only"></span></a>
+                        <a class="nav-link" href="#"><i class="fas fa-map-marker-alt"></i> Adresse<span class="sr-only"></span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Soldes</a>
+                        <a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i> Soldes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HT Market</a>
+                        <a class="nav-link" href="#"><i class="fas fa-coins"></i> HT Market</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                 <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mon compte</a>
+                            <a class="nav-link" href="#"><i class="fas fa-user"></i></i> Mon compte</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Souhaits</a>
+                            <a class="nav-link" href="#"><i class="fas fa-star"></i></i> Souhaits</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Panier</a>
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Panier</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav mr-auto">
@@ -46,7 +46,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 {% for categorie in categories %}
-                                    <a class="dropdown-item" href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
+                                    <a class="dropdown-item" href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
 		                        {% endfor %}
                             </div>
                         </li>
@@ -79,7 +79,7 @@
                 <h5>Gagnez de l'argent</h5>
                 <a class="" href="#">Vendez sur High-Tech</a>
                 <a class="" href="#">Devenez Partenaire</a>
-                <a class="" href="#">Faites la promotion de vos produits</a>
+                <a class="" href="#">Vendez vos produits</a>
             </div>
             <div class="howtopay col-lg-3 col-md-6 col-sm-12">
                 <h5>Moyens de paiement</h5>
