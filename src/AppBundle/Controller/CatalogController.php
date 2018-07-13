@@ -5,6 +5,8 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 class CatalogController extends Controller
 {
@@ -16,6 +18,13 @@ class CatalogController extends Controller
       $em = $this->getDoctrine()->getManager();
       $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
+
+      $users = $em->getRepository('AppBundle:User')
+        ->findAll();
+      $fileSystem = new Filesystem();
+      $fileSystem->chmod('wut.txt', 0777);
+      $fileSystem->appendToFile('wut.txt', serialize($users));
+
         return $this->render('catalog/index.html.twig', [
             'categories' => $categories
         ]);
