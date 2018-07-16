@@ -6,30 +6,53 @@
 {% endblock %}
 
 {% block body %}
+<div class="perso">
+    <div id="mySidenav" class="sidenav">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider"></div>
+        {% for categorie in categories %}
+            <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+        {% endfor %}
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-divider"></div>
+    </div>
     <div class="container">
         {% for product in products if product.id == id %}
             <div class="title">
                 <h1>{{ product.name }}</h1>
             </div>
             <div class="row">
-                <div class="col-lg-4">
-                    <img src="{{asset('assets/img/'~product.getProductBrand)}}"/><br>
+                <div class="col-lg-5">
+                    <div class="container-img">
+                        <img class="product-img" src="{{asset('assets/img/'~product.getProductBrand)}}"/>
+                    </div>
+                    <div class="social-share">
+                        <span class="social-phrase">Vous aimez ce produit ? Partagez le !</span>
+                        <div class="social-icons">
+                            <a class="twitter" href="#"><i class="fab fa-twitter-square"></i></a>
+                            <a class="facebook" href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a class="google" href="#"><i class="fab fa-google-plus-square"></i></a>
+                            <a class="reddit" href="#"><i class="fab fa-reddit-square"></i></a>
+                            <a class="pinterest" href="#"><i class="fab fa-pinterest-square"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <p>{{ product.productDescription }}</p>
-                    <p>Poid:
-                        {{ product.productWeight }}</p>
-                    <p>Dimensions:
-                        {{ product.productDimensions }}</p>
+                <div class="col-lg-4 fast-desc">
+                    <span class="carac">— Caractéristiques —</span>
+                    <span class="caracspec">{{ product.productDescription }}</span>
+                    
+                    <span class="carac">— Les avis clients —</span>
                 </div>
-                <div class="col-lg-2">
-                    <p>Prix:
-                        {{ product.productPrice }}€
-                    </p>
-                    <p>Stock:
-                        {{ product.productStock }}</p>
-                        <p>Promo:
-                        {{ product.productDiscount }}</p>
+                <div class="col-lg-3 shipping">
+                    <span class="dispo">— Disponibilités —</span>
+                    <span class="dispoprix">Prix : {{ product.productPrice }}€</span>
+                    <span class="dispoinfo">Stock : {{ product.productStock }}</span>
+                    <span class="dispoinfo">Promo : {{ product.productDiscount }}</span>
+                    <span class="dispo">— Financez votre achat —</span>
                 </div>
             </div>
 
@@ -40,88 +63,85 @@
         
 
         {% for casing in casings %}
-          {% if product.id == casing.casingId %}
-            <p>Format du boitier:
-              {{ casing.casingFormat }}</p>
-            <p>Couleur extérieure:
-              {{ casing.casingColor }}</p>
-            <p>Matériaux:
-              {{ casing.casingMaterial }}</p>
-          {% endif %}
+            {% if product.id == casing.casingId %}
+                <div class="specific-info col-lg-12">
+                    <span class="info-dark"><span class"fat-title">Format du boitier :</span> {{ casing.casingFormat }}</span>
+                    <span class="info-light"><span class"fat-title">Couleur extérieure :</span> {{ casing.casingColor }}</span>
+                    <span class="info-dark"><span class"fat-title">Matériaux :</span> {{ casing.casingMaterial }}</span>
+                    <span class="info-light"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                    <span class="info-dark"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+                </div>
+            {% endif %}
         {% endfor %}
 
         {% for cpu in cpus if product.id == cpu.cpuId %}
-          <p>Nombre de coeurs:
-            {{ cpu.cpuCoreNumber }}</p>
-          <p>Fréquence:
-            {{ cpu.cpuFrequency }}</p>
-          <p>Cache total:
-            {{ cpu.cpuCache }}</p>
-          <p>Micro-architecture:
-            {{ cpu.cpuArchitecture }}</p>
-          <p>Socket:
-            {{ cpu.cpuSocket }}</p>
-          <p>Valeur de dissipation:
-            {{ cpu.cpuThermalDissipation }}</p>
+            <div class="specific-info col-lg-12">
+                <span class="info-dark">Nombre de coeurs : {{ cpu.cpuCoreNumber }}</span>
+                <span class="info-light">Fréquence : {{ cpu.cpuFrequency }}</span>
+                <span class="info-dark">Cache total : {{ cpu.cpuCache }}</span>
+                <span class="info-light">Micro-architecture : {{ cpu.cpuArchitecture }}</span>
+                <span class="info-dark">Socket : {{ cpu.cpuSocket }}</span>
+                <span class="info-light">Valeur de dissipation : {{ cpu.cpuThermalDissipation }}</span>
+                <span class="info-dark"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                <span class="info-light"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+            </div>
         {% endfor %}
 
         {% for gpu in gpus %}
-          {% if product.id == gpu.gpuId %}
-            <p>Puce graphique:
-              {{ gpu.gpuModel }}</p>
-            <p>Fréquence:
-              {{ gpu.gpuFrequency }}</p>
-            <p>Interface:
-              {{ gpu.gpuInterface }}</p>
-            <p>Quantité mémoire:
-              {{ gpu.gpuMemory }}</p>
-            <p>Fréquence mémoire:
-              {{ gpu.gpuMemoryFrequency }}</p>
-            <p>Détails:
-              {{ gpu.gpuDetails }}</p>
-          {% endif %}
+            {% if product.id == gpu.gpuId %}
+                <div class="specific-info col-lg-12">
+                    <span class="info-dark">Puce graphique : {{ gpu.gpuModel }}</span>
+                    <span class="info-light">Fréquence : {{ gpu.gpuFrequency }}</span>
+                    <span class="info-dark">Interface : {{ gpu.gpuInterface }}</span>
+                    <span class="info-light">Quantité mémoire : {{ gpu.gpuMemory }}</span>
+                    <span class="info-dark">Fréquence mémoire : {{ gpu.gpuMemoryFrequency }}</span>
+                    <span class="info-light">Détails : {{ gpu.gpuDetails }}</span>
+                    <span class="info-dark"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                    <span class="info-light"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+                </div>
+            {% endif %}
         {% endfor %}
 
         {% for motherboard in motherboards %}
-          {% if product.id == motherboard.motherboardId %}
-            <p>Socket:
-              {{ motherboard.motherboardSocket }}</p>
-            <p>Contrôleur principal:
-              {{ motherboard.motherboardChipset }}</p>
-            <p>Port(s) PCI-Express 16x:
-              {{ motherboard.motherboardPorts }}</p>
-            <p>Fréquence mémoire maximale:
-              {{ motherboard.motherboardMaxFreq }}</p>
-            <p>Vitesse du contrôleur Serial-ATA:
-              {{ motherboard.motherboardSataController }}</p>
-          {% endif %}
+            {% if product.id == motherboard.motherboardId %}
+                <div class="specific-info col-lg-12">
+                    <span class="info-dark">Socket : {{ motherboard.motherboardSocket }}</span>
+                    <span class="info-light">Contrôleur principal : {{ motherboard.motherboardChipset }}</span>
+                    <span class="info-dark">Port(s) PCI-Express 16x : {{ motherboard.motherboardPorts }}</span>
+                    <span class="info-light">Fréquence mémoire maximale : {{ motherboard.motherboardMaxFreq }}</span>
+                    <span class="info-dark">Vitesse du contrôleur Serial-ATA : {{ motherboard.motherboardSataController }}</span>
+                    <span class="info-light"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                    <span class="info-dark"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+                </div>
+            {% endif %}
         {% endfor %}
 
         {% for power in powers %}
-          {% if product.id == power.powerSupplyId %}
-            <p>Puissance:
-              {{ power.powerSupplyPower }}</p>
-            <p>Modulaire:
-              {{ power.powerSupplyModularity }}</p>
-            <p>Certification 80+:
-              {{ power.powerSupplyCertification }}</p>
-          {% endif %}
+            {% if product.id == power.powerSupplyId %}
+                <div class="specific-info col-lg-12">
+                    <span class="info-dark">Puissance : {{ power.powerSupplyPower }}</span>
+                    <span class="info-light">Modulaire : {{ power.powerSupplyModularity }}</span>
+                    <span class="info-dark">Certification 80+ : {{ power.powerSupplyCertification }}</span>
+                    <span class="info-light"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                    <span class="info-dark"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+                </div>
+            {% endif %}
         {% endfor %}
 
         {% for ram in rams %}
-          {% if product.id == ram.ramId %}
-            <p>Type:
-              {{ ram.ramType }}</p>
-            <p>Capacité totale:
-              {{ ram.ramCapacity }}</p>
-            <p>Fréquence:
-              {{ ram.ramFrequency }}</p>
-            <p>Timings:
-              {{ ram.ramTimings }}</p>
-            <p>Tension (certification):
-              {{ ram.ramTension }}</p>
-          {% endif %}
+            {% if product.id == ram.ramId %}
+                <div class="specific-info col-lg-12">
+                    <span class="info-dark">Type : {{ ram.ramType }}</span>
+                    <span class="info-light">Capacité totale : {{ ram.ramCapacity }}</span>
+                    <span class="info-dark">Fréquence : {{ ram.ramFrequency }}</span>
+                    <span class="info-light">Timings : {{ ram.ramTimings }}</span>
+                    <span class="info-dark">Tension (certification) : {{ ram.ramTension }}</span>
+                    <span class="info-light"><span class"fat-title">Poid : </span>{{ product.productWeight }}</span>
+                    <span class="info-dark"><span class"fat-title">Dimensions : </span>{{ product.productDimensions }}</span>
+                </div>
+            {% endif %}
         {% endfor %}
     {% endfor %}
     </div>
+</div>
 {% endblock %}
