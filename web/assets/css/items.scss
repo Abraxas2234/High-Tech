@@ -70,6 +70,14 @@ $textFont: 'Roboto', sans-serif;
     }
 }
 
+.star-full {
+    color: $red;
+}
+
+.star-empty {
+    color: $black;
+}
+
 .product-price {
     margin: 20px;
 }

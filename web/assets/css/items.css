@@ -51,6 +51,12 @@
       -o-transition: ease .3s;
       transition: ease .3s; }
 
+.star-full {
+  color: #CE0234; }
+
+.star-empty {
+  color: #555; }
+
 .product-price {
   margin: 20px; }
 

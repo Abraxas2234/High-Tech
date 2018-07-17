@@ -171,6 +171,21 @@ h1 {
   .shipping .dispoinfo {
     font-size: 12px; }
 
+.rating-general-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .specific-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,6 +293,14 @@ h1 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
+    .avis-general .rating-general .based-on {
+      opacity: 0.6;
+      font-size: 13px; }
+    .avis-general .rating-general .nombre-avis {
+      color: #0084b4;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 24px; }
   .avis-general .stars-general {
     display: -webkit-box;
     display: -ms-flexbox;
