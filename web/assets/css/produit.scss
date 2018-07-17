@@ -140,7 +140,7 @@ h1 {
         font-size: 11px;
         text-transform: uppercase;
         opacity: 0.6;
-        margin: 5px;
+        margin: 20px 0px 5px 0px;
     }
 
     .caracspec {
@@ -158,7 +158,7 @@ h1 {
         font-size: 11px;
         text-transform: uppercase;
         opacity: 0.6;
-        margin: 5px;
+        margin: 20px 0px 5px 0px;
     }
 
     .dispoprix {
@@ -168,7 +168,7 @@ h1 {
     }
 
     .dispoinfo {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -184,6 +184,7 @@ h1 {
 
         .fat-title {
             font-weight: 700;
+            color: $red;
         }
     }
     
@@ -246,4 +247,120 @@ h1 {
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+.titre-avis-general {
+    font-weight: 700;
+    border-bottom: 1px solid;
+}
+
+.avis-general {
+    display: flex;
+    flex-direction: row;
+    border: solid 1px transparent;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #edf3f8;
+
+    .rating-general {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .stars-general {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .message-general {
+        border-left: 1px solid $lightGrey;
+    }
+}
+
+.avis-users {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #edf3f8;
+
+    .dzad-users {
+
+        .stars-users {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .note-users {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infos-users {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+
+        .aezazer {
+
+            .name-users {
+                font-weight: 700;
+            }
+
+            .poste-date-users {
+                opacity: 0.6;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .content {
+
+        .titre-avis {
+            font-size: 18px;
+            font-weight: 700;
+            color: $red;
+        }
+
+        .content-avis {
+            font-size: 14px;
+        }
+    }
+}
+
+.star-full {
+    color: $red;
+}
+
+.note-general {
+    color: $red;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.slash-general {
+    opacity: 0.6;
+}
+
+.note-users {
+    color: $red;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.slash-users {
+    opacity: 0.6;
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
 }

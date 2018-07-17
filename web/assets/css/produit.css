@@ -141,7 +141,7 @@ h1 {
     font-size: 11px;
     text-transform: uppercase;
     opacity: 0.6;
-    margin: 5px; }
+    margin: 20px 0px 5px 0px; }
   .fast-desc .caracspec {
     font-size: 15px; }
 
@@ -163,13 +163,13 @@ h1 {
     font-size: 11px;
     text-transform: uppercase;
     opacity: 0.6;
-    margin: 5px; }
+    margin: 20px 0px 5px 0px; }
   .shipping .dispoprix {
     font-size: 21px;
     font-weight: 700;
     color: #555; }
   .shipping .dispoinfo {
-    font-size: 14px; }
+    font-size: 12px; }
 
 .specific-info {
   display: -webkit-box;
@@ -185,7 +185,8 @@ h1 {
     background-color: #deebf5;
     padding-left: 5px; }
     .specific-info .info-dark .fat-title {
-      font-weight: 700; }
+      font-weight: 700;
+      color: #CE0234; }
   .specific-info .info-light {
     background-color: #edf3f8;
     padding-left: 5px; }
@@ -247,3 +248,127 @@ h1 {
     padding-top: 15px; }
   .sidenav a {
     font-size: 18px; } }
+
+.titre-avis-general {
+  font-weight: 700;
+  border-bottom: 1px solid; }
+
+.avis-general {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  border: solid 1px transparent;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #edf3f8; }
+  .avis-general .rating-general {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+  .avis-general .stars-general {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .avis-general .message-general {
+    border-left: 1px solid #DBDBDB; }
+
+.avis-users {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  border: 1px solid transparent;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #edf3f8; }
+  .avis-users .dzad-users .stars-users {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .avis-users .dzad-users .note-users {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .avis-users .dzad-users .infos-users {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 20px; }
+  .avis-users .dzad-users .aezazer .name-users {
+    font-weight: 700; }
+  .avis-users .dzad-users .aezazer .poste-date-users {
+    opacity: 0.6;
+    font-size: 14px; }
+  .avis-users .content .titre-avis {
+    font-size: 18px;
+    font-weight: 700;
+    color: #CE0234; }
+  .avis-users .content .content-avis {
+    font-size: 14px; }
+
+.star-full {
+  color: #CE0234; }
+
+.note-general {
+  color: #CE0234;
+  font-size: 24px;
+  font-weight: 700; }
+
+.slash-general {
+  opacity: 0.6; }
+
+.note-users {
+  color: #CE0234;
+  font-size: 24px;
+  font-weight: 700; }
+
+.slash-users {
+  opacity: 0.6;
+  color: #555;
+  font-size: 16px;
+  font-weight: 400; }
