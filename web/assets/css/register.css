@@ -1,0 +1,71 @@
+body {
+  font-family: 'Raleway', sans-serif; }
+
+#box-form {
+  border-radius: 4px;
+  border: 1px #ddd solid;
+  background-color: #fff;
+  padding: 14px 18px;
+  max-width: 500px;
+  margin: 2em auto;
+  max-width: 350px;
+  width: 95%; }
+
+#box-title {
+  color: #555;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 10px; }
+
+#box-label {
+  color: #555;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  font-weight: 600;
+  margin-bottom: .0rem; }
+
+#box-alert {
+  color: #575555;
+  margin-bottom: .5rem;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px; }
+
+#box-legal {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 13px; }
+
+.spacer {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.already-reg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .already-reg .reg {
+    -ms-flex-item-align: center;
+    align-self: center;
+    text-decoration: none;
+    color: #232F3E;
+    -webkit-transition: ease 0.3s;
+    -o-transition: ease 0.3s;
+    transition: ease 0.3s; }
+    .already-reg .reg:hover {
+      color: #CE0234;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s;
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2); }
