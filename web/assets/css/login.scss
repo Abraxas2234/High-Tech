@@ -97,6 +97,15 @@ body {
             }
         }
     }
+
+    .forgot-password {
+        color: $red;
+        font-size: 13px;
+
+        &:hover {
+            color: $red;
+        }
+    }
 }
 
 .spacer {

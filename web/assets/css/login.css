@@ -48,6 +48,11 @@ body {
       color: #CE0234; }
       #box-form #box-legal .link-red:hover {
         color: #CE0234; }
+  #box-form .forgot-password {
+    color: #CE0234;
+    font-size: 13px; }
+    #box-form .forgot-password:hover {
+      color: #CE0234; }
 
 .spacer {
   margin-top: 20px;
