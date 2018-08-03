@@ -1,8 +1,6 @@
-{% extends 'layout.html.twig' %}
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block stylesheets %}
-{{ parent() }}
 	<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
 {% endblock %}
 
@@ -11,6 +9,9 @@
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
     <div id="container">
+        <div class="logo-link">
+            <a class="link-logo" href="{{ path('catalog') }}"><img class="logo" src="{{ asset('assets/img/logo.png') }}"></a>
+        </div>
         <div class="row spacer">
             <div class="col-lg-12">
                 <div id="box-form">
@@ -37,7 +38,7 @@
                     <span class="nouveau-catch">— Vous ne possédez pas encore de compte ? —</span>
                 </div>
                 <div class="question col-lg-12">
-                    <div class="btn btn-primary" class="reg">Inscrivez-vous</div>
+                    <a class="btn btn-primary" href="{{ path('fos_user_registration_register') }}">Inscrivez-vous gratuitement</a>
                 </div>
             </div>
         </div>
