@@ -3,6 +3,7 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 {% endblock %}
@@ -13,47 +14,72 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse row" id="navbarSupportedContent" style="flex-direction: row; justify-content: start; align-items: center;">
+                <a href="{{ path('catalog') }}"><img class="logo" src="{{ asset('assets/img/logo.png') }}"></a>
+                <form class="form-inline my-2 my-lg-0 form-test">
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">
+                                <ul class="navbar-nav mr-auto">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle cat-color" style="color:#555;" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Catégorie
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            {% for categorie in categories %}
+                                                <a class="dropdown-item" href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+                                            {% endfor %}
+                                        </div>
+                                    </li>
+                                </ul>               
+                            </div>
+                        </div>
+                        <input class="form-control mr-sm-2 resize-input" style="border-radius: 0px 5px 5px 0px;" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-perso">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse row" id="navbarSupportedContent">
-                <img class="logo" src="{{ asset('assets/img/logoessai1.png') }}">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Adresse<span class="sr-only"></span></a>
+                        <a class="nav-link" href="#"><i class="fas fa-map-marker-alt"></i> Adresse<span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Catégorie
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% for categorie in categories %}
+                                <a class="dropdown-item" href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+                            {% endfor %}
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Soldes</a>
+                        <a class="nav-link" href="#"><i class="fas fa-dollar-sign"></i> Soldes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HT Market</a>
+                        <a class="nav-link" href="#"><i class="fas fa-coins"></i> HT Market</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mon compte</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Souhaits</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Panier</a>
-                        </li>
-                    </ul>
+                <form class="form-inline my-2 my-lg-0" style="margin-top: 27px;">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Catégorie
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                {% if categories is defined %}
-                                {% for categorie in categories %}
-                                    <a class="dropdown-item" href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
-		                        {% endfor %}
-                                {% endif %}
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-user"></i></i> Mon compte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-star"></i></i> Souhaits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> Panier</a>
                         </li>
                     </ul>
-                    <input class="form-control mr-sm-2 resize-input" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -80,7 +106,7 @@
                 <h5>Gagnez de l'argent</h5>
                 <a class="" href="#">Vendez sur High-Tech</a>
                 <a class="" href="#">Devenez Partenaire</a>
-                <a class="" href="#">Faites la promotion de vos produits</a>
+                <a class="" href="#">Vendez vos produits</a>
             </div>
             <div class="howtopay col-lg-3 col-md-6 col-sm-12">
                 <h5>Moyens de paiement</h5>

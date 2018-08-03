@@ -29,6 +29,10 @@ $textFont: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
+.perso {
+    display: flex;
+}
+
 .productbox {
     width: 100%;
     display: flex;
@@ -40,8 +44,8 @@ $textFont: 'Roboto', sans-serif;
 }
 
 .img-product {
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
 }
 
 .product-name {
@@ -64,6 +68,14 @@ $textFont: 'Roboto', sans-serif;
             transition: ease .3s;
         }
     }
+}
+
+.star-full {
+    color: $red;
+}
+
+.star-empty {
+    color: $black;
 }
 
 .product-price {
@@ -102,4 +114,50 @@ $textFont: 'Roboto', sans-serif;
     height: 1px;
     width: 100%;
     background-color: $lightGrey;
+}
+
+.sidenav {
+    width: 150px;
+    z-index: 1;
+    background-color: $white;
+    overflow-x: hidden;
+    border-right: 1px solid $lightGrey;
+    margin: 20px 0px 20px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 16px;
+    color: $black;
+    display: block;
+    transition: ease 0.3s;
+    padding-left: 10px;
+    border-left: 0px solid transparent;
+
+    &:hover {
+        transition: ease 0.3s;
+        color: $red;
+        border-left: 5px solid $red;
+    }
+
+    &:focus {
+        transition: ease 0.3s;
+        color: $red;
+        border-left: 5px solid $red;
+    }
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
