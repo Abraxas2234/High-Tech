@@ -43,26 +43,26 @@ h5 {
 //NAVBAR -----------------------------------
 .navbar {
     background-color: $darkblue;
+    padding: 0;
 
     a {
-        border: 1px solid transparent;
         transition: ease 0.3s;
 
         &:hover {
-            border: 1px solid $red;
             transition: ease 0.3s;
         }
     }
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
 }
 
 .form-control {
-    border-radius: 0px;
-
+    border-radius: 0px 5px 5px 0px;
+    
     &:focus {
         color: #555;
         background-color: #fff;
@@ -70,6 +70,23 @@ h5 {
         outline: 0;
         box-shadow: 0 0 0 0.2rem rgba(206, 2, 53,.25);
     }
+
+    input {
+        margin-right: 0px;
+    }
+}
+
+.form-inline .form-control {
+    width: 500px;
+}
+
+.input-group {
+    height: 36px;
+    margin-left: 60px;
+}
+
+input {
+    margin-right: 0;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -79,20 +96,28 @@ h5 {
     &:hover {
         color: $red;
     }
+
+    &:focus {
+        color: $red;
+    }
 }
 
 .btn-outline-primary {
+    border-radius: 5px;
     color: $red;
     background-color: transparent;
     background-image: none;
     border-color: $red;
-    border-radius: 0px;    
 
     &:hover {
         color: $white;
         border-color: $red;
         background-color: $red;
     }
+}
+
+.btn  {
+    border-radius: 5px;
 }
 
 .nav-link {
@@ -110,14 +135,9 @@ h5 {
 
         &:hover {
             background-color: $darkblue;
-            color: $white;
+            color: $red;
         }
     }
-}
-
-.resize-input {
-    height: 30px;
-    width: 350px;
 }
 
 //FOOTER -----------------------------------

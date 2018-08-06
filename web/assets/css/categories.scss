@@ -28,7 +28,7 @@ body {
     background-color: $white;
 }
 
-.categories {
+.categories .productbox {
     background-color: $lightGrey;
     transition: ease 0.3s;
     display: flex;
@@ -39,26 +39,18 @@ body {
     &:hover {
         background-color: $darkblue;
         transition: ease 0.3s;
+        color: $white;
     }
 }
 
 .productbox {
     display: flex;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    color: $red;
+    font-size: 1.6rem;
 
-    a {
-        color: $red;
-        font-family: $titleFont;
-        align-self: center;
-        text-transform: uppercase;
-        font-size: 1.3rem;
-        transition: ease 0.3s;
-
-        &:hover {
-            color: $white;
-            text-decoration: none;
-            transition: ease 0.3s;
-        }
+    &:hover {
+        color: $white;
     }
 }

@@ -12,10 +12,10 @@
                 <img class="d-block w-100" src="{{ asset('assets/img/soldes.png') }}" alt="First slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('assets/img/soldes.png') }}" alt="Second slide">
+                <img class="d-block w-100" src="{{ asset('assets/img/flash.png') }}" alt="Second slide">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('assets/img/soldes.png') }}" alt="Third slide">
+                <img class="d-block w-100" src="{{ asset('assets/img/echo.png') }}" alt="Third slide">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -27,13 +27,15 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-	<div id="quizbox"> 
+	<div id="quizbox">
 		{% for categorie in categories %}
+        <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': categorie.id}) }}">
             <div class="categories">
                 <div class="productbox">
-                    <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+                    {{ categorie.name }}
                 </div>
             </div>
+        </a>
 		{% endfor %}
     </div>
 {% endblock %}

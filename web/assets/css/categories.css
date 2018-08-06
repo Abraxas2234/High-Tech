@@ -1,7 +1,7 @@
 body {
   background-color: #ffffff; }
 
-.categories {
+.categories .productbox {
   background-color: #efefef;
   -webkit-transition: ease 0.3s;
   -o-transition: ease 0.3s;
@@ -14,11 +14,12 @@ body {
   justify-content: center;
   text-align: center;
   height: 20vh; }
-  .categories:hover {
+  .categories .productbox:hover {
     background-color: #232F3E;
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
-    transition: ease 0.3s; }
+    transition: ease 0.3s;
+    color: #ffffff; }
 
 .productbox {
   display: -webkit-box;
@@ -27,20 +28,10 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center; }
-  .productbox a {
-    color: #CE0234;
-    font-family: "Raleway", sans-serif;
-    -ms-flex-item-align: center;
-    align-self: center;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    -webkit-transition: ease 0.3s;
-    -o-transition: ease 0.3s;
-    transition: ease 0.3s; }
-    .productbox a:hover {
-      color: #ffffff;
-      text-decoration: none;
-      -webkit-transition: ease 0.3s;
-      -o-transition: ease 0.3s;
-      transition: ease 0.3s; }
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #CE0234;
+  font-size: 1.6rem; }
+  .productbox:hover {
+    color: #ffffff; }

@@ -12,24 +12,24 @@ h5 {
   font-size: 1.2rem; }
 
 .navbar {
-  background-color: #232F3E; }
+  background-color: #232F3E;
+  padding: 0; }
   .navbar a {
-    border: 1px solid transparent;
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s; }
     .navbar a:hover {
-      border: 1px solid #CE0234;
       -webkit-transition: ease 0.3s;
       -o-transition: ease 0.3s;
       transition: ease 0.3s; }
 
 .logo {
-  width: 80px;
-  height: 80px; }
+  width: 250px;
+  max-width: 100%;
+  height: auto; }
 
 .form-control {
-  border-radius: 0px; }
+  border-radius: 0px 5px 5px 0px; }
   .form-control:focus {
     color: #555;
     background-color: #fff;
@@ -37,23 +37,40 @@ h5 {
     outline: 0;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+  .form-control input {
+    margin-right: 0px; }
+
+.form-inline .form-control {
+  width: 500px; }
+
+.input-group {
+  height: 36px;
+  margin-left: 60px; }
+
+input {
+  margin-right: 0; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #ffffff;
   margin: 10px; }
   .navbar-dark .navbar-nav .nav-link:hover {
     color: #CE0234; }
+  .navbar-dark .navbar-nav .nav-link:focus {
+    color: #CE0234; }
 
 .btn-outline-primary {
+  border-radius: 5px;
   color: #CE0234;
   background-color: transparent;
   background-image: none;
-  border-color: #CE0234;
-  border-radius: 0px; }
+  border-color: #CE0234; }
   .btn-outline-primary:hover {
     color: #ffffff;
     border-color: #CE0234;
     background-color: #CE0234; }
+
+.btn {
+  border-radius: 5px; }
 
 .nav-link {
   font-family: "Raleway", sans-serif;
@@ -67,11 +84,7 @@ h5 {
     opacity: 1; }
     .dropdown-menu.show .dropdown-item:hover {
       background-color: #232F3E;
-      color: #ffffff; }
-
-.resize-input {
-  height: 30px;
-  width: 350px; }
+      color: #CE0234; }
 
 .footer {
   width: 100%;
