@@ -8,6 +8,11 @@ body {
     background-color: #A6002A;
     border-color: #A6002A; }
 
+.form-control:focus {
+  border-color: #CE0234;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
 .logo-link {
   display: -webkit-box;
   display: -ms-flexbox;

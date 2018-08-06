@@ -7,6 +7,23 @@ body {
   .btn-primary:hover {
     background-color: #A6002A;
     border-color: #A6002A; }
+  .btn-primary:active {
+    background-color: #CE0234;
+    border-color: #CE0234;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #CE0234;
+  border-color: #CE0234;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
+.form-control:focus {
+  border-color: #CE0234;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
 
 .logo-link {
   display: -webkit-box;
