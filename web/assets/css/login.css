@@ -7,6 +7,29 @@ body {
   .btn-primary:hover {
     background-color: #A6002A;
     border-color: #A6002A; }
+  .btn-primary:active {
+    background-color: #A6002A;
+    border-color: #A6002A;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+  .btn-primary:focus {
+    background-color: #A6002A;
+    border-color: #A6002A; }
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #CE0234;
+  border-color: #CE0234;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
+
+.btn-primary.focus, .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(206, 2, 53, 0.25); }
 
 .form-control:focus {
   border-color: #CE0234;
@@ -79,12 +102,14 @@ body {
     #box-form #box-legal .link-red {
       color: #CE0234; }
       #box-form #box-legal .link-red:hover {
-        color: #CE0234; }
+        color: #CE0234;
+        text-decoration: underline; }
   #box-form .forgot-password {
     color: #CE0234;
     font-size: 13px; }
     #box-form .forgot-password:hover {
-      color: #CE0234; }
+      color: #CE0234;
+      text-decoration: underline; }
 
 .spacer {
   margin-top: 20px;
