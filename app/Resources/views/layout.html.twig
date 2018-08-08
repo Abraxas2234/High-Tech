@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block stylesheets %}
+<<<<<<< HEAD
 <<<<<<< front-each-product
     {{ parent() }}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -209,6 +210,69 @@
             </div>
         </div>
 =======
+=======
+  {{ parent() }}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ asset('assets/css/layout.css') }}">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+{% endblock %}
+
+{% block header %}
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-perso">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <img class="logo" src="{{ asset('assets/img/logoessai1.png') }}">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Adresse<span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Soldes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">HT Market</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mon compte</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Souhaits</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Panier</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Catégorie
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                {% if categories is defined %}
+                  {% for categorie in categories %}
+                    <a class="dropdown-item" href="http://localhost:8888/Projets-en-cours/High-Tech/web/app_dev.php/catalog/{{ categorie.id }}">{{ categorie.name }}</a>
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </li>
+          </ul>
+          <input class="form-control mr-sm-2 resize-input" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+{% endblock %}
+
+{% block body %}{% endblock %}
+
+>>>>>>> master
 {% block footer %}
   <div class="text-bar">
     <a class="return-top" href="#">Retour en haut</a>
@@ -242,7 +306,10 @@
         <a class="" href="#">Informations Marketplace</a>
         <a class="" href="#">Aide</a>
       </div>
+<<<<<<< HEAD
 >>>>>>> Master MaJ après vacs
+=======
+>>>>>>> master
     </div>
   </div>
 {% endblock %}
