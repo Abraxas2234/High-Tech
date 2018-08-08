@@ -79,10 +79,14 @@ fos_user:
 easy_admin:
     site_name:                       'High-Tech'
     design:
-        brand_color:                 ForestGreen
+        brand_color:                 #232F3E
     entities:
               User:
                   class:             AppBundle\Entity\User
+              Clients:
+                  class:             AppBundle\Entity\Clients
+              Billing:
+                  class:             AppBundle\Entity\Billing
               Categorie:
                   class:             AppBundle\Entity\Categorie
               Product:
