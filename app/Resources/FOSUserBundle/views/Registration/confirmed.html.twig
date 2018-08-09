@@ -5,10 +5,10 @@
 {% block fos_user_content %}
 <div id="wrapper">
     <div id="container">
-    <p style="font-size= 15px;">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
-    {% if targetUrl %}
-    <p style="font-size= 15px;"><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
-    {% endif %}
+        <p style="font-size= 15px;">{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+        {% if targetUrl %}
+            <p style="font-size= 15px;"><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+        {% endif %}
     </div>
 </div>
 {% endblock fos_user_content %}
