@@ -21,9 +21,6 @@ class CatalogController extends Controller
 
       $users = $em->getRepository('AppBundle:User')
         ->findAll();
-      $fileSystem = new Filesystem();
-      $fileSystem->chmod('wut.txt', 0777);
-      $fileSystem->appendToFile('wut.txt', serialize($users));
 
         return $this->render('catalog/index.html.twig', [
             'categories' => $categories
