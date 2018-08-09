@@ -28,5 +28,12 @@ class Categorie
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bg", type="string", length=255, nullable=false)
+     */
+    private $bg;
+
 
 }

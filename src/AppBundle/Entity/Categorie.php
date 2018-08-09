@@ -28,6 +28,13 @@ class Categorie
      */
     private $name;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="bg", type="string", length=255, nullable=false)
+     */
+    private $bg;
+
 
 
     /**
@@ -62,5 +69,29 @@ class Categorie
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set bg.
+     *
+     * @param string $bg
+     *
+     * @return Categorie
+     */
+    public function setBg($bg)
+    {
+        $this->bg = $bg;
+
+        return $this;
+    }
+
+    /**
+     * Get bg.
+     *
+     * @return string
+     */
+    public function getBg()
+    {
+        return $this->bg;
     }
 }
