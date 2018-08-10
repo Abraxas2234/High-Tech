@@ -20,6 +20,8 @@ class CustomUserController extends Controller
         ->findAll();
       $clients = $em->getRepository('AppBundle:Clients')
         ->findAll();
+      $deliveries = $em->getRepository('AppBundle:Delivery')
+        ->findAll();
       $billings = $em->getRepository('AppBundle:Billing')
         ->findAll();
 
@@ -35,6 +37,7 @@ class CustomUserController extends Controller
             'categories' => $categories,
             'user' => $user,
             'clients' => $clients,
+            'deliveries' => $deliveries,
             'billings' => $billings
         ]);
     }

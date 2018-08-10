@@ -38,45 +38,9 @@ class Clients
     /**
      * @var string
      *
-     * @ORM\Column(name="client_password", type="string", length=255, nullable=false)
-     */
-    private $clientPassword;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="client_phone", type="string", length=255, nullable=false)
      */
     private $clientPhone;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="client_adress", type="string", length=255, nullable=false)
-     */
-    private $clientAdress;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="client_zip_code", type="string", length=255, nullable=false)
-     */
-    private $clientZipCode;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="client_city", type="string", length=255, nullable=false)
-     */
-    private $clientCity;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="client_country", type="string", length=255, nullable=false)
-     */
-    private $clientCountry;
-
 
 
     /**

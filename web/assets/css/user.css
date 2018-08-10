@@ -4,7 +4,6 @@ body {
 
 .profilebox {
   margin: auto;
-  width: 80%;
   margin-top: 20px;
   padding: 40px 20px;
   text-align: center;
@@ -25,6 +24,25 @@ body {
 }
 
 .profilebox p {
+  color: whitesmoke;
+}
+
+.cuckbox {
+  margin: 20px auto;
+  padding: 40px 20px;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #232F3E;
+}
+
+.cuckbox h4 {
+  color: #bd081c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.cuckbox p {
   color: whitesmoke;
 }
 
