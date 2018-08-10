@@ -23,7 +23,7 @@ class CustomUserController extends Controller
       $billings = $em->getRepository('AppBundle:Billing')
         ->findAll();
 
-        $user = $this->getUser();
+      $user = $this->getUser();
 
         /*
         if (!is_object($user) || !$user instanceof UserInterface) {

@@ -2,11 +2,14 @@
 
 {% block stylesheets %}
   {{ parent() }}
-  <link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
 {% endblock %}
 
 {% block body %}
-  <div style="text-align: center">
+  <div class="profilebox">
+    <h3>
+      <b>Profile</b>
+    </h3>
     <p>Nom d'utilisateur:
       {{ user.username }}</p>
     <p>Email:
@@ -18,30 +21,29 @@
         {{ client.clientName }}</p>
       <p>Numéro de télephone:
         {{ client.clientPhone }}</p>
+      <button class="btn btn-primary">Modifier</button>
       <h4>
         <b>Livraison</b>
       </h4>
-      <p>Adresse:
-        {{ client.clientAdress }}</p>
-      <p>Code Postal:
-        {{ client.clientZipCode }}</p>
-      <p>Ville:
-        {{ client.clientCity }}</p>
-      <p>Pays:
+      <p>
+        {{ client.clientAdress }}
+        {{ client.clientZipCode }}
+        {{ client.clientCity }}
         {{ client.clientCountry }}</p>
     {% endfor %}
+    <button class="btn btn-primary">Ajouter</button>
+    <button class="btn btn-primary">Modifier</button>
+    <h4>
+      <b>Facturation</b>
+    </h4>
     {% for billing in billings if billing.userId == user.id %}
-      <h4>
-        <b>Facturation</b>
-      </h4>
-      <p>Adresse :
-        {{ billing.billingAdress }}</p>
-      <p>Code Postal:
-        {{ billing.billingZipCode }}</p>
-      <p>Ville:
-        {{ billing.billingCity }}</p>
-      <p>Pays:
+      <p>
+        {{ billing.billingAdress }}
+        {{ billing.billingZipCode }}
+        {{ billing.billingCity }}
         {{ billing.billingCountry }}</p>
     {% endfor %}
+    <button class="btn btn-primary">Ajouter</button>
+    <button class="btn btn-primary">Modifier</button>
   </div>
 {% endblock %}
