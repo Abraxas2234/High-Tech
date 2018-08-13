@@ -16,7 +16,8 @@
             </button>
             <div class="collapse navbar-collapse row" id="navbarSupportedContent" style="flex-direction: row; justify-content: start; align-items: center;">
                 <a href="{{ path('catalog') }}"><img class="logo" src="{{ asset('assets/img/logo.png') }}"></a>
-                <form class="form-inline my-2 my-lg-0 form-test">
+                {{ render(controller('AppBundle:catalog:searchBar')) }}
+                {# <form class="form-inline my-2 my-lg-0 form-test">
                     <div class="input-group mb-2 mr-sm-2">
                         <div class="input-group-prepend">
                             <div class="input-group-text">
@@ -37,7 +38,7 @@
                         <input class="form-control mr-sm-2 resize-input" style="border-radius: 0px 5px 5px 0px;" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
                     </div>
-                </form>
+                </form> #}
             </div>
         </div>
     </nav>
@@ -114,7 +115,7 @@
 
 {% endblock %}
 
-{% block footer %} 
+{% block footer %}
     <div class="text-bar">
         <a class="return-top" href="#">Retour en haut</a>
     </div>
