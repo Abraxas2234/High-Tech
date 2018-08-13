@@ -2,10 +2,14 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SearchType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Filesystem\Filesystem;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+//use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 class CatalogController extends Controller
@@ -78,5 +82,39 @@ class CatalogController extends Controller
             'rams' => $rams,
             'id' => $id
         ]);
+    }
+
+    /**
+     * @Route("/search", name="search_bar_result", method="GET")
+     */
+    public function searchBarAction(Request $request) {        
+        $form = $this
+            ->createFormBuilder()
+            ->add('search', SearchType::class)
+            ->getForm()
+        ;
+
+        if ($request->isMethod('GET') && $form->handleRequest($request)->isValid()) {
+            $res = $form->getData();
+            $search = $res['search'];
+            
+            $em = $this
+                ->getDoctrine()
+                ->getManager()
+            ;
+
+            $products = $em
+                ->getRepository('AppBundle:Product')
+                ->getProductsByName($search)
+            ;
+
+            return $this->render('catalog/searchBarResult.html.twig', array(
+                'products' => $products
+            ));
+        }
+
+        return $this->render('catalog/searchBar.html.twig', array(
+            'form' => $form->createView()
+        ));
     }
 }
