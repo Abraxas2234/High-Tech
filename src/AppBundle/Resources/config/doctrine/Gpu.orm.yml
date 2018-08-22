@@ -1,57 +1,57 @@
 AppBundle\Entity\Gpu:
-    type: entity
+    type:  entity
     table: gpu
     id:
         gpuId:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            id: true
-            column: gpu_id
+            id:       true
+            column:   gpu_id
             generator:
                 strategy: IDENTITY
     fields:
         gpuModel:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_model
+            column:   gpu_model
         gpuFrequency:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_frequency
+            column:   gpu_frequency
         gpuInterface:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_interface
+            column:   gpu_interface
         gpuMemory:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_memory
+            column:   gpu_memory
         gpuMemoryFrequency:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_memory_frequency
+            column:   gpu_memory_frequency
         gpuDetails:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: gpu_details
+            column:   gpu_details
     lifecycleCallbacks: {  }

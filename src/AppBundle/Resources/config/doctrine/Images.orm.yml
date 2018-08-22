@@ -1,32 +1,32 @@
 AppBundle\Entity\Images:
-    type: entity
+    type:  entity
     table: images
     id:
         id:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            id: true
+            id:       true
             generator:
                 strategy: IDENTITY
     fields:
         productId:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            column: product_id
+            column:   product_id
         source:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
         alt:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
     lifecycleCallbacks: {  }

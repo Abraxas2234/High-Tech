@@ -92,7 +92,7 @@ body {
     }
 }
 
-#box-form {
+#form-box {
     border-radius: 4px;
     background-color: $darkblue;
     padding: 14px 18px;
@@ -110,7 +110,7 @@ body {
         font-family: $titleFont;
     }
 
-    #box-label {
+    #label-box {
         color: $white;
         padding-left: 2px;
         padding-bottom: 2px;
@@ -121,7 +121,7 @@ body {
         font-size: 13px;
     }
 
-    #box-alert {
+    #alert-box {
         color: $lightGrey;
         margin-bottom: .5rem;
         text-align: left;
@@ -129,7 +129,7 @@ body {
         line-height: 15px;
     }
 
-    #box-legal {
+    #legal-box {
         font-size: 12px;
         line-height: 1.5;
         margin-top: 13px;

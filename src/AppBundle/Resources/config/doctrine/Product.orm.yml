@@ -1,75 +1,75 @@
 AppBundle\Entity\Product:
-    type: entity
+    type:  entity
     table: product
     id:
         id:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            id: true
+            id:       true
             generator:
                 strategy: IDENTITY
     fields:
-        idCategorie:
-            type: integer
+        idCategory:
+            type:     integer
             nullable: true
             options:
                 unsigned: false
-            column: id_categorie
+            column:   id_categorie
         name:
-            type: string
+            type:     string
             nullable: true
-            length: 255
+            length:   255
             options:
                 fixed: false
         productDescription:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_description
+            column:   product_description
         productBrand:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_brand
+            column:   product_brand
         productPrice:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_price
+            column:   product_price
         productStock:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_stock
+            column:   product_stock
         productWeight:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_weight
+            column:   product_weight
         productDimensions:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_dimensions
+            column:   product_dimensions
         productDiscount:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: product_discount
+            column:   product_discount
     lifecycleCallbacks: {  }

@@ -7,7 +7,7 @@
   display: -ms-flexbox;
   display: flex; }
 
-.productbox {
+.product-box {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -51,21 +51,21 @@
       -o-transition: ease .3s;
       transition: ease .3s; }
 
-.star-full {
+.full-star {
   color: #CE0234; }
 
-.star-empty {
+.empty-star {
   color: #555; }
 
 .product-price {
   margin: 20px; }
 
-.reduction {
+.discount {
   font-size: 16px;
   font-weight: 700;
   color: #CE0234; }
 
-.fullprice {
+.full-price {
   font-size: 14px;
   text-decoration: line-through;
   color: #555;
@@ -80,7 +80,7 @@
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.livraison {
+.delivery {
   color: #555;
   font-size: 14px; }
 
@@ -93,7 +93,7 @@
   width: 100%;
   background-color: #DBDBDB; }
 
-.sidenav {
+.side-nav {
   width: 150px;
   z-index: 1;
   background-color: #ffffff;
@@ -108,7 +108,7 @@
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.sidenav a {
+.side-nav a {
   text-decoration: none;
   font-size: 16px;
   color: #555;
@@ -118,20 +118,20 @@
   transition: ease 0.3s;
   padding-left: 10px;
   border-left: 0px solid transparent; }
-  .sidenav a:hover {
+  .side-nav a:hover {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
     color: #CE0234;
     border-left: 5px solid #CE0234; }
-  .sidenav a:focus {
+  .side-nav a:focus {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
     color: #CE0234;
     border-left: 5px solid #CE0234; }
 
-.sidenav .closebtn {
+.side-nav .close-btn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -139,7 +139,7 @@
   margin-left: 50px; }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
+  .side-nav {
     padding-top: 15px; }
-  .sidenav a {
+  .side-nav a {
     font-size: 18px; } }

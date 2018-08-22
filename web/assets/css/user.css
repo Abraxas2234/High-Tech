@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.profilebox {
+.profile-box {
   margin: auto;
   margin-top: 20px;
   padding: 40px 20px;
@@ -12,22 +12,22 @@ body {
   background-color: #232F3E;
 }
 
-.profilebox h3 {
+.profile-box h3 {
   color: #bd081c;
   margin-bottom: 20px;
 }
 
-.profilebox h4 {
+.profile-box h4 {
   color: #bd081c;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.profilebox p {
+.profile-box p {
   color: whitesmoke;
 }
 
-.cuckbox {
+.cuck-box {
   margin: 20px auto;
   padding: 40px 20px;
   text-align: center;
@@ -36,13 +36,13 @@ body {
   background-color: #232F3E;
 }
 
-.cuckbox h4 {
+.cuck-box h4 {
   color: #bd081c;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.cuckbox p {
+.cuck-box p {
   color: whitesmoke;
 }
 

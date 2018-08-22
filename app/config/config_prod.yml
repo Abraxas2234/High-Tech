@@ -1,5 +1,5 @@
 imports:
-    - { resource:                   config.yml }
+    - { resource: config.yml }
 
 #doctrine:
 #    orm:
@@ -10,13 +10,13 @@ imports:
 monolog:
     handlers:
         main:
-            type:                   fingers_crossed
-            action_level:           error
-            handler:                nested
+            type:         fingers_crossed
+            action_level: error
+            handler:      nested
         nested:
-            type:                   stream
-            path:                   '%kernel.logs_dir%/%kernel.environment%.log'
-            level:                  debug
+            type:  stream
+            path:  '%kernel.logs_dir%/%kernel.environment%.log'
+            level: debug
         console:
             type:                   console
             process_psr_3_messages: false
