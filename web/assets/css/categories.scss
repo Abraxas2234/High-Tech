@@ -28,7 +28,7 @@ body {
     background-color: $white;
 }
 
-.categories .productbox {
+.categories .product-box {
     background-color: $lightGrey;
     transition: ease 0.3s;
     display: flex;
@@ -43,7 +43,7 @@ body {
     }
 }
 
-.productbox {
+.product-box {
     display: flex;
     justify-content: center;
     align-items: center;

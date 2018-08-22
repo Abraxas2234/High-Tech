@@ -1,49 +1,49 @@
 AppBundle\Entity\Delivery:
-    type: entity
+    type:  entity
     table: delivery
     id:
         deliveryId:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            id: true
-            column: delivery_id
+            id:       true
+            column:   delivery_id
             generator:
                 strategy: IDENTITY
     fields:
         userId:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            column: user_id
+            column:    user_id
         deliveryAdress:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: delivery_adress
+            column:   delivery_adress
         deliveryZipCode:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: delivery_zip_code
+            column:   delivery_zip_code
         deliveryCity:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: delivery_city
+            column:   delivery_city
         deliveryCountry:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: delivery_country
+            column:   delivery_country
     lifecycleCallbacks: {  }

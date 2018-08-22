@@ -8,7 +8,7 @@ h1 {
   margin: 20px;
   color: #CE0234; }
 
-.container-img {
+.img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +22,7 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .container-img .product-img {
+  .img-container .img-product {
     height: auto;
     max-width: 250px;
     width: 100%; }
@@ -137,12 +137,12 @@ h1 {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start; }
-  .fast-desc .carac {
+  .fast-desc .character {
     font-size: 11px;
     text-transform: uppercase;
     opacity: 0.6;
     margin: 20px 0px 5px 0px; }
-  .fast-desc .caracspec {
+  .fast-desc .special-character {
     font-size: 15px; }
 
 .shipping {
@@ -159,19 +159,19 @@ h1 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .shipping .dispo {
+  .shipping .availability {
     font-size: 11px;
     text-transform: uppercase;
     opacity: 0.6;
     margin: 20px 0px 5px 0px; }
-  .shipping .dispoprix {
+  .shipping .availability-price {
     font-size: 21px;
     font-weight: 700;
     color: #555; }
-  .shipping .dispoinfo {
+  .shipping .availability-info {
     font-size: 12px; }
 
-.rating-general-2 {
+.general-rating-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,7 +213,7 @@ h1 {
   display: -ms-flexbox;
   display: flex; }
 
-.sidenav {
+.side-nav {
   width: 150px;
   z-index: 1;
   background-color: #ffffff;
@@ -228,7 +228,7 @@ h1 {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.sidenav a {
+.side-nav a {
   text-decoration: none;
   font-size: 16px;
   color: #555;
@@ -238,20 +238,20 @@ h1 {
   transition: ease 0.3s;
   padding-left: 10px;
   border-left: 0px solid transparent; }
-  .sidenav a:hover {
+  .side-nav a:hover {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
     color: #CE0234;
     border-left: 5px solid #CE0234; }
-  .sidenav a:focus {
+  .side-nav a:focus {
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
     color: #CE0234;
     border-left: 5px solid #CE0234; }
 
-.sidenav .closebtn {
+.side-nav .close-btn {
   position: absolute;
   top: 0;
   right: 25px;
@@ -259,16 +259,16 @@ h1 {
   margin-left: 50px; }
 
 @media screen and (max-height: 450px) {
-  .sidenav {
+  .side-nav {
     padding-top: 15px; }
-  .sidenav a {
+  .side-nav a {
     font-size: 18px; } }
 
-.titre-avis-general {
+.general-opinion-title {
   font-weight: 700;
   border-bottom: 1px solid; }
 
-.avis-general {
+.general-opinion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +281,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #edf3f8; }
-  .avis-general .rating-general {
+  .general-opinion .general-rating {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -293,15 +293,15 @@ h1 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .avis-general .rating-general .based-on {
+    .general-opinion .general-rating .based-on {
       opacity: 0.6;
       font-size: 13px; }
-    .avis-general .rating-general .nombre-avis {
+    .general-opinion .general-rating .opinions-number {
       color: #0084b4;
       text-transform: uppercase;
       font-weight: 700;
       font-size: 24px; }
-  .avis-general .stars-general {
+  .general-opinion .general-stars {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -309,10 +309,10 @@ h1 {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-  .avis-general .message-general {
+  .general-opinion .general-message {
     border-left: 1px solid #DBDBDB; }
 
-.avis-users {
+.users-opinion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -325,7 +325,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #edf3f8; }
-  .avis-users .dzad-users .stars-users {
+  .users-opinion .users-dzad .users-stars {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,7 +339,7 @@ h1 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .avis-users .dzad-users .note-users {
+  .users-opinion .users-dzad .users-note {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -353,7 +353,7 @@ h1 {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  .avis-users .dzad-users .infos-users {
+  .users-opinion .users-dzad .users-infos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -362,16 +362,16 @@ h1 {
     -ms-flex-direction: row;
     flex-direction: row;
     margin: 20px; }
-  .avis-users .dzad-users .aezazer .name-users {
+  .users-opinion .users-dzad .aezazer .users-name {
     font-weight: 700; }
-  .avis-users .dzad-users .aezazer .poste-date-users {
+  .users-opinion .users-dzad .aezazer .users-date-post {
     opacity: 0.6;
     font-size: 14px; }
-  .avis-users .content .titre-avis {
+  .users-opinion .content .title-opinion {
     font-size: 18px;
     font-weight: 700;
     color: #CE0234; }
-  .avis-users .content .content-avis {
+  .users-opinion .content .content-opinion {
     font-size: 14px; }
 
 .star-full {
@@ -385,12 +385,12 @@ h1 {
 .slash-general {
   opacity: 0.6; }
 
-.note-users {
+.users-note {
   color: #CE0234;
   font-size: 24px;
   font-weight: 700; }
 
-.slash-users {
+.users-slash {
   opacity: 0.6;
   color: #555;
   font-size: 16px;

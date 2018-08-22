@@ -1,46 +1,73 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
-{{ parent() }}
-  <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}">
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}">
 {% endblock %}
 
 {% block body %}
-<div class="perso">
-    <div id="mySidenav" class="sidenav">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
-        <div class="dropdown-divider"></div>
-    </div>
-    <div class="container">
-        {% for product in products %}
-            <div class="row">
-                <div class="productbox">
-                    <div class="product-img col-lg-2">
-                        <img class="img-product" src="{{asset('assets/img/'~product.getProductBrand)}}"/>
-                    </div>
-                    <div class="product-name col-lg-10">
-                        <div class="name">
-                            <a href="#">
-                                <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a>
-                            </a>
-                            <div><i class="fas fa-star star-full"></i><i class="fas fa-star star-full"></i><i class="fas fa-star star-full"></i><i class="fas fa-star star-full"></i><i class="far fa-star star-empty"></i></div>
-                            <span>4/5 (1 avis)
-                        </div>
-                        <div class="product-price">
-                            <span class="reduction">Prix réduit </span><span class="fullprice">{{ product.productPrice }} EUR</span><br>
-                            <div class="infos">
-                                <span class="livraison">Livraison gratuite possible (voir fiche produit).</span>
-                                <span class="stock">Stock : {{ product.productStock }}</span>
+    <div class="perso">
+        <div id="mySidenav" class="side-nav">
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+            
+            <div class="dropdown-divider"></div>
+        </div>
+
+        <div class="container">
+            {% if products is not empty %}
+                <p>{{ nbResult }} résultat(s) trouvé(s).</p>
+                {% for product in products %}
+                    <div class="row">
+                        <div class="product-box">
+                            <div class="img-product col-lg-2">
+                                <img class="img-product" src="{{asset('assets/img/'~product.getProductBrand)}}"/>
+                            </div>
+
+                            <div class="product-name col-lg-10">
+                                <div class="name">
+                                    <a href="#">
+                                        <a href="{{ path('product', {'id': product.id}) }}">{{ product.name }}</a>
+                                    </a>
+
+                                    <div>
+                                        <i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i>
+                                        <i class="fas fa-star full-star"></i>
+                                        <i class="far fa-star empty-star"></i>
+                                    </div>
+
+                                    <span>4/5 (1 avis)</span>
+                                </div>
+
+                                <p>Catégorie : {{ category }}</p>
+
+                                <div class="product-price">
+                                    <span class="discount">Prix réduit </span>
+                                    <span class="full-price">{{ product.productPrice }} EUR</span>
+
+                                    <br>
+
+                                    <div class="infos">
+                                        <span class="delivery">Livraison gratuite possible (voir fiche produit).</span>
+                                        <span class="stock">Stock : {{ product.productStock }}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="spacer"></div>
-        {% endfor %}
+
+                    <div class="spacer"></div>
+                    
+                    <div class="spacer"></div>
+                {% endfor %}
+            {% else %}
+                <p>Aucun résultat trouvé.</p>
+            {% endif %}
+        </div>
     </div>
-</div>
 {% endblock %}

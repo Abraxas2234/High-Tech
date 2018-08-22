@@ -1,57 +1,57 @@
 AppBundle\Entity\Cpu:
-    type: entity
+    type:  entity
     table: cpu
     id:
         cpuId:
-            type: integer
+            type:     integer
             nullable: false
             options:
                 unsigned: false
-            id: true
-            column: cpu_id
+            id:       true
+            column:   cpu_id
             generator:
                 strategy: IDENTITY
     fields:
         cpuCoreNumber:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_core_number
+            column:   cpu_core_number
         cpuFrequency:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_frequency
+            column:   cpu_frequency
         cpuCache:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_cache
+            column:   cpu_cache
         cpuArchitecture:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_architecture
+            column:   cpu_architecture
         cpuSocket:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_socket
+            column:   cpu_socket
         cpuThermalDissipation:
-            type: string
+            type:     string
             nullable: false
-            length: 255
+            length:   255
             options:
                 fixed: false
-            column: cpu_thermal_dissipation
+            column:   cpu_thermal_dissipation
     lifecycleCallbacks: {  }

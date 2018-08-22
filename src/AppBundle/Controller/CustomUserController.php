@@ -19,6 +19,7 @@ class CustomUserController extends Controller
      */
     public function indexAction(Request $request)
     {
+<<<<<<< refs/remotes/origin/master
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
@@ -28,6 +29,33 @@ class CustomUserController extends Controller
         ->findAll();
         $billings = $em->getRepository('AppBundle:Billing')
         ->findAll();
+=======
+        $em = $this
+            ->getDoctrine()
+            ->getManager()
+        ;
+
+        $categories = $em
+            ->getRepository('AppBundle:Category')
+            ->findAll()
+        ;
+
+        $clients = $em
+            ->getRepository('AppBundle:Clients')
+            ->findAll()
+        ;
+
+        $deliveries = $em
+            ->getRepository('AppBundle:Delivery')
+            ->findAll()
+        ;
+
+        $billings = $em
+            ->getRepository('AppBundle:Billing')
+            ->findAll()
+        ;
+
+>>>>>>> errors correction
 
         $user = $this->getUser();
 
@@ -37,13 +65,13 @@ class CustomUserController extends Controller
         }
         */
 
-        return $this->render('user/index.html.twig', [
-            'categories' => $categories,
-            'user' => $user,
-            'clients' => $clients,
-            'deliveries' => $deliveries,
-            'billings' => $billings
-        ]);
+          return $this->render('user/index.html.twig', [
+              'categories' => $categories,
+              'user'       => $user,
+              'clients'    => $clients,
+              'deliveries' => $deliveries,
+              'billings'   => $billings
+          ]);
     }
 
     /**

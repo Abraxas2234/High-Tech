@@ -1,7 +1,7 @@
 body {
   background-color: #ffffff; }
 
-.categories .productbox {
+.categories .product-box {
   background-color: #efefef;
   -webkit-transition: ease 0.3s;
   -o-transition: ease 0.3s;
@@ -14,14 +14,14 @@ body {
   justify-content: center;
   text-align: center;
   height: 20vh; }
-  .categories .productbox:hover {
+  .categories .product-box:hover {
     background-color: #232F3E;
     -webkit-transition: ease 0.3s;
     -o-transition: ease 0.3s;
     transition: ease 0.3s;
     color: #ffffff; }
 
-.productbox {
+.product-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,5 +34,5 @@ body {
   color: #CE0234;
   font-size: 1.6rem;
   font-weight: 400; }
-  .productbox:hover {
+  .product-box:hover {
     color: #ffffff; }

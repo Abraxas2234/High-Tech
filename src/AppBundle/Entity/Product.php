@@ -24,9 +24,9 @@ class Product
     /**
      * @var int|null
      *
-     * @ORM\Column(name="id_categorie", type="integer", nullable=true)
+     * @ORM\Column(name="id_category", type="integer", nullable=true)
      */
-    private $idCategorie;
+    private $idCategory;
 
     /**
      * @var string|null
@@ -97,27 +97,27 @@ class Product
     }
 
     /**
-     * Set idCategorie.
+     * Set idCategory.
      *
-     * @param int|null $idCategorie
+     * @param int|null $idCategory
      *
      * @return Product
      */
-    public function setIdCategorie($idCategorie = null)
+    public function setIdCategory($idCategory = null)
     {
-        $this->idCategorie = $idCategorie;
+        $this->idCategory = $idCategory;
 
         return $this;
     }
 
     /**
-     * Get idCategorie.
+     * Get idCategory.
      *
      * @return int|null
      */
-    public function getIdCategorie()
+    public function getIdCategory()
     {
-        return $this->idCategorie;
+        return $this->idCategory;
     }
 
     /**
