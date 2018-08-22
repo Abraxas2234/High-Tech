@@ -83,8 +83,8 @@ easy_admin:
     entities:
               User:
                   class: AppBundle\Entity\User
-              Categorie:
-                  class: AppBundle\Entity\Categorie
+              Category:
+                  class: AppBundle\Entity\Category
               Product:
                   class: AppBundle\Entity\Product
               Casing:

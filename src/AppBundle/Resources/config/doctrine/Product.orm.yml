@@ -16,7 +16,7 @@ AppBundle\Entity\Product:
             nullable: true
             options:
                 unsigned: false
-            column:   id_categorie
+            column:   id_category
         name:
             type:     string
             nullable: true

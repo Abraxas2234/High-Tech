@@ -10,15 +10,21 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="{{ asset('assets/img/soldes.png') }}" alt="First slide" />
+                <a href="#">
+                    <img class="d-block w-100" src="{{ asset('assets/img/soldes.png') }}" alt="First slide" />
+                </a>
             </div>
 
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('assets/img/flash.png') }}" alt="Second slide" />
+                <a href="#">
+                    <img class="d-block w-100" src="{{ asset('assets/img/flash.png') }}" alt="Second slide" />
+                </a>
             </div>
 
             <div class="carousel-item">
-                <img class="d-block w-100" src="{{ asset('assets/img/echo.png') }}" alt="Third slide" />
+                <a href="#">
+                    <img class="d-block w-100" src="{{ asset('assets/img/echo.png') }}" alt="Third slide" />
+                </a>
             </div>
         </div>
 
@@ -34,11 +40,11 @@
     </div>
 
     <div id="quizbox">
-        {% for categorie in categories %}
-            <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': categorie.id}) }}">
+        {% for category in categories %}
+            <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': category.id}) }}">
                 <div class="categories">
                     <div class="product-box">
-                        {{ categorie.name }}
+                        {{ category.name }}
                     </div>
                 </div>
             </a>
