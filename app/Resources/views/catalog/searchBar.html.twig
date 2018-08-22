@@ -19,8 +19,8 @@
                         Catégorie
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        {% for categorie in categories %}
-                            <a class="dropdown-item" href="{{ path('category', {'id': categorie.id}) }}" value="{{ categorie.id }}">{{ categorie.name }}</a>
+                        {% for category in categories %}
+                            <a class="dropdown-item" href="{{ path('category', {'id': category.id}) }}" value="{{ category.id }}">{{ category.name }}</a>
                         {% endfor %}
                     </div>
                 </li>

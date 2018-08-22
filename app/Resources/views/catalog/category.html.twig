@@ -17,8 +17,8 @@
             <div class="dropdown-divider"></div>
             <div class="dropdown-divider"></div>
 
-            {% for categorie in categories %}
-                <a href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+            {% for category in categories %}
+                <a href="{{ path('category', {'id': category.id}) }}">{{ category.name }}</a>
             {% endfor %}
 
             <div class="dropdown-divider"></div>
@@ -26,7 +26,7 @@
         </div>
 
         <div class="container">
-            {% for product in products if product.idCategorie == id %}
+            {% for product in products if product.idCategory == id %}
                 <div class="row">
                     <div class="product-box">
                         <div class="img-product col-lg-2">

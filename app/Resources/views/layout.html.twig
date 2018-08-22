@@ -47,8 +47,8 @@
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             {% if categories is defined %}
-                                {% for categorie in categories %}
-                                    <a class="dropdown-item" href="{{ path('category', {'id': categorie.id}) }}">{{ categorie.name }}</a>
+                                {% for category in categories %}
+                                    <a class="dropdown-item" href="{{ path('category', {'id': category.id}) }}">{{ category.name }}</a>
                                 {% endfor %}
                             {% endif %}
                         </div>
@@ -73,7 +73,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             {% if is_granted("ROLE_ADMIN") %}
-                                <a class="nav-link text-primary" href="http://127.0.0.1:8000/admin/?action=list&entity=Categorie">
+                                <a class="nav-link text-primary" href="http://127.0.0.1:8000/admin/?action=list&entity=Category">
                                     <i class="fas fa-user-secret"></i>
                                     Admin
                                 </a>
@@ -140,8 +140,8 @@
 
                 <a class="" href="#">À propos de High-Tech</a>
                 <a class="" href="#">Carrières</a>
-                <a class="" href="{{ path('rgpd') }}">Utilisation des cookies</a>
-                <a class="" href="{{ path('rgpd') }}">Mentions légales</a>
+                {# <a class="" href="{{ path('rgpd') }}">Utilisation des cookies</a>
+                <a class="" href="{{ path('rgpd') }}">Mentions légales</a> #}
             </div>
 
             <div class="sell-out col-lg-3 col-md-6 col-sm-12">

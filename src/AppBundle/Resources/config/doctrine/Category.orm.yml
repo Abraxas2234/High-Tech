@@ -1,4 +1,4 @@
-AppBundle\Entity\Categorie:
+AppBundle\Entity\Category:
     type:  entity
     table: category
     id:
