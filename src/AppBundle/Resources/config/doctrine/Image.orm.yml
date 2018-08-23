@@ -1,36 +1,32 @@
-AppBundle\Entity\Clients:
+AppBundle\Entity\Image:
     type:  entity
-    table: clients
+    table: image
     id:
-        clientId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:       client_id
             generator:
                 strategy: IDENTITY
     fields:
-        clientName:
+        product:
+            type:     integer
+            nullable: false
+            options:
+                unsigned: false
+            column:   product_id
+        source:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   client_name
-        clientFirstname:
+        alt:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   client_firstname
-        clientPhone:
-            type:     string
-            nullable: false
-            length:   255
-            options:
-                fixed: false
-            column:   client_phone
-    lifecycleCallbacks:   {  }
+    lifecycleCallbacks: {  }

@@ -31,9 +31,9 @@ class Category
     /**
      * @var string
      *
-     * @ORM\Column(name="bg", type="string", length=255, nullable=false)
+     * @ORM\Column(name="background", type="boolean")
      */
-    private $bg;
+    private $background;
 
 
 
@@ -72,26 +72,26 @@ class Category
     }
 
     /**
-     * Set bg.
+     * Set background.
      *
-     * @param string $bg
+     * @param string $background
      *
      * @return Category
      */
-    public function setBg($bg)
+    public function setBackground($background)
     {
-        $this->bg = $bg;
+        $this->background = $background;
 
         return $this;
     }
 
     /**
-     * Get bg.
+     * Get background.
      *
      * @return string
      */
-    public function getBg()
+    public function getBackground()
     {
-        return $this->bg;
+        return $this->background;
     }
 }

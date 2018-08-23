@@ -15,207 +15,207 @@ class Gpu
     /**
      * @var int
      *
-     * @ORM\Column(name="gpu_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $gpuId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_model", type="string", length=255, nullable=false)
+     * @ORM\Column(name="model", type="string", length=255, nullable=false)
      */
-    private $gpuModel;
+    private $model;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_frequency", type="string", length=255, nullable=false)
+     * @ORM\Column(name="frequency", type="string", length=255, nullable=false)
      */
-    private $gpuFrequency;
+    private $frequency;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_interface", type="string", length=255, nullable=false)
+     * @ORM\Column(name="interface", type="string", length=255, nullable=false)
      */
-    private $gpuInterface;
+    private $interface;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_memory", type="string", length=255, nullable=false)
+     * @ORM\Column(name="memory", type="string", length=255, nullable=false)
      */
-    private $gpuMemory;
+    private $memory;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_memory_frequency", type="string", length=255, nullable=false)
+     * @ORM\Column(name="memory_frequency", type="string", length=255, nullable=false)
      */
-    private $gpuMemoryFrequency;
+    private $memoryFrequency;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="gpu_details", type="string", length=255, nullable=false)
+     * @ORM\Column(name="details", type="string", length=255, nullable=false)
      */
-    private $gpuDetails;
+    private $details;
 
 
 
     /**
-     * Get gpuId.
+     * Get id.
      *
      * @return int
      */
-    public function getGpuId()
+    public function getId()
     {
-        return $this->gpuId;
+        return $this->id;
     }
 
     /**
-     * Set gpuModel.
+     * Set model.
      *
-     * @param string $gpuModel
+     * @param string $model
      *
      * @return Gpu
      */
-    public function setGpuModel($gpuModel)
+    public function setModel($model)
     {
-        $this->gpuModel = $gpuModel;
+        $this->model = $model;
 
         return $this;
     }
 
     /**
-     * Get gpuModel.
+     * Get model.
      *
      * @return string
      */
-    public function getGpuModel()
+    public function getModel()
     {
-        return $this->gpuModel;
+        return $this->model;
     }
 
     /**
-     * Set gpuFrequency.
+     * Set frequency.
      *
-     * @param string $gpuFrequency
+     * @param string $frequency
      *
      * @return Gpu
      */
-    public function setGpuFrequency($gpuFrequency)
+    public function setFrequency($frequency)
     {
-        $this->gpuFrequency = $gpuFrequency;
+        $this->frequency = $frequency;
 
         return $this;
     }
 
     /**
-     * Get gpuFrequency.
+     * Get frequency.
      *
      * @return string
      */
-    public function getGpuFrequency()
+    public function getFrequency()
     {
-        return $this->gpuFrequency;
+        return $this->frequency;
     }
 
     /**
-     * Set gpuInterface.
+     * Set interface.
      *
-     * @param string $gpuInterface
+     * @param string $interface
      *
      * @return Gpu
      */
-    public function setGpuInterface($gpuInterface)
+    public function setInterface($interface)
     {
-        $this->gpuInterface = $gpuInterface;
+        $this->interface = $interface;
 
         return $this;
     }
 
     /**
-     * Get gpuInterface.
+     * Get interface.
      *
      * @return string
      */
-    public function getGpuInterface()
+    public function getInterface()
     {
-        return $this->gpuInterface;
+        return $this->interface;
     }
 
     /**
-     * Set gpuMemory.
+     * Set memory.
      *
-     * @param string $gpuMemory
+     * @param string $memory
      *
      * @return Gpu
      */
-    public function setGpuMemory($gpuMemory)
+    public function setMemory($memory)
     {
-        $this->gpuMemory = $gpuMemory;
+        $this->memory = $memory;
 
         return $this;
     }
 
     /**
-     * Get gpuMemory.
+     * Get memory.
      *
      * @return string
      */
-    public function getGpuMemory()
+    public function getMemory()
     {
-        return $this->gpuMemory;
+        return $this->memory;
     }
 
     /**
-     * Set gpuMemoryFrequency.
+     * Set memoryFrequency.
      *
-     * @param string $gpuMemoryFrequency
+     * @param string $memoryFrequency
      *
      * @return Gpu
      */
-    public function setGpuMemoryFrequency($gpuMemoryFrequency)
+    public function setMemoryFrequency($memoryFrequency)
     {
-        $this->gpuMemoryFrequency = $gpuMemoryFrequency;
+        $this->memoryFrequency = $memoryFrequency;
 
         return $this;
     }
 
     /**
-     * Get gpuMemoryFrequency.
+     * Get memoryFrequency.
      *
      * @return string
      */
-    public function getGpuMemoryFrequency()
+    public function getMemoryFrequency()
     {
-        return $this->gpuMemoryFrequency;
+        return $this->memoryFrequency;
     }
 
     /**
-     * Set gpuDetails.
+     * Set details.
      *
-     * @param string $gpuDetails
+     * @param string $details
      *
      * @return Gpu
      */
-    public function setGpuDetails($gpuDetails)
+    public function setDetails($details)
     {
-        $this->gpuDetails = $gpuDetails;
+        $this->details = $details;
 
         return $this;
     }
 
     /**
-     * Get gpuDetails.
+     * Get details.
      *
      * @return string
      */
-    public function getGpuDetails()
+    public function getDetails()
     {
-        return $this->gpuDetails;
+        return $this->details;
     }
 }

@@ -2,56 +2,56 @@ AppBundle\Entity\Gpu:
     type:  entity
     table: gpu
     id:
-        gpuId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   gpu_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        gpuModel:
+        model:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_model
-        gpuFrequency:
+            column:   model
+        frequency:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_frequency
-        gpuInterface:
+            column:   frequency
+        interface:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_interface
-        gpuMemory:
+            column:   interface
+        memory:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_memory
-        gpuMemoryFrequency:
+            column:   memory
+        memoryFrequency:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_memory_frequency
-        gpuDetails:
+            column:   memory_frequency
+        details:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   gpu_details
+            column:   details
     lifecycleCallbacks: {  }

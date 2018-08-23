@@ -15,114 +15,114 @@ class PowerSupply
     /**
      * @var int
      *
-     * @ORM\Column(name="power_supply_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $powerSupplyId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="power_supply_power", type="string", length=255, nullable=false)
+     * @ORM\Column(name="power", type="string", length=255, nullable=false)
      */
-    private $powerSupplyPower;
+    private $power;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="power_supply_modularity", type="string", length=255, nullable=false)
+     * @ORM\Column(name="modularity", type="string", length=255, nullable=false)
      */
-    private $powerSupplyModularity;
+    private $modularity;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="power_supply_certification", type="string", length=255, nullable=false)
+     * @ORM\Column(name="certification", type="string", length=255, nullable=false)
      */
-    private $powerSupplyCertification;
+    private $certification;
 
 
 
     /**
-     * Get powerSupplyId.
+     * Get id.
      *
      * @return int
      */
-    public function getPowerSupplyId()
+    public function getId()
     {
-        return $this->powerSupplyId;
+        return $this->id;
     }
 
     /**
-     * Set powerSupplyPower.
+     * Set power.
      *
-     * @param string $powerSupplyPower
+     * @param string $power
      *
      * @return PowerSupply
      */
-    public function setPowerSupplyPower($powerSupplyPower)
+    public function setPower($power)
     {
-        $this->powerSupplyPower = $powerSupplyPower;
+        $this->power = $power;
 
         return $this;
     }
 
     /**
-     * Get powerSupplyPower.
+     * Get power.
      *
      * @return string
      */
-    public function getPowerSupplyPower()
+    public function getPower()
     {
-        return $this->powerSupplyPower;
+        return $this->power;
     }
 
     /**
-     * Set powerSupplyModularity.
+     * Set modularity.
      *
-     * @param string $powerSupplyModularity
+     * @param string $modularity
      *
      * @return PowerSupply
      */
-    public function setPowerSupplyModularity($powerSupplyModularity)
+    public function setModularity($modularity)
     {
-        $this->powerSupplyModularity = $powerSupplyModularity;
+        $this->modularity = $modularity;
 
         return $this;
     }
 
     /**
-     * Get powerSupplyModularity.
+     * Get modularity.
      *
      * @return string
      */
-    public function getPowerSupplyModularity()
+    public function getModularity()
     {
-        return $this->powerSupplyModularity;
+        return $this->modularity;
     }
 
     /**
-     * Set powerSupplyCertification.
+     * Set certification.
      *
-     * @param string $powerSupplyCertification
+     * @param string $certification
      *
      * @return PowerSupply
      */
-    public function setPowerSupplyCertification($powerSupplyCertification)
+    public function setCertification($certification)
     {
-        $this->powerSupplyCertification = $powerSupplyCertification;
+        $this->certification = $certification;
 
         return $this;
     }
 
     /**
-     * Get powerSupplyCertification.
+     * Get certification.
      *
      * @return string
      */
-    public function getPowerSupplyCertification()
+    public function getCertification()
     {
-        return $this->powerSupplyCertification;
+        return $this->certification;
     }
 }

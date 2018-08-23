@@ -81,13 +81,23 @@
 
     <div id="quizbox">
         {% for category in categories %}
-            <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': category.id}) }}">
-                <div class="categories">
-                    <div class="product-box">
-                        {{ category.name }}
+            {% if category.background == 0 %}
+                <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': category.id}) }}">
+                    <div class="categories">
+                        <div class="product-box dark-product-box">
+                            {{ category.name }}
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            {% else %}
+                <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': category.id}) }}">
+                    <div class="categories">
+                        <div class="product-box light-product-box">
+                            {{ category.name }}
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
         {% endfor %}
     </div>
 {% endblock %}

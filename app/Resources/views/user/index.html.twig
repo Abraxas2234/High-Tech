@@ -1,12 +1,13 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
-  {{ parent() }}
+    {{ parent() }}
 
-  <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/user.css') }}">
 {% endblock %}
 
 {% block body %}
+<<<<<<< refs/remotes/origin/master
   <div class="container">
     <div class="profile-box">
       <h3>
@@ -34,11 +35,28 @@
         <p>Nom : {{ client.clientFirstname }}</p>
         <p>Prénom: {{ client.clientName }}</p>
         <p>Numéro de télephone : {{ client.clientPhone }}</p>
+=======
+    <div class="container">
+        <div class="profile-box">
+            <h3>
+                <b>Profile</b>
+            </h3>
 
-        <button class="btn btn-primary">Modifier</button>
-      {% endfor %}
-    </div>
+            <p>Nom d'utilisateur : {{ user.username }}</p>
+            <p>Email : {{ user.email }}</p>
+            
+            {% for client in clients if client.id == user.id %}
+                <p>Nom : {{ client.firstName }}</p>
+                <p>Prénom: {{ client.alias }}</p>
+                <p>Numéro de télephone : {{ client.phone }}</p>
+            {% endfor %}
+>>>>>>> method get form
 
+            <button class="btn btn-primary">Modifier</button>
+            <button class="btn btn-primary">Supprimer</button>
+      </div>
+
+<<<<<<< refs/remotes/origin/master
 >>>>>>> errors correction
     <div class="row">
       <div class="col-lg-5 cuck-box">
@@ -73,12 +91,33 @@
         <button class="btn btn-primary">Modifier</button>
 >>>>>>> errors correction
       </div>
+=======
+      <div class="row">
+          <div class="col-lg-5 cuck-box">
+              <h4>
+                  <b>Livraison</b>
+              </h4>
 
-      <div class="col-lg-5 cuck-box">
-        <h4>
-          <b>Facturation</b>
-        </h4>
+              {% for delivery in deliveries if delivery.user == user.id %}
+                  <p>
+                      {{ delivery.address }}
+                      {{ delivery.zipCode }}
+                      {{ delivery.city }}
+                      {{ delivery.country }}
+                  </p>
+              {% endfor %}
 
+              <button class="btn btn-primary">Ajouter</button>
+              <button class="btn btn-primary">Modifier</button>
+          </div>
+>>>>>>> method get form
+
+          <div class="col-lg-5 cuck-box">
+              <h4>
+                  <b>Facturation</b>
+              </h4>
+
+<<<<<<< refs/remotes/origin/master
         {% for billing in billings if billing.userId == user.id %}
           <p>
             {{ billing.billingAdress }}
@@ -117,7 +156,20 @@
         <button class="btn btn-primary">Ajouter</button>
         <button class="btn btn-primary">Modifier</button>
 >>>>>>> errors correction
+=======
+              {% for billing in billings if billing.user == user.id %}
+                  <p>
+                      {{ billing.address }}
+                      {{ billing.zipCode }}
+                      {{ billing.city }}
+                      {{ billing.country }}
+                  </p>
+              {% endfor %}
+
+              <button class="btn btn-primary">Ajouter</button>
+              <button class="btn btn-primary">Modifier</button>
+          </div>
+>>>>>>> method get form
       </div>
     </div>
-  </div>
 {% endblock %}

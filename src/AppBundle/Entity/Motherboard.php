@@ -15,176 +15,176 @@ class Motherboard
     /**
      * @var int
      *
-     * @ORM\Column(name="motherboard_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $motherboardId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="motherboard_socket", type="string", length=255, nullable=false)
+     * @ORM\Column(name="socket", type="string", length=255, nullable=false)
      */
-    private $motherboardSocket;
+    private $socket;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="motherboard_chipset", type="string", length=255, nullable=false)
+     * @ORM\Column(name="chipset", type="string", length=255, nullable=false)
      */
-    private $motherboardChipset;
+    private $chipset;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="motherboard_ports", type="string", length=255, nullable=false)
+     * @ORM\Column(name="ports", type="string", length=255, nullable=false)
      */
-    private $motherboardPorts;
+    private $ports;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="motherboard_max_freq", type="string", length=255, nullable=false)
+     * @ORM\Column(name="max_frequency", type="string", length=255, nullable=false)
      */
-    private $motherboardMaxFreq;
+    private $maxFrequency;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="motherboard_sata_controller", type="string", length=255, nullable=false)
+     * @ORM\Column(name="sata_controller", type="string", length=255, nullable=false)
      */
-    private $motherboardSataController;
+    private $sataController;
 
 
 
     /**
-     * Get motherboardId.
+     * Get id.
      *
      * @return int
      */
-    public function getMotherboardId()
+    public function getId()
     {
-        return $this->motherboardId;
+        return $this->id;
     }
 
     /**
-     * Set motherboardSocket.
+     * Set socket.
      *
-     * @param string $motherboardSocket
+     * @param string $socket
      *
      * @return Motherboard
      */
-    public function setMotherboardSocket($motherboardSocket)
+    public function setSocket($socket)
     {
-        $this->motherboardSocket = $motherboardSocket;
+        $this->socket = $socket;
 
         return $this;
     }
 
     /**
-     * Get motherboardSocket.
+     * Get socket.
      *
      * @return string
      */
-    public function getMotherboardSocket()
+    public function getSocket()
     {
-        return $this->motherboardSocket;
+        return $this->socket;
     }
 
     /**
-     * Set motherboardChipset.
+     * Set chipset.
      *
-     * @param string $motherboardChipset
+     * @param string $chipset
      *
      * @return Motherboard
      */
-    public function setMotherboardChipset($motherboardChipset)
+    public function setChipset($chipset)
     {
-        $this->motherboardChipset = $motherboardChipset;
+        $this->chipset = $chipset;
 
         return $this;
     }
 
     /**
-     * Get motherboardChipset.
+     * Get chipset.
      *
      * @return string
      */
-    public function getMotherboardChipset()
+    public function getChipset()
     {
-        return $this->motherboardChipset;
+        return $this->chipset;
     }
 
     /**
-     * Set motherboardPorts.
+     * Set ports.
      *
-     * @param string $motherboardPorts
+     * @param string $ports
      *
      * @return Motherboard
      */
-    public function setMotherboardPorts($motherboardPorts)
+    public function setPorts($ports)
     {
-        $this->motherboardPorts = $motherboardPorts;
+        $this->ports = $ports;
 
         return $this;
     }
 
     /**
-     * Get motherboardPorts.
+     * Get ports.
      *
      * @return string
      */
-    public function getMotherboardPorts()
+    public function getPorts()
     {
-        return $this->motherboardPorts;
+        return $this->ports;
     }
 
     /**
-     * Set motherboardMaxFreq.
+     * Set maxFrequency.
      *
-     * @param string $motherboardMaxFreq
+     * @param string $maxFrequency
      *
      * @return Motherboard
      */
-    public function setMotherboardMaxFreq($motherboardMaxFreq)
+    public function setMaxFrequency($maxFrequency)
     {
-        $this->motherboardMaxFreq = $motherboardMaxFreq;
+        $this->maxFrequency = $maxFrequency;
 
         return $this;
     }
 
     /**
-     * Get motherboardMaxFreq.
+     * Get maxFrequency.
      *
      * @return string
      */
-    public function getMotherboardMaxFreq()
+    public function getMaxFrequency()
     {
-        return $this->motherboardMaxFreq;
+        return $this->maxFrequency;
     }
 
     /**
-     * Set motherboardSataController.
+     * Set sataController.
      *
-     * @param string $motherboardSataController
+     * @param string $sataController
      *
      * @return Motherboard
      */
-    public function setMotherboardSataController($motherboardSataController)
+    public function setSataController($sataController)
     {
-        $this->motherboardSataController = $motherboardSataController;
+        $this->sataController = $sataController;
 
         return $this;
     }
 
     /**
-     * Get motherboardSataController.
+     * Get sataController.
      *
      * @return string
      */
-    public function getMotherboardSataController()
+    public function getSataController()
     {
-        return $this->motherboardSataController;
+        return $this->sataController;
     }
 }

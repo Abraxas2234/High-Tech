@@ -2,35 +2,35 @@ AppBundle\Entity\Casing:
     type:  entity
     table: casing
     id:
-        casingId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   casing_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        casingFormat:
+        format:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   casing_format
-        casingColor:
+            column:   format
+        color:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   casing_color
-        casingMaterial:
+            column:   color
+        material:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:    casing_material
+            column:    material
     lifecycleCallbacks: {  }

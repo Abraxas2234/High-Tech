@@ -40,8 +40,8 @@ class CustomUserController extends Controller
             ->findAll()
         ;
 
-        $clients = $em
-            ->getRepository('AppBundle:Clients')
+        $client = $em
+            ->getRepository('AppBundle:Client')
             ->findAll()
         ;
 
@@ -65,14 +65,15 @@ class CustomUserController extends Controller
         }
         */
 
-          return $this->render('user/index.html.twig', [
-              'categories' => $categories,
-              'user'       => $user,
-              'clients'    => $clients,
-              'deliveries' => $deliveries,
-              'billings'   => $billings
-          ]);
+        return $this->render('user/index.html.twig', [
+            'categories' => $categories,
+            'user'       => $user,
+            'clients'    => $client,
+            'deliveries' => $deliveries,
+            'billings'   => $billings
+        ]);
     }
+<<<<<<< refs/remotes/origin/master
 
     /**
      * Creates a new delivery entity.
@@ -240,4 +241,6 @@ class CustomUserController extends Controller
 
         return $this->redirectToRoute('catalog');
     }
+=======
+>>>>>>> method get form
 }

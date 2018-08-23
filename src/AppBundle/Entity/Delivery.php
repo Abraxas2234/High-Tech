@@ -5,9 +5,9 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Delivery
+ * 
  *
- * @ORM\Table(name="delivery")
+ * @ORM\Table(name="")
  * @ORM\Entity
  */
 class Delivery
@@ -15,176 +15,176 @@ class Delivery
     /**
      * @var int
      *
-     * @ORM\Column(name="delivery_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $deliveryId;
+    private $id;
 
     /**
      * @var int
      *
      * @ORM\Column(name="user_id", type="integer", nullable=false)
      */
-    private $userId;
+    private $user;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="delivery_adress", type="string", length=255, nullable=false)
+     * @ORM\Column(name="address", type="string", length=255, nullable=false)
      */
-    private $deliveryAdress;
+    private $address;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="delivery_zip_code", type="string", length=255, nullable=false)
+     * @ORM\Column(name="zip_code", type="string", length=255, nullable=false)
      */
-    private $deliveryZipCode;
+    private $zipCode;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="delivery_city", type="string", length=255, nullable=false)
+     * @ORM\Column(name="city", type="string", length=255, nullable=false)
      */
-    private $deliveryCity;
+    private $city;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="delivery_country", type="string", length=255, nullable=false)
+     * @ORM\Column(name="country", type="string", length=255, nullable=false)
      */
-    private $deliveryCountry;
+    private $country;
 
 
 
     /**
-     * Get deliveryId.
+     * Get id.
      *
      * @return int
      */
-    public function getDeliveryId()
+    public function getId()
     {
-        return $this->deliveryId;
+        return $this->id;
     }
 
     /**
-     * Set userId.
+     * Set user.
      *
-     * @param int $userId
+     * @param int $user
      *
-     * @return Delivery
+     * @return 
      */
-    public function setUserId($userId)
+    public function setUser($user)
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * Get userId.
+     * Get user.
      *
      * @return int
      */
-    public function getUserId()
+    public function getUser()
     {
-        return $this->userId;
+        return $this->user;
     }
 
     /**
-     * Set deliveryAdress.
+     * Set address.
      *
-     * @param string $deliveryAdress
+     * @param string $address
      *
-     * @return Delivery
+     * @return 
      */
-    public function setDeliveryAdress($deliveryAdress)
+    public function setAddress($address)
     {
-        $this->deliveryAdress = $deliveryAdress;
+        $this->address = $address;
 
         return $this;
     }
 
     /**
-     * Get deliveryAdress.
+     * Get address.
      *
      * @return string
      */
-    public function getDeliveryAdress()
+    public function getAddress()
     {
-        return $this->deliveryAdress;
+        return $this->address;
     }
 
     /**
-     * Set deliveryZipCode.
+     * Set zipCode.
      *
-     * @param string $deliveryZipCode
+     * @param string $zipCode
      *
-     * @return Delivery
+     * @return 
      */
-    public function setDeliveryZipCode($deliveryZipCode)
+    public function setZipCode($zipCode)
     {
-        $this->deliveryZipCode = $deliveryZipCode;
+        $this->zipCode = $zipCode;
 
         return $this;
     }
 
     /**
-     * Get deliveryZipCode.
+     * Get zipCode.
      *
      * @return string
      */
-    public function getDeliveryZipCode()
+    public function getZipCode()
     {
-        return $this->deliveryZipCode;
+        return $this->zipCode;
     }
 
     /**
-     * Set deliveryCity.
+     * Set city.
      *
-     * @param string $deliveryCity
+     * @param string $city
      *
-     * @return Delivery
+     * @return 
      */
-    public function setDeliveryCity($deliveryCity)
+    public function setCity($city)
     {
-        $this->deliveryCity = $deliveryCity;
+        $this->city = $city;
 
         return $this;
     }
 
     /**
-     * Get deliveryCity.
+     * Get city.
      *
      * @return string
      */
-    public function getDeliveryCity()
+    public function getCity()
     {
-        return $this->deliveryCity;
+        return $this->city;
     }
 
     /**
-     * Set deliveryCountry.
+     * Set country.
      *
-     * @param string $deliveryCountry
+     * @param string $country
      *
-     * @return Delivery
+     * @return 
      */
-    public function setDeliveryCountry($deliveryCountry)
+    public function setCountry($country)
     {
-        $this->deliveryCountry = $deliveryCountry;
+        $this->country = $country;
 
         return $this;
     }
 
     /**
-     * Get deliveryCountry.
+     * Get country.
      *
      * @return string
      */
-    public function getDeliveryCountry()
+    public function getCountry()
     {
-        return $this->deliveryCountry;
+        return $this->country;
     }
 }

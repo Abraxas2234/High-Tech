@@ -2,49 +2,49 @@ AppBundle\Entity\Ram:
     type:  entity
     table: ram
     id:
-        ramId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   ram_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        ramType:
+        type:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   ram_type
-        ramCapacity:
+            column:   type
+        capacity:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   ram_capacity
-        ramFrequency:
+            column:   capacity
+        frequency:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   ram_frequency
-        ramTimings:
+            column:   frequency
+        timings:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   ram_timings
-        ramTension:
+            column:   timings
+        tension:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   ram_tension
+            column:   tension
     lifecycleCallbacks: {  }

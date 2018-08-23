@@ -2,56 +2,56 @@ AppBundle\Entity\Cpu:
     type:  entity
     table: cpu
     id:
-        cpuId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   cpu_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        cpuCoreNumber:
+        coreNumber:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_core_number
-        cpuFrequency:
+            column:   core_number
+        frequency:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_frequency
-        cpuCache:
+            column:   frequency
+        cache:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_cache
-        cpuArchitecture:
+            column:   cache
+        architecture:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_architecture
-        cpuSocket:
+            column:   architecture
+        socket:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_socket
-        cpuThermalDissipation:
+            column:   socket
+        thermalDissipation:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   cpu_thermal_dissipation
+            column:   thermal_dissipation
     lifecycleCallbacks: {  }

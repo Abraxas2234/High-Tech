@@ -15,18 +15,18 @@ class PurchaseProduct
     /**
      * @var int
      *
-     * @ORM\Column(name="purchase_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $purchaseId;
+    private $id;
 
     /**
      * @var int
      *
      * @ORM\Column(name="product_id", type="integer", nullable=false)
      */
-    private $productId;
+    private $product;
 
     /**
      * @var int
@@ -45,37 +45,37 @@ class PurchaseProduct
 
 
     /**
-     * Get purchaseId.
+     * Get id.
      *
      * @return int
      */
-    public function getPurchaseId()
+    public function getId()
     {
-        return $this->purchaseId;
+        return $this->id;
     }
 
     /**
-     * Set productId.
+     * Set product.
      *
-     * @param int $productId
+     * @param int $product
      *
      * @return PurchaseProduct
      */
-    public function setProductId($productId)
+    public function setProduct($product)
     {
-        $this->productId = $productId;
+        $this->product = $product;
 
         return $this;
     }
 
     /**
-     * Get productId.
+     * Get product.
      *
      * @return int
      */
-    public function getProductId()
+    public function getProduct()
     {
-        return $this->productId;
+        return $this->product;
     }
 
     /**

@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Images
+ * Image
  *
- * @ORM\Table(name="images")
+ * @ORM\Table(name="image")
  * @ORM\Entity
  */
-class Images
+class Image
 {
     /**
      * @var int
@@ -26,7 +26,7 @@ class Images
      *
      * @ORM\Column(name="product_id", type="integer", nullable=false)
      */
-    private $productId;
+    private $product;
 
     /**
      * @var string
@@ -55,27 +55,27 @@ class Images
     }
 
     /**
-     * Set productId.
+     * Set product.
      *
-     * @param int $productId
+     * @param int $product
      *
-     * @return Images
+     * @return Image
      */
-    public function setProductId($productId)
+    public function setProduct($product)
     {
-        $this->productId = $productId;
+        $this->product = $product;
 
         return $this;
     }
 
     /**
-     * Get productId.
+     * Get product.
      *
      * @return int
      */
-    public function getProductId()
+    public function getProduct()
     {
-        return $this->productId;
+        return $this->product;
     }
 
     /**
@@ -83,7 +83,7 @@ class Images
      *
      * @param string $source
      *
-     * @return Images
+     * @return Image
      */
     public function setSource($source)
     {
@@ -107,7 +107,7 @@ class Images
      *
      * @param string $alt
      *
-     * @return Images
+     * @return Image
      */
     public function setAlt($alt)
     {
