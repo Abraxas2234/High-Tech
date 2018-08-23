@@ -15,83 +15,83 @@ class Purchase
     /**
      * @var int
      *
-     * @ORM\Column(name="purchase_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $purchaseId;
+    private $id;
 
     /**
      * @var int
      *
      * @ORM\Column(name="user_id", type="integer", nullable=false)
      */
-    private $userId;
+    private $user;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="purchase_date", type="date", nullable=false)
+     * @ORM\Column(name="date", type="date", nullable=false)
      */
-    private $purchaseDate;
+    private $date;
 
 
 
     /**
-     * Get purchaseId.
+     * Get id.
      *
      * @return int
      */
-    public function getPurchaseId()
+    public function getId()
     {
-        return $this->purchaseId;
+        return $this->id;
     }
 
     /**
-     * Set userId.
+     * Set user.
      *
-     * @param int $userId
+     * @param int $user
      *
      * @return Purchase
      */
-    public function setUserId($userId)
+    public function setUser($user)
     {
-        $this->userId = $userId;
+        $this->user = $user;
 
         return $this;
     }
 
     /**
-     * Get userId.
+     * Get user.
      *
      * @return int
      */
-    public function getUserId()
+    public function getUser()
     {
-        return $this->userId;
+        return $this->user;
     }
 
     /**
-     * Set purchaseDate.
+     * Set date.
      *
-     * @param \DateTime $purchaseDate
+     * @param \DateTime $date
      *
      * @return Purchase
      */
-    public function setPurchaseDate($purchaseDate)
+    public function setDate($date)
     {
-        $this->purchaseDate = $purchaseDate;
+        $this->date = $date;
 
         return $this;
     }
 
     /**
-     * Get purchaseDate.
+     * Get date.
      *
      * @return \DateTime
      */
-    public function getPurchaseDate()
+    public function getDate()
     {
-        return $this->purchaseDate;
+        return $this->date;
     }
 }

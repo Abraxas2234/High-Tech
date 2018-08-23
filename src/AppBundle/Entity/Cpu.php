@@ -15,207 +15,207 @@ class Cpu
     /**
      * @var int
      *
-     * @ORM\Column(name="cpu_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $cpuId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_core_number", type="string", length=255, nullable=false)
+     * @ORM\Column(name="core_number", type="string", length=255, nullable=false)
      */
-    private $cpuCoreNumber;
+    private $coreNumber;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_frequency", type="string", length=255, nullable=false)
+     * @ORM\Column(name="frequency", type="string", length=255, nullable=false)
      */
-    private $cpuFrequency;
+    private $frequency;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_cache", type="string", length=255, nullable=false)
+     * @ORM\Column(name="cache", type="string", length=255, nullable=false)
      */
-    private $cpuCache;
+    private $cache;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_architecture", type="string", length=255, nullable=false)
+     * @ORM\Column(name="architecture", type="string", length=255, nullable=false)
      */
-    private $cpuArchitecture;
+    private $architecture;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_socket", type="string", length=255, nullable=false)
+     * @ORM\Column(name="socket", type="string", length=255, nullable=false)
      */
-    private $cpuSocket;
+    private $socket;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="cpu_thermal_dissipation", type="string", length=255, nullable=false)
+     * @ORM\Column(name="thermal_dissipation", type="string", length=255, nullable=false)
      */
-    private $cpuThermalDissipation;
+    private $thermalDissipation;
 
 
 
     /**
-     * Get cpuId.
+     * Get id.
      *
      * @return int
      */
-    public function getCpuId()
+    public function getId()
     {
-        return $this->cpuId;
+        return $this->id;
     }
 
     /**
-     * Set cpuCoreNumber.
+     * Set coreNumber.
      *
-     * @param string $cpuCoreNumber
+     * @param string $coreNumber
      *
      * @return Cpu
      */
-    public function setCpuCoreNumber($cpuCoreNumber)
+    public function setCoreNumber($coreNumber)
     {
-        $this->cpuCoreNumber = $cpuCoreNumber;
+        $this->coreNumber = $coreNumber;
 
         return $this;
     }
 
     /**
-     * Get cpuCoreNumber.
+     * Get coreNumber.
      *
      * @return string
      */
-    public function getCpuCoreNumber()
+    public function getCoreNumber()
     {
-        return $this->cpuCoreNumber;
+        return $this->coreNumber;
     }
 
     /**
-     * Set cpuFrequency.
+     * Set frequency.
      *
-     * @param string $cpuFrequency
+     * @param string $frequency
      *
      * @return Cpu
      */
-    public function setCpuFrequency($cpuFrequency)
+    public function setFrequency($frequency)
     {
-        $this->cpuFrequency = $cpuFrequency;
+        $this->frequency = $frequency;
 
         return $this;
     }
 
     /**
-     * Get cpuFrequency.
+     * Get frequency.
      *
      * @return string
      */
-    public function getCpuFrequency()
+    public function getFrequency()
     {
-        return $this->cpuFrequency;
+        return $this->frequency;
     }
 
     /**
-     * Set cpuCache.
+     * Set cache.
      *
-     * @param string $cpuCache
+     * @param string $cache
      *
      * @return Cpu
      */
-    public function setCpuCache($cpuCache)
+    public function setCache($cache)
     {
-        $this->cpuCache = $cpuCache;
+        $this->cache = $cpache;
 
         return $this;
     }
 
     /**
-     * Get cpuCache.
+     * Get cache.
      *
      * @return string
      */
-    public function getCpuCache()
+    public function getCache()
     {
-        return $this->cpuCache;
+        return $this->cache;
     }
 
     /**
-     * Set cpuArchitecture.
+     * Set architecture.
      *
-     * @param string $cpuArchitecture
+     * @param string $architecture
      *
      * @return Cpu
      */
-    public function setCpuArchitecture($cpuArchitecture)
+    public function setArchitecture($architecture)
     {
-        $this->cpuArchitecture = $cpuArchitecture;
+        $this->architecture = $architecture;
 
         return $this;
     }
 
     /**
-     * Get cpuArchitecture.
+     * Get architecture.
      *
      * @return string
      */
-    public function getCpuArchitecture()
+    public function getArchitecture()
     {
-        return $this->cpuArchitecture;
+        return $this->architecture;
     }
 
     /**
-     * Set cpuSocket.
+     * Set socket.
      *
-     * @param string $cpuSocket
+     * @param string $socket
      *
      * @return Cpu
      */
-    public function setCpuSocket($cpuSocket)
+    public function setSocket($socket)
     {
-        $this->cpuSocket = $cpuSocket;
+        $this->socket = $socket;
 
         return $this;
     }
 
     /**
-     * Get cpuSocket.
+     * Get socket.
      *
      * @return string
      */
-    public function getCpuSocket()
+    public function getSocket()
     {
-        return $this->cpuSocket;
+        return $this->socket;
     }
 
     /**
-     * Set cpuThermalDissipation.
+     * Set thermalDissipation.
      *
-     * @param string $cpuThermalDissipation
+     * @param string $thermalDissipation
      *
      * @return Cpu
      */
-    public function setCpuThermalDissipation($cpuThermalDissipation)
+    public function setThermalDissipation($thermalDissipation)
     {
-        $this->cpuThermalDissipation = $cpuThermalDissipation;
+        $this->thermalDissipation = $thermalDissipation;
 
         return $this;
     }
 
     /**
-     * Get cpuThermalDissipation.
+     * Get thermalDissipation.
      *
      * @return string
      */
-    public function getCpuThermalDissipation()
+    public function getThermalDissipation()
     {
-        return $this->cpuThermalDissipation;
+        return $this->thermalDissipation;
     }
 }

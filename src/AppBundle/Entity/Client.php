@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Billing
+ * Client
  *
- * @ORM\Table(name="billing")
+ * @ORM\Table(name="client")
  * @ORM\Entity
  */
-class Billing
+class Client
 {
     /**
      * @var int
@@ -22,42 +22,25 @@ class Billing
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="user_id", type="integer", nullable=false)
+     * @ORM\Column(name="alias", type="string", length=255, nullable=false)
      */
-    private $user;
+    private $alias;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="address", type="string", length=255, nullable=false)
+     * @ORM\Column(name="first_name", type="string", length=255, nullable=false)
      */
-    private $address;
+    private $firstName;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="zip_code", type="string", length=255, nullable=false)
+     * @ORM\Column(name="phone", type="string", length=255, nullable=false)
      */
-    private $zipCode;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="city", type="string", length=255, nullable=false)
-     */
-    private $city;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="country", type="string", length=255, nullable=false)
-     */
-    private $country;
-    /**
-     * @var int
-     */
+    private $phone;
 
 
     /**
@@ -71,27 +54,99 @@ class Billing
     }
 
     /**
-     * Set user.
+     * Set alias.
      *
-     * @param int $user
+     * @param string $alias
      *
-     * @return Billing
+     * @return Client
      */
-    public function setUser($user)
+    public function setAlias($alias)
     {
-        $this->user = $user;
+        $this->alias = $alias;
 
         return $this;
     }
 
     /**
-     * Get user.
+     * Get alias.
      *
-     * @return int
+     * @return string
      */
-    public function getUser()
+    public function getAlias()
     {
-        return $this->user;
+        return $this->alias;
+    }
+
+    /**
+     * Set firstName.
+     *
+     * @param string $firstName
+     *
+     * @return Client
+     */
+    public function setFirstName($firstName)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Get firstName.
+     *
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set password.
+     *
+     * @param string $password
+     *
+     * @return Client
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password.
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+
+    /**
+     * Set phone.
+     *
+     * @param string $phone
+     *
+     * @return Client
+     */
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+
+        return $this;
+    }
+
+    /**
+     * Get phone.
+     *
+     * @return string
+     */
+    public function getPhone()
+    {
+        return $this->phone;
     }
 
     /**
@@ -99,7 +154,7 @@ class Billing
      *
      * @param string $address
      *
-     * @return Billing
+     * @return Client
      */
     public function setAddress($address)
     {
@@ -123,9 +178,9 @@ class Billing
      *
      * @param string $zipCode
      *
-     * @return Billing
+     * @return Client
      */
-    public function setZipCode($ipCode)
+    public function setZipCode($zipCode)
     {
         $this->zipCode = $zipCode;
 
@@ -147,7 +202,7 @@ class Billing
      *
      * @param string $city
      *
-     * @return Billing
+     * @return Client
      */
     public function setCity($city)
     {
@@ -171,7 +226,7 @@ class Billing
      *
      * @param string $country
      *
-     * @return Billing
+     * @return Client
      */
     public function setCountry($country)
     {

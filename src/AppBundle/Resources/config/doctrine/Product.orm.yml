@@ -11,65 +11,65 @@ AppBundle\Entity\Product:
             generator:
                 strategy: IDENTITY
     fields:
-        idCategory:
+        category:
             type:     integer
             nullable: true
             options:
                 unsigned: false
-            column:   id_category
+            column:   category_id
         name:
             type:     string
             nullable: true
             length:   255
             options:
                 fixed: false
-        productDescription:
+        description:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_description
-        productBrand:
+            column:   description
+        brand:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_brand
-        productPrice:
+            column:   brand
+        price:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_price
-        productStock:
+            column:   price
+        stock:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_stock
-        productWeight:
+            column:   stock
+        weight:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_weight
-        productDimensions:
+            column:   weight
+        dimensions:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_dimensions
-        productDiscount:
+            column:   dimensions
+        discount:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   product_discount
+            column:   discount
     lifecycleCallbacks: {  }

@@ -1,18 +1,18 @@
 AppBundle\Entity\PurchaseProduct:
     type:  entity
-    table: purchase_product
+    table: product
     id:
-        purchaseId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   purchase_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        productId:
+        product:
             type:     integer
             nullable: false
             options:

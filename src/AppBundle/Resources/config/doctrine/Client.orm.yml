@@ -1,6 +1,6 @@
-AppBundle\Entity\Images:
+AppBundle\Entity\Client:
     type:  entity
-    table: images
+    table: client
     id:
         id:
             type:     integer
@@ -8,25 +8,29 @@ AppBundle\Entity\Images:
             options:
                 unsigned: false
             id:       true
+            column:       id
             generator:
                 strategy: IDENTITY
     fields:
-        productId:
-            type:     integer
-            nullable: false
-            options:
-                unsigned: false
-            column:   product_id
-        source:
+        alias:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-        alt:
+            column:   alias
+        firstName:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-    lifecycleCallbacks: {  }
+            column:   first_name
+        phone:
+            type:     string
+            nullable: false
+            length:   255
+            options:
+                fixed: false
+            column:   phone
+    lifecycleCallbacks:   {  }

@@ -2,7 +2,6 @@ body {
   background-color: #ffffff; }
 
 .categories .product-box {
-  background-color: #efefef;
   -webkit-transition: ease 0.3s;
   -o-transition: ease 0.3s;
   transition: ease 0.3s;
@@ -36,3 +35,9 @@ body {
   font-weight: 400; }
   .product-box:hover {
     color: #ffffff; }
+
+.light-product-box {
+  background-color: #efefef; }
+
+.dark-product-box {
+  background-color: #9B9B9B; }

@@ -25,8 +25,8 @@ class CustomUserController extends Controller
             ->findAll()
         ;
 
-        $clients = $em
-            ->getRepository('AppBundle:Clients')
+        $client = $em
+            ->getRepository('AppBundle:Client')
             ->findAll()
         ;
 
@@ -46,16 +46,15 @@ class CustomUserController extends Controller
         /*
         if (!is_object($user) || !$user instanceof UserInterface) {
             throw new AccessDeniedException('This user does not have access to this section.');
-          }
+        }
         */
 
-          return $this->render('user/index.html.twig', [
-              'categories' => $categories,
-              'user'       => $user,
-              'clients'    => $clients,
-              'deliveries' => $deliveries,
-              'billings'   => $billings
-          ]);
+        return $this->render('user/index.html.twig', [
+            'categories' => $categories,
+            'user'       => $user,
+            'clients'    => $client,
+            'deliveries' => $deliveries,
+            'billings'   => $billings
+        ]);
     }
-
 }

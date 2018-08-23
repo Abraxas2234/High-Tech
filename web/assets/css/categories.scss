@@ -29,7 +29,6 @@ body {
 }
 
 .categories .product-box {
-    background-color: $lightGrey;
     transition: ease 0.3s;
     display: flex;
     justify-content: center;
@@ -54,4 +53,12 @@ body {
     &:hover {
         color: $white;
     }
+}
+
+.light-product-box {
+    background-color: $lightGrey;
+}
+
+.dark-product-box {
+    background-color: $grey;
 }

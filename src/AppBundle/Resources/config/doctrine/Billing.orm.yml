@@ -2,48 +2,48 @@ AppBundle\Entity\Billing:
     type:  entity
     table: billing
     id:
-        billingId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   billing_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        userId:
+        user:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             column:   user_id
-        billingAdress:
+        address:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   billing_adress
-        billingZipCode:
+            column:   address
+        zipCode:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   billing_zip_code
-        billingCity:
+            column:   zip_code
+        city:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   billing_city
-        billingCountry:
+            column:   city
+        country:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   billing_country
+            column:   country
     lifecycleCallbacks: {  }

@@ -24,9 +24,9 @@ class Product
     /**
      * @var int|null
      *
-     * @ORM\Column(name="id_category", type="integer", nullable=true)
+     * @ORM\Column(name="category_id", type="integer", nullable=true)
      */
-    private $idCategory;
+    private $category;
 
     /**
      * @var string|null
@@ -38,51 +38,51 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="product_description", type="string", length=255, nullable=false)
+     * @ORM\Column(name="description", type="string", length=255, nullable=false)
      */
-    private $productDescription;
+    private $description;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_brand", type="string", length=255, nullable=false)
+     * @ORM\Column(name="brand", type="string", length=255, nullable=false)
      */
-    private $productBrand;
+    private $brand;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_price", type="string", length=255, nullable=false)
+     * @ORM\Column(name="price", type="string", length=255, nullable=false)
      */
-    private $productPrice;
+    private $price;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_stock", type="string", length=255, nullable=false)
+     * @ORM\Column(name="stock", type="string", length=255, nullable=false)
      */
-    private $productStock;
+    private $stock;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_weight", type="string", length=255, nullable=false)
+     * @ORM\Column(name="weight", type="string", length=255, nullable=false)
      */
-    private $productWeight;
+    private $weight;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_dimensions", type="string", length=255, nullable=false)
+     * @ORM\Column(name="dimensions", type="string", length=255, nullable=false)
      */
-    private $productDimensions;
+    private $dimensions;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="product_discount", type="string", length=255, nullable=false)
+     * @ORM\Column(name="discount", type="string", length=255, nullable=false)
      */
-    private $productDiscount;
+    private $discount;
 
 
 
@@ -97,27 +97,27 @@ class Product
     }
 
     /**
-     * Set idCategory.
+     * Set category.
      *
-     * @param int|null $idCategory
+     * @param int|null $category
      *
      * @return Product
      */
-    public function setIdCategory($idCategory = null)
+    public function setCategory($category = null)
     {
-        $this->idCategory = $idCategory;
+        $this->category = $category;
 
         return $this;
     }
 
     /**
-     * Get idCategory.
+     * Get category.
      *
      * @return int|null
      */
-    public function getIdCategory()
+    public function getCategory()
     {
-        return $this->idCategory;
+        return $this->category;
     }
 
     /**
@@ -145,170 +145,170 @@ class Product
     }
 
     /**
-     * Set productDescription.
+     * Set description.
      *
-     * @param string $productDescription
+     * @param string $description
      *
      * @return Product
      */
-    public function setProductDescription($productDescription)
+    public function setDescription($description)
     {
-        $this->productDescription = $productDescription;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get productDescription.
+     * Get description.
      *
      * @return string
      */
-    public function getProductDescription()
+    public function getDescription()
     {
-        return $this->productDescription;
+        return $this->description;
     }
 
     /**
-     * Set productBrand.
+     * Set brand.
      *
-     * @param string $productBrand
+     * @param string $brand
      *
      * @return Product
      */
-    public function setProductBrand($productBrand)
+    public function setBrand($brand)
     {
-        $this->productBrand = $productBrand;
+        $this->brand = $brand;
 
         return $this;
     }
 
     /**
-     * Get productBrand.
+     * Get brand.
      *
      * @return string
      */
-    public function getProductBrand()
+    public function getBrand()
     {
-        return $this->productBrand;
+        return $this->brand;
     }
 
     /**
-     * Set productPrice.
+     * Set price.
      *
-     * @param string $productPrice
+     * @param string $price
      *
      * @return Product
      */
-    public function setProductPrice($productPrice)
+    public function setPrice($price)
     {
-        $this->productPrice = $productPrice;
+        $this->price = $price;
 
         return $this;
     }
 
     /**
-     * Get productPrice.
+     * Get price.
      *
      * @return string
      */
-    public function getProductPrice()
+    public function getPrice()
     {
-        return $this->productPrice;
+        return $this->price;
     }
 
     /**
-     * Set productStock.
+     * Set stock.
      *
-     * @param string $productStock
+     * @param string $stock
      *
      * @return Product
      */
-    public function setProductStock($productStock)
+    public function setStock($stock)
     {
-        $this->productStock = $productStock;
+        $this->stock = $stock;
 
         return $this;
     }
 
     /**
-     * Get productStock.
+     * Get stock.
      *
      * @return string
      */
-    public function getProductStock()
+    public function getStock()
     {
-        return $this->productStock;
+        return $this->stock;
     }
 
     /**
-     * Set productWeight.
+     * Set weight.
      *
-     * @param string $productWeight
+     * @param string $weight
      *
      * @return Product
      */
-    public function setProductWeight($productWeight)
+    public function setWeight($weight)
     {
-        $this->productWeight = $productWeight;
+        $this->weight = $weight;
 
         return $this;
     }
 
     /**
-     * Get productWeight.
+     * Get weight.
      *
      * @return string
      */
-    public function getProductWeight()
+    public function getWeight()
     {
-        return $this->productWeight;
+        return $this->weight;
     }
 
     /**
-     * Set productDimensions.
+     * Set dimensions.
      *
-     * @param string $productDimensions
+     * @param string $dimensions
      *
      * @return Product
      */
-    public function setProductDimensions($productDimensions)
+    public function setDimensions($dimensions)
     {
-        $this->productDimensions = $productDimensions;
+        $this->dimensions = $dimensions;
 
         return $this;
     }
 
     /**
-     * Get productDimensions.
+     * Get dimensions.
      *
      * @return string
      */
-    public function getProductDimensions()
+    public function getDimensions()
     {
-        return $this->productDimensions;
+        return $this->dimensions;
     }
 
     /**
-     * Set productDiscount.
+     * Set discount.
      *
-     * @param string $productDiscount
+     * @param string $discount
      *
      * @return Product
      */
-    public function setProductDiscount($productDiscount)
+    public function setDiscount($discount)
     {
-        $this->productDiscount = $productDiscount;
+        $this->discount = $discount;
 
         return $this;
     }
 
     /**
-     * Get productDiscount.
+     * Get discount.
      *
      * @return string
      */
-    public function getProductDiscount()
+    public function getDiscount()
     {
-        return $this->productDiscount;
+        return $this->discount;
     }
 }

@@ -2,35 +2,35 @@ AppBundle\Entity\PowerSupply:
     type:  entity
     table: power_supply
     id:
-        powerSupplyId:
+        id:
             type:     integer
             nullable: false
             options:
                 unsigned: false
             id:       true
-            column:   power_supply_id
+            column:   id
             generator:
                 strategy: IDENTITY
     fields:
-        powerSupplyPower:
+        power:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   power_supply_power
-        powerSupplyModularity:
+            column:   power
+        modularity:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   power_supply_modularity
-        powerSupplyCertification:
+            column:   modularity
+        certification:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   power_supply_certification
+            column:   certification
     lifecycleCallbacks: {  }

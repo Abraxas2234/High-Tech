@@ -17,10 +17,10 @@ AppBundle\Entity\Category:
             length:   100
             options:
                 fixed: false
-        bg:
-            type:     string
+        background:
+            type:     boolean
             nullable: false
-            length:   255
+            length:   
             options:
                 fixed: false
     lifecycleCallbacks: {  }

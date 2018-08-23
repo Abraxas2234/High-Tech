@@ -20,11 +20,12 @@
         <div class="container">
             {% if products is not empty %}
                 <p>{{ nbResult }} résultat(s) trouvé(s).</p>
+
                 {% for product in products %}
                     <div class="row">
                         <div class="product-box">
                             <div class="img-product col-lg-2">
-                                <img class="img-product" src="{{asset('assets/img/'~product.getProductBrand)}}"/>
+                                <img class="img-product" src="{{asset('assets/img/'~product.getBrand)}}"/>
                             </div>
 
                             <div class="product-name col-lg-10">
@@ -44,17 +45,19 @@
                                     <span>4/5 (1 avis)</span>
                                 </div>
 
-                                <p>Catégorie : {{ category }}</p>
+                                {% for category in categories if product.category == category.id %}
+                                    <p>Catégorie : {{ category.name }}</p>
+                                {% endfor %}
 
                                 <div class="product-price">
                                     <span class="discount">Prix réduit </span>
-                                    <span class="full-price">{{ product.productPrice }} EUR</span>
+                                    <span class="full-price">{{ product.price }} EUR</span>
 
                                     <br>
 
                                     <div class="infos">
                                         <span class="delivery">Livraison gratuite possible (voir fiche produit).</span>
-                                        <span class="stock">Stock : {{ product.productStock }}</span>
+                                        <span class="stock">Stock : {{ product.stock }}</span>
                                     </div>
                                 </div>
                             </div>

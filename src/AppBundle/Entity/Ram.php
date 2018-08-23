@@ -15,176 +15,176 @@ class Ram
     /**
      * @var int
      *
-     * @ORM\Column(name="ram_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $ramId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ram_type", type="string", length=255, nullable=false)
+     * @ORM\Column(name="type", type="string", length=255, nullable=false)
      */
-    private $ramType;
+    private $type;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ram_capacity", type="string", length=255, nullable=false)
+     * @ORM\Column(name="capacity", type="string", length=255, nullable=false)
      */
-    private $ramCapacity;
+    private $capacity;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ram_frequency", type="string", length=255, nullable=false)
+     * @ORM\Column(name="frequency", type="string", length=255, nullable=false)
      */
-    private $ramFrequency;
+    private $frequency;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ram_timings", type="string", length=255, nullable=false)
+     * @ORM\Column(name="timings", type="string", length=255, nullable=false)
      */
-    private $ramTimings;
+    private $timings;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ram_tension", type="string", length=255, nullable=false)
+     * @ORM\Column(name="tension", type="string", length=255, nullable=false)
      */
-    private $ramTension;
+    private $tension;
 
 
 
     /**
-     * Get ramId.
+     * Get id.
      *
      * @return int
      */
-    public function getRamId()
+    public function getId()
     {
-        return $this->ramId;
+        return $this->id;
     }
 
     /**
-     * Set ramType.
+     * Set type.
      *
-     * @param string $ramType
+     * @param string $type
      *
      * @return Ram
      */
-    public function setRamType($ramType)
+    public function setType($type)
     {
-        $this->ramType = $ramType;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get ramType.
+     * Get type.
      *
      * @return string
      */
-    public function getRamType()
+    public function getType()
     {
-        return $this->ramType;
+        return $this->type;
     }
 
     /**
-     * Set ramCapacity.
+     * Set capactity.
      *
-     * @param string $ramCapacity
+     * @param string $capactity
      *
      * @return Ram
      */
-    public function setRamCapacity($ramCapacity)
+    public function setCapacity($capactity)
     {
-        $this->ramCapacity = $ramCapacity;
+        $this->capactity = $capactity;
 
         return $this;
     }
 
     /**
-     * Get ramCapacity.
+     * Get capactity.
      *
      * @return string
      */
-    public function getRamCapacity()
+    public function getCapacity()
     {
-        return $this->ramCapacity;
+        return $this->capactity;
     }
 
     /**
-     * Set ramFrequency.
+     * Set frequency.
      *
-     * @param string $ramFrequency
+     * @param string $frequency
      *
      * @return Ram
      */
-    public function setRamFrequency($ramFrequency)
+    public function setFrequency($frequency)
     {
-        $this->ramFrequency = $ramFrequency;
+        $this->frequency = $frequency;
 
         return $this;
     }
 
     /**
-     * Get ramFrequency.
+     * Get frequency.
      *
      * @return string
      */
-    public function getRamFrequency()
+    public function getFrequency()
     {
-        return $this->ramFrequency;
+        return $this->frequency;
     }
 
     /**
-     * Set ramTimings.
+     * Set timings.
      *
-     * @param string $ramTimings
+     * @param string $timings
      *
      * @return Ram
      */
-    public function setRamTimings($ramTimings)
+    public function setTimings($timings)
     {
-        $this->ramTimings = $ramTimings;
+        $this->timings = $timings;
 
         return $this;
     }
 
     /**
-     * Get ramTimings.
+     * Get timings.
      *
      * @return string
      */
-    public function getRamTimings()
+    public function getTimings()
     {
-        return $this->ramTimings;
+        return $this->timings;
     }
 
     /**
-     * Set ramTension.
+     * Set tension.
      *
-     * @param string $ramTension
+     * @param string $tension
      *
      * @return Ram
      */
-    public function setRamTension($ramTension)
+    public function setTension($tension)
     {
-        $this->ramTension = $ramTension;
+        $this->tension = $tension;
 
         return $this;
     }
 
     /**
-     * Get ramTension.
+     * Get tension.
      *
      * @return string
      */
-    public function getRamTension()
+    public function getTension()
     {
-        return $this->ramTension;
+        return $this->tension;
     }
 }

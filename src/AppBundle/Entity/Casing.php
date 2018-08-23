@@ -15,114 +15,114 @@ class Casing
     /**
      * @var int
      *
-     * @ORM\Column(name="casing_id", type="integer")
+     * @ORM\Column(name="id", type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $casingId;
+    private $id;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="casing_format", type="string", length=255, nullable=false)
+     * @ORM\Column(name="format", type="string", length=255, nullable=false)
      */
-    private $casingFormat;
+    private $format;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="casing_color", type="string", length=255, nullable=false)
+     * @ORM\Column(name="color", type="string", length=255, nullable=false)
      */
-    private $casingColor;
+    private $color;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="casing_material", type="string", length=255, nullable=false)
+     * @ORM\Column(name="material", type="string", length=255, nullable=false)
      */
-    private $casingMaterial;
+    private $material;
 
 
 
     /**
-     * Get casingId.
+     * Get id.
      *
      * @return int
      */
-    public function getCasingId()
+    public function getId()
     {
-        return $this->casingId;
+        return $this->id;
     }
 
     /**
-     * Set casingFormat.
+     * Set format.
      *
-     * @param string $casingFormat
+     * @param string $format
      *
      * @return Casing
      */
-    public function setCasingFormat($casingFormat)
+    public function setFormat($format)
     {
-        $this->casingFormat = $casingFormat;
+        $this->format = $format;
 
         return $this;
     }
 
     /**
-     * Get casingFormat.
+     * Get format.
      *
      * @return string
      */
-    public function getCasingFormat()
+    public function getFormat()
     {
-        return $this->casingFormat;
+        return $this->format;
     }
 
     /**
-     * Set casingColor.
+     * Set color.
      *
-     * @param string $casingColor
+     * @param string $color
      *
      * @return Casing
      */
-    public function setCasingColor($casingColor)
+    public function setColor($color)
     {
-        $this->casingColor = $casingColor;
+        $this->color = $color;
 
         return $this;
     }
 
     /**
-     * Get casingColor.
+     * Get color.
      *
      * @return string
      */
-    public function getCasingColor()
+    public function getColor()
     {
-        return $this->casingColor;
+        return $this->color;
     }
 
     /**
-     * Set casingMaterial.
+     * Set material.
      *
-     * @param string $casingMaterial
+     * @param string $material
      *
      * @return Casing
      */
-    public function setCasingMaterial($casingMaterial)
+    public function setMaterial($material)
     {
-        $this->casingMaterial = $casingMaterial;
+        $this->material = $material;
 
         return $this;
     }
 
     /**
-     * Get casingMaterial.
+     * Get material.
      *
      * @return string
      */
-    public function getCasingMaterial()
+    public function getMaterial()
     {
-        return $this->casingMaterial;
+        return $this->material;
     }
 }
