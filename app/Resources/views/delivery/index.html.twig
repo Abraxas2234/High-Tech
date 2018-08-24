@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Deliveries list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Deliveryid</th>
+                <th>Userid</th>
+                <th>Deliveryadress</th>
+                <th>Deliveryzipcode</th>
+                <th>Deliverycity</th>
+                <th>Deliverycountry</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for delivery in deliveries %}
+            <tr>
+                <td><a href="{{ path('delivery_show', { 'deliveryId': delivery.deliveryId }) }}">{{ delivery.deliveryId }}</a></td>
+                <td>{{ delivery.userId }}</td>
+                <td>{{ delivery.deliveryAdress }}</td>
+                <td>{{ delivery.deliveryZipCode }}</td>
+                <td>{{ delivery.deliveryCity }}</td>
+                <td>{{ delivery.deliveryCountry }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('delivery_show', { 'deliveryId': delivery.deliveryId }) }}">show</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    
+{% endblock %}

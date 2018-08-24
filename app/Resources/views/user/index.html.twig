@@ -9,7 +9,7 @@
   <div class="container">
     <div class="profilebox">
       <h3>
-        <b>Profile</b>
+        <b>Profil</b>
       </h3>
       <p>Nom d'utilisateur:
         {{ user.username }}</p>
@@ -22,9 +22,15 @@
           {{ client.clientName }}</p>
         <p>Numéro de télephone:
           {{ client.clientPhone }}</p>
-        <button class="btn btn-primary">Modifier</button>
-      </div>
-    {% endfor %}
+
+        <a href="{{ path('clients_edit', { 'clientId': client.clientId }) }}">
+          <button class="btn btn-primary">
+            <i class="fas fa-edit"></i>
+          </button>
+        </a>
+      {% endfor %}
+    </div>
+
     <div class="row">
       <div class="col-lg-5 cuckbox">
         <h4>
@@ -35,10 +41,20 @@
             {{ delivery.deliveryAdress }}
             {{ delivery.deliveryZipCode }}
             {{ delivery.deliveryCity }}
-            {{ delivery.deliveryCountry }}</p>
+            {{ delivery.deliveryCountry }}
+            <a href="{{ path('delivery_edit', { 'deliveryId': delivery.deliveryId }) }}">
+              <button class="btn btn-primary">
+                <i class="fas fa-edit"></i>
+              </button>
+            </a>
+          </p>
         {% endfor %}
-        <button class="btn btn-primary">Ajouter</button>
-        <button class="btn btn-primary">Modifier</button>
+        <a href="{{ path('delivery_new') }}">
+          <button class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+
+        </a>
       </div>
       <div class="col-lg-5 cuckbox">
         <h4>
@@ -49,10 +65,33 @@
             {{ billing.billingAdress }}
             {{ billing.billingZipCode }}
             {{ billing.billingCity }}
-            {{ billing.billingCountry }}</p>
+            {{ billing.billingCountry }}
+            <a href="{{ path('billing_edit', { 'billingId': billing.billingId }) }}">
+              <button class="btn btn-primary">
+                <i class="fas fa-edit"></i>
+              </button>
+            </a>
+          </p>
         {% endfor %}
-        <button class="btn btn-primary">Ajouter</button>
-        <button class="btn btn-primary">Modifier</button>
+        <a href="{{ path('billing_new') }}">
+          <button class="btn btn-primary">
+            <i class="fas fa-plus-circle"></i>
+          </button>
+        </a>
+      </div>
+      <div class="profilebox">
+
+        <h3>Loi RGPD, suppression de vos données et de votre compte :
+        </h3>
+        {% for client in clients if client.clientId == user.id %}
+          <a href="{{ path('clients_delete', { 'clientId': client.clientId }) }}">
+            <button class="btn btn-primary">
+              Désactivation du compte
+            </button>
+          </a>
+        {% endfor %}
+        <p>ATTENTION: Toutes vos informations personelles seront supprimées de notre base de donnée conformément à la loi RGPD.</p>
+
       </div>
     </div>
   </div>

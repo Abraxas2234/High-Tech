@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Delivery</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Deliveryid</th>
+                <td>{{ delivery.deliveryId }}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ delivery.userId }}</td>
+            </tr>
+            <tr>
+                <th>Deliveryadress</th>
+                <td>{{ delivery.deliveryAdress }}</td>
+            </tr>
+            <tr>
+                <th>Deliveryzipcode</th>
+                <td>{{ delivery.deliveryZipCode }}</td>
+            </tr>
+            <tr>
+                <th>Deliverycity</th>
+                <td>{{ delivery.deliveryCity }}</td>
+            </tr>
+            <tr>
+                <th>Deliverycountry</th>
+                <td>{{ delivery.deliveryCountry }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('delivery_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -15,11 +15,11 @@ class CatalogController extends Controller
      */
     public function indexAction(Request $request)
     {
-      $em = $this->getDoctrine()->getManager();
-      $categories = $em->getRepository('AppBundle:Categorie')
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
 
-      $users = $em->getRepository('AppBundle:User')
+        $users = $em->getRepository('AppBundle:User')
         ->findAll();
 
         return $this->render('catalog/index.html.twig', [
@@ -32,10 +32,10 @@ class CatalogController extends Controller
      */
     public function showAction($id)
     {
-      $em = $this->getDoctrine()->getManager();
-      $categories = $em->getRepository('AppBundle:Categorie')
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
-      $products = $em->getRepository('AppBundle:Product')
+        $products = $em->getRepository('AppBundle:Product')
         ->findAll();
 
         return $this->render('catalog/category.html.twig', [
@@ -50,21 +50,21 @@ class CatalogController extends Controller
      */
     public function showProduct($id)
     {
-      $em = $this->getDoctrine()->getManager();
-      $categories = $em->getRepository("AppBundle:Categorie")->findAll();
-      $products = $em->getRepository('AppBundle:Product')
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository("AppBundle:Categorie")->findAll();
+        $products = $em->getRepository('AppBundle:Product')
         ->findAll();
-      $casings = $em->getRepository('AppBundle:Casing')
+        $casings = $em->getRepository('AppBundle:Casing')
         ->findAll();
-      $cpus = $em->getRepository('AppBundle:Cpu')
+        $cpus = $em->getRepository('AppBundle:Cpu')
         ->findAll();
-      $gpus = $em->getRepository('AppBundle:Gpu')
+        $gpus = $em->getRepository('AppBundle:Gpu')
         ->findAll();
-      $motherboards = $em->getRepository('AppBundle:Motherboard')
+        $motherboards = $em->getRepository('AppBundle:Motherboard')
         ->findAll();
-      $powers = $em->getRepository('AppBundle:PowerSupply')
+        $powers = $em->getRepository('AppBundle:PowerSupply')
         ->findAll();
-      $rams = $em->getRepository('AppBundle:Ram')
+        $rams = $em->getRepository('AppBundle:Ram')
         ->findAll();
 
         return $this->render('catalog/product.html.twig', [

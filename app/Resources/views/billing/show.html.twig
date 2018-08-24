@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Billing</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Billingid</th>
+                <td>{{ billing.billingId }}</td>
+            </tr>
+            <tr>
+                <th>Userid</th>
+                <td>{{ billing.userId }}</td>
+            </tr>
+            <tr>
+                <th>Billingadress</th>
+                <td>{{ billing.billingAdress }}</td>
+            </tr>
+            <tr>
+                <th>Billingzipcode</th>
+                <td>{{ billing.billingZipCode }}</td>
+            </tr>
+            <tr>
+                <th>Billingcity</th>
+                <td>{{ billing.billingCity }}</td>
+            </tr>
+            <tr>
+                <th>Billingcountry</th>
+                <td>{{ billing.billingCountry }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('billing_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}
