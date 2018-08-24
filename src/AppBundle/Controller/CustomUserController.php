@@ -176,7 +176,7 @@ class CustomUserController extends Controller
     /**
      * Deletes a client entity.
      *
-     * @Route("user/{clientId}/nuke", name="clients_delete")
+     * @Route("user/{clientId}/nuke", name="nuke_user")
      * @Method({"DELETE", "GET"})
      */
     public function NukeUserAction(Request $request)
