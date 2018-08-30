@@ -12,13 +12,13 @@ AppBundle\Entity\Client:
             generator:
                 strategy: IDENTITY
     fields:
-        alias:
+        lastName:
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
-            column:   alias
+            column:   last_name
         firstName:
             type:     string
             nullable: false
@@ -33,4 +33,4 @@ AppBundle\Entity\Client:
             options:
                 fixed: false
             column:   phone
-    lifecycleCallbacks:   {  }
+    lifecycleCallbacks: {  }

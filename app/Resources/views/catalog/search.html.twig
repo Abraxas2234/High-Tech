@@ -2,37 +2,29 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    
-    <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}" />
+
+    <link rel="stylesheet" href="{{ asset('assets/css/items.css') }}">
 {% endblock %}
 
 {% block body %}
     <div class="perso">
-        <div id="mySideNav" class="side-nav">
+        <div id="mySidenav" class="side-nav">
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
             <a href="#">Contact</a>
-
-            <div class="dropdown-divider"></div>
-            <div class="dropdown-divider"></div>
-
-            {% for category in listCategories %}
-                <a href="{{ path('category', {'id': category.id}) }}">{{ category.name }}</a>
-            {% endfor %}
-
-            <div class="dropdown-divider"></div>
+            
             <div class="dropdown-divider"></div>
         </div>
 
         <div class="container">
-            <p>{{ nbProducts }} produit(s) trouvé(s).</p>
+            <p>{{ nbResults }} résultat(s) trouvé(s).</p>
 
-            {% for product in listProducts %}
+            {% for product in results %}
                 <div class="row">
                     <div class="product-box">
                         <div class="img-product col-lg-2">
-                            <img class="img-product" src="{{ asset('assets/img/'~product.getBrand) }}"/>
+                            <img class="img-product" src="{{asset('assets/img/'~product.getBrand)}}"/>
                         </div>
 
                         <div class="product-name col-lg-10">
@@ -71,6 +63,8 @@
                     </div>
                 </div>
 
+                <div class="spacer"></div>
+                
                 <div class="spacer"></div>
             {% endfor %}
         </div>

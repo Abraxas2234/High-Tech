@@ -24,9 +24,9 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="alias", type="string", length=255, nullable=false)
+     * @ORM\Column(name="lastName", type="string", length=255, nullable=false)
      */
-    private $alias;
+    private $lastName;
 
     /**
      * @var string
@@ -54,27 +54,27 @@ class Client
     }
 
     /**
-     * Set alias.
+     * Set lastName.
      *
-     * @param string $alias
+     * @param string $lastName
      *
      * @return Client
      */
-    public function setAlias($alias)
+    public function setLastName($lastName)
     {
-        $this->alias = $alias;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get alias.
+     * Get lastName.
      *
      * @return string
      */
-    public function getAlias()
+    public function getLastName()
     {
-        return $this->alias;
+        return $this->lastName;
     }
 
     /**

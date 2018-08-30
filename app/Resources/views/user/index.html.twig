@@ -10,20 +10,23 @@
     <div class="container">
         <div class="profile-box">
             <h3>
-                <b>Profile</b>
+                <b>Profil</b>
             </h3>
 
             <p>Nom d'utilisateur : {{ user.username }}</p>
-            <p>Email : {{ user.email }}</p>
+            <p>Adresse e-mail : {{ user.email }}</p>
             
-            {% for client in clients if client.id == user.id %}
-                <p>Nom : {{ client.firstName }}</p>
-                <p>Prénom: {{ client.alias }}</p>
+            {% for client in detailsClient if client.id == user.id %}
+                <p>Nom : {{ client.lastName }}</p>
+                <p>Prénom : {{ client.firstName }}</p>
                 <p>Numéro de télephone : {{ client.phone }}</p>
-            {% endfor %}
 
-            <button class="btn btn-primary">Modifier</button>
-            <button class="btn btn-primary">Supprimer</button>
+                <a href="{{ path('client_edit', { 'id': client.id }) }}">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </a>
+            {% endfor %}
       </div>
 
       <div class="row">
@@ -32,17 +35,26 @@
                   <b>Livraison</b>
               </h4>
 
-              {% for delivery in deliveries if delivery.user == user.id %}
+              {% for delivery in listDeliveries if delivery.user == user.id %}
                   <p>
                       {{ delivery.address }}
                       {{ delivery.zipCode }}
                       {{ delivery.city }}
                       {{ delivery.country }}
+
+                      <a href="{{ path('delivery_edit', { 'id': delivery.id }) }}">
+                          <button class="btn btn-primary">
+                              <i class="fas fa-edit"></i>
+                          </button>
+                      </a>
                   </p>
               {% endfor %}
 
-              <button class="btn btn-primary">Ajouter</button>
-              <button class="btn btn-primary">Modifier</button>
+              <a href="{{ path('delivery_new') }}">
+                  <button class="btn btn-primary">
+                      <i class="fas fa-plus-circle"></i>
+                  </button>
+              </a>
           </div>
 
           <div class="col-lg-5 cuck-box">
@@ -50,17 +62,41 @@
                   <b>Facturation</b>
               </h4>
 
-              {% for billing in billings if billing.user == user.id %}
+              {% for billing in listBillings if billing.user == user.id %}
                   <p>
                       {{ billing.address }}
                       {{ billing.zipCode }}
                       {{ billing.city }}
                       {{ billing.country }}
                   </p>
+
+                  <a href="{{ path('billing_edit', { 'id': billing.id }) }}">
+                      <button class="btn btn-primary">
+                          <i class="fas fa-edit"></i>
+                      </button>
+                  </a>
               {% endfor %}
 
-              <button class="btn btn-primary">Ajouter</button>
-              <button class="btn btn-primary">Modifier</button>
+              <a href="{{ path('billing_new') }}">
+                  <button class="btn btn-primary">
+                      <i class="fas fa-plus-circle"></i>
+                  </button>
+              </a>
+          </div>
+
+          <div class="profile-box">
+              <h3>Loi RGPD, suppression de vos données et de votre compte :
+              </h3>
+
+              {% for client in detailsClient if client.id == user.id %}
+                  <a href="{{ path('nuke_user', { 'id': client.id }) }}">
+                      <button class="btn btn-primary">
+                        Désactivation du compte
+                      </button>
+                  </a>
+              {% endfor %}
+
+              <p>ATTENTION : Toutes vos informations personelles seront supprimées de notre base de données conformément à la loi RGPD.</p>
           </div>
       </div>
     </div>

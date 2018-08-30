@@ -40,12 +40,12 @@
 # Vendor
 /vendor/*
 
-#Parameters
-/app/config/parameters.yml
-
 #IDE
 .idea
 .vscode/*
 
 #SCSS
 /prepros-6.config
+
+#Mac OS X
+.DS_Store
