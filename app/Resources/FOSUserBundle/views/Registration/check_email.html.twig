@@ -1,11 +1,19 @@
-{% extends "@FOSUser/layout.html.twig" %}
+{% extends "layout.html.twig" %}
 
 {% trans_default_domain 'FOSUserBundle' %}
 
+<<<<<<< HEAD
 {% block fos_user_content %}
+=======
+{% block body %}
+>>>>>>> searchbar
 	<div id="wrapper">
 	    <div id="container">
 	        <p style="font-size= 15px;">{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 	    </div>
 	</div>
+<<<<<<< HEAD
 {% endblock fos_user_content %}
+=======
+{% endblock body %}
+>>>>>>> searchbar

@@ -125,7 +125,11 @@ class Billing
      *
      * @return Billing
      */
+<<<<<<< HEAD
     public function setZipCode($ipCode)
+=======
+    public function setZipCode($zipCode)
+>>>>>>> searchbar
     {
         $this->zipCode = $zipCode;
 

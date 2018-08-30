@@ -13,8 +13,20 @@ class DeliveryType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+<<<<<<< HEAD
         $builder->add('deliveryAdress')->add('deliveryZipCode')->add('deliveryCity')->add('deliveryCountry');
     }/**
+=======
+        $builder
+            ->add('address')
+            ->add('zipCode')
+            ->add('city')
+            ->add('country')
+        ;
+    }
+
+    /**
+>>>>>>> searchbar
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

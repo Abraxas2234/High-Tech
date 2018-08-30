@@ -93,6 +93,7 @@ class Ram
     }
 
     /**
+<<<<<<< HEAD
      * Set capactity.
      *
      * @param string $capactity
@@ -102,18 +103,37 @@ class Ram
     public function setCapacity($capactity)
     {
         $this->capactity = $capactity;
+=======
+     * Set capacity.
+     *
+     * @param string $capacity
+     *
+     * @return Ram
+     */
+    public function setCapacity($capacity)
+    {
+        $this->capacity = $capacity;
+>>>>>>> searchbar
 
         return $this;
     }
 
     /**
+<<<<<<< HEAD
      * Get capactity.
+=======
+     * Get capacity.
+>>>>>>> searchbar
      *
      * @return string
      */
     public function getCapacity()
     {
+<<<<<<< HEAD
         return $this->capactity;
+=======
+        return $this->capacity;
+>>>>>>> searchbar
     }
 
     /**

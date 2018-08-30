@@ -17,7 +17,11 @@
             <div class="dropdown-divider"></div>
             <div class="dropdown-divider"></div>
 
+<<<<<<< HEAD
             {% for category in categories %}
+=======
+            {% for category in listCategories %}
+>>>>>>> searchbar
                 <a href="{{ path('category', {'id': category.id}) }}">{{ category.name }}</a>
             {% endfor %}
 
@@ -26,7 +30,13 @@
         </div>
 
         <div class="container">
+<<<<<<< HEAD
             {% for product in products if product.category == id %}
+=======
+            <p>{{ nbProducts }} produit(s) trouvé(s).</p>
+
+            {% for product in listProducts %}
+>>>>>>> searchbar
                 <div class="row">
                     <div class="product-box">
                         <div class="img-product col-lg-2">
@@ -50,7 +60,11 @@
                                 <span>4/5 (1 avis)</span>
                             </div>
 
+<<<<<<< HEAD
                             {% for category in categories if product.category == category.id %}
+=======
+                            {% for category in listCategories if product.category == category.id %}
+>>>>>>> searchbar
                                 <p>Catégorie : {{ category.name }}</p>
                             {% endfor %}
 

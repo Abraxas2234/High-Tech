@@ -12,13 +12,21 @@ AppBundle\Entity\Client:
             generator:
                 strategy: IDENTITY
     fields:
+<<<<<<< HEAD
         alias:
+=======
+        lastName:
+>>>>>>> searchbar
             type:     string
             nullable: false
             length:   255
             options:
                 fixed: false
+<<<<<<< HEAD
             column:   alias
+=======
+            column:   last_name
+>>>>>>> searchbar
         firstName:
             type:     string
             nullable: false
@@ -33,4 +41,8 @@ AppBundle\Entity\Client:
             options:
                 fixed: false
             column:   phone
+<<<<<<< HEAD
     lifecycleCallbacks:   {  }
+=======
+    lifecycleCallbacks: {  }
+>>>>>>> searchbar

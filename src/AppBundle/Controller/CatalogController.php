@@ -20,6 +20,7 @@ class CatalogController extends Controller
      */
     public function indexAction(Request $request)
     {
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository('AppBundle:Categorie')
@@ -38,6 +39,17 @@ class CatalogController extends Controller
             ->findAll()
         ;
 >>>>>>> errors correction
+=======
+        $em = $this
+            ->getDoctrine()
+            ->getManager()
+        ;
+
+        $listCategories = $em
+            ->getRepository('AppBundle:Category')
+            ->findAll()
+        ;
+>>>>>>> searchbar
 
         $users = $em
             ->getRepository('AppBundle:User')
@@ -45,7 +57,7 @@ class CatalogController extends Controller
         ;
 
         return $this->render('catalog/index.html.twig', [
-            'categories' => $categories
+            'listCategories' => $listCategories
         ]);
     }
 
@@ -54,17 +66,44 @@ class CatalogController extends Controller
      */
     public function showAction($id)
     {
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository('AppBundle:Categorie')
         ->findAll();
         $products = $em->getRepository('AppBundle:Product')
         ->findAll();
+=======
+        $em = $this
+            ->getDoctrine()
+            ->getManager()
+        ;
+
+        $listCategories = $em
+            ->getRepository('AppBundle:Category')
+            ->findAll()
+        ;
+
+        $listProducts = $em
+            ->getRepository('AppBundle:Product')
+            ->createQueryBuilder('p')
+            ->where('p.category LIKE :category_id')
+            ->setParameter('category_id', $id)
+            ->getQuery()
+            ->getResult()
+        ;
+
+        if (null == $listProducts) {
+            throw new NotFoundHttpException("La catégorie d'id \"$id\" n'existe pas.");
+        }
+
+        $nbProducts = count($listProducts);
+>>>>>>> searchbar
 
         return $this->render('catalog/category.html.twig', [
-            'categories' => $categories,
-            'products' => $products,
-            'id' => $id
+            'listCategories' => $listCategories,
+            'listProducts'   => $listProducts,
+            'nbProducts'     => $nbProducts
         ]);
 =======
         $em = $this
@@ -103,6 +142,7 @@ class CatalogController extends Controller
      */
     public function showProduct($id)
     {
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
         $em = $this->getDoctrine()->getManager();
         $categories = $em->getRepository("AppBundle:Categorie")->findAll();
@@ -120,17 +160,189 @@ class CatalogController extends Controller
         ->findAll();
         $rams = $em->getRepository('AppBundle:Ram')
         ->findAll();
+=======
+        $em = $this
+            ->getDoctrine()
+            ->getManager()
+        ;
+
+        $listCategories = $em
+            ->getRepository("AppBundle:Category")
+            ->findAll()
+        ;
+
+        $detailsProduct = $em
+            ->getRepository('AppBundle:Product')
+            ->findBy(array('id' => $id))
+        ;
+
+        if (null == $detailsProduct) {
+            throw new NotFoundHttpException("Le produit d'id \"$id\" n'existe pas.");
+        }
+
+        // $productCategory = $em
+        //     ->getRepository('AppBundle:Product')
+        //     ->findBy(array('id' => $id))
+        // ;
+        
+        $productCategory = $em
+            ->getRepository('AppBundle:Product')
+            ->createQueryBuilder('p')
+            ->select('p.category')
+            ->where('p.id LIKE :id')
+            ->setParameter('id', $id)
+            ->getQuery()
+            ->getResult()
+        ;
+
+        $categoryName = $em
+            ->getRepository("AppBundle:Category")
+            ->createQueryBuilder('c')
+            ->select('c.name')
+            ->where('c.id LIKE :id')
+            ->setParameter('id', $productCategory)
+            ->getQuery()
+            ->getResult()
+        ;
+
+        $detailsCasing = $em
+            ->getRepository('AppBundle:Casing')
+            ->findBy(array('id' => $id))
+        ;
+
+        $detailsCpu = $em
+            ->getRepository('AppBundle:Cpu')
+            ->findBy(array('id' => $id))
+        ;
+
+        $detailsGpu = $em
+            ->getRepository('AppBundle:Gpu')
+            ->findBy(array('id' => $id))
+        ;
+
+        $detailsMotherboard = $em
+            ->getRepository('AppBundle:Motherboard')
+            ->findBy(array('id' => $id))
+        ;
+
+        $detailsPower = $em
+            ->getRepository('AppBundle:PowerSupply')
+            ->findBy(array('id' => $id))
+        ;
+
+        $detailsRam = $em
+            ->getRepository('AppBundle:Ram')
+            ->findBy(array('id' => $id))
+        ;
+>>>>>>> searchbar
 
         return $this->render('catalog/product.html.twig', [
-            'categories' => $categories,
-            'products' => $products,
-            'casings' => $casings,
-            'cpus' => $cpus,
-            'gpus' => $gpus,
-            'motherboards' => $motherboards,
-            'powers' => $powers,
-            'rams' => $rams,
-            'id' => $id
+            'listCategories'     => $listCategories,
+            'categoryName'       => $categoryName,
+            'detailsProduct'     => $detailsProduct,
+            'detailsCasing'      => $detailsCasing,
+            'detailsCpu'         => $detailsCpu,
+            'detailsGpu'         => $detailsGpu,
+            'detailsMotherboard' => $detailsMotherboard,
+            'detailsPower'       => $detailsPower,
+            'detailsRam'         => $detailsRam
+        ]);
+    }
+
+    /**
+     * @Route("/search/", name="search")
+     */
+    public function searchAction(Request $request)
+    {
+        $form = $this
+            ->createFormBuilder()
+            ->setMethod('GET')
+            ->add('categories', EntityType::class, array(
+                'class'        => 'AppBundle:Category',
+                'choice_label' => 'name',
+                'required'     => false,
+                'placeholder'  => 'Toutes les catégories'
+            ))
+            ->add('search', SearchType::class)
+            ->getForm()
+        ;
+
+        $em = $this
+                ->getDoctrine()
+                ->getManager()
+        ;
+
+        $listCategories = $em
+            ->getRepository("AppBundle:Category")
+            ->findAll()
+        ;
+
+        if ($request->isMethod('GET') && $form->handleRequest($request)->isValid()) {
+            $categoryForm = $form
+                ->get('categories')
+                ->getData()
+            ;
+
+            $search = $form
+                ->get('search')
+                ->getData()
+            ;
+
+            $listProducts = $em->getRepository('AppBundle:Product');
+
+            if ($categoryForm != NULL) {
+                $qb = $listProducts
+                    ->createQueryBuilder('p')
+                    ->where('p.name LIKE :name')
+                    ->setParameter('name', "%$search%")
+                    ->andWhere('p.category = :category')
+                    ->setParameter('category', $categoryForm->getId())
+                ;
+            } else {
+                $qb = $listProducts
+                    ->createQueryBuilder('p')
+                    ->where('p.name LIKE :name')
+                    ->setParameter('name', "%$search%")
+                ;
+            }
+
+            $results = $qb
+                ->getQuery()
+                ->getResult()
+            ;
+
+            $nbResults = count($results);
+
+            return $this->render('catalog/search.html.twig', array(
+                'listCategories' => $listCategories,
+                'results'        => $results,
+                'nbResults'      => $nbResults
+            ));
+        }
+
+        return $this->render('catalog/searchForm.html.twig', array(
+            'listCategories' => $listCategories,
+            'form'           => $form->createView()
+        ));
+    }
+
+    /**
+     * @Route("/rgpd/", name="rgpd")
+     */
+    public function rgpdAction(Request $request)
+    {
+        $em = $this
+            ->getDoctrine()
+            ->getManager()
+        ;
+
+        $listCategories = $em
+            ->getRepository('AppBundle:Category')
+            ->findAll()
+        ;
+        
+        return $this->render('catalog/rgpd.html.twig', [
+            'listCategories' => $listCategories
         ]);
 =======
         $em = $this

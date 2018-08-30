@@ -7,6 +7,7 @@
 {% endblock %}
 
 {% block body %}
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
   <div class="container">
     <div class="profile-box">
@@ -92,18 +93,47 @@
 >>>>>>> errors correction
       </div>
 =======
+=======
+    <div class="container">
+        <div class="profile-box">
+            <h3>
+                <b>Profil</b>
+            </h3>
+
+            <p>Nom d'utilisateur : {{ user.username }}</p>
+            <p>Adresse e-mail : {{ user.email }}</p>
+            
+            {% for client in detailsClient if client.id == user.id %}
+                <p>Nom : {{ client.lastName }}</p>
+                <p>Prénom : {{ client.firstName }}</p>
+                <p>Numéro de télephone : {{ client.phone }}</p>
+
+                <a href="{{ path('client_edit', { 'id': client.id }) }}">
+                    <button class="btn btn-primary">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </a>
+            {% endfor %}
+      </div>
+
+>>>>>>> searchbar
       <div class="row">
           <div class="col-lg-5 cuck-box">
               <h4>
                   <b>Livraison</b>
               </h4>
 
+<<<<<<< HEAD
               {% for delivery in deliveries if delivery.user == user.id %}
+=======
+              {% for delivery in listDeliveries if delivery.user == user.id %}
+>>>>>>> searchbar
                   <p>
                       {{ delivery.address }}
                       {{ delivery.zipCode }}
                       {{ delivery.city }}
                       {{ delivery.country }}
+<<<<<<< HEAD
                   </p>
               {% endfor %}
 
@@ -111,12 +141,30 @@
               <button class="btn btn-primary">Modifier</button>
           </div>
 >>>>>>> method get form
+=======
+
+                      <a href="{{ path('delivery_edit', { 'id': delivery.id }) }}">
+                          <button class="btn btn-primary">
+                              <i class="fas fa-edit"></i>
+                          </button>
+                      </a>
+                  </p>
+              {% endfor %}
+
+              <a href="{{ path('delivery_new') }}">
+                  <button class="btn btn-primary">
+                      <i class="fas fa-plus-circle"></i>
+                  </button>
+              </a>
+          </div>
+>>>>>>> searchbar
 
           <div class="col-lg-5 cuck-box">
               <h4>
                   <b>Facturation</b>
               </h4>
 
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
         {% for billing in billings if billing.userId == user.id %}
           <p>
@@ -158,18 +206,53 @@
 >>>>>>> errors correction
 =======
               {% for billing in billings if billing.user == user.id %}
+=======
+              {% for billing in listBillings if billing.user == user.id %}
+>>>>>>> searchbar
                   <p>
                       {{ billing.address }}
                       {{ billing.zipCode }}
                       {{ billing.city }}
                       {{ billing.country }}
                   </p>
+<<<<<<< HEAD
               {% endfor %}
 
               <button class="btn btn-primary">Ajouter</button>
               <button class="btn btn-primary">Modifier</button>
           </div>
 >>>>>>> method get form
+=======
+
+                  <a href="{{ path('billing_edit', { 'id': billing.id }) }}">
+                      <button class="btn btn-primary">
+                          <i class="fas fa-edit"></i>
+                      </button>
+                  </a>
+              {% endfor %}
+
+              <a href="{{ path('billing_new') }}">
+                  <button class="btn btn-primary">
+                      <i class="fas fa-plus-circle"></i>
+                  </button>
+              </a>
+          </div>
+
+          <div class="profile-box">
+              <h3>Loi RGPD, suppression de vos données et de votre compte :
+              </h3>
+
+              {% for client in detailsClient if client.id == user.id %}
+                  <a href="{{ path('nuke_user', { 'id': client.id }) }}">
+                      <button class="btn btn-primary">
+                        Désactivation du compte
+                      </button>
+                  </a>
+              {% endfor %}
+
+              <p>ATTENTION : Toutes vos informations personelles seront supprimées de notre base de données conformément à la loi RGPD.</p>
+          </div>
+>>>>>>> searchbar
       </div>
     </div>
 {% endblock %}

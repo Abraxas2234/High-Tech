@@ -13,8 +13,20 @@ class BillingType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+<<<<<<< HEAD
         $builder->add('billingAdress')->add('billingZipCode')->add('billingCity')->add('billingCountry');
     }/**
+=======
+        $builder
+            ->add('address')
+            ->add('zipCode')
+            ->add('city')
+            ->add('country')
+        ;
+    }
+
+    /**
+>>>>>>> searchbar
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)

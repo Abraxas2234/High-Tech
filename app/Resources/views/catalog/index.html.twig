@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block stylesheets %}
+<<<<<<< HEAD
 <<<<<<< refs/remotes/origin/master
   {{ parent() }}
   <link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}">
@@ -41,6 +42,8 @@
   </div>
 {% endblock %}
 =======
+=======
+>>>>>>> searchbar
     {{ parent() }}
 
 	<link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}" />
@@ -80,7 +83,11 @@
     </div>
 
     <div id="quizbox">
+<<<<<<< HEAD
         {% for category in categories %}
+=======
+        {% for category in listCategories %}
+>>>>>>> searchbar
             {% if category.background == 0 %}
                 <a class="cat-link" style="text-decoration: none;" href="{{ path('category', {'id': category.id}) }}">
                     <div class="categories">

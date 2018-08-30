@@ -19,7 +19,11 @@
                     <img class="logo" src="{{ asset('assets/img/logo.png') }}" />
                 </a>
 
+<<<<<<< HEAD
                 {{ render(controller('AppBundle:Catalog:searchBar')) }}
+=======
+                {{ render(controller('AppBundle:Catalog:search')) }}
+>>>>>>> searchbar
 
                 <a href="#">Recherche avancée</a>
             </div>
@@ -46,8 +50,13 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégorie</a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+<<<<<<< HEAD
                             {% if categories is defined %}
                                 {% for category in categories %}
+=======
+                            {% if listCategories is defined %}
+                                {% for category in listCategories %}
+>>>>>>> searchbar
                                     <a class="dropdown-item" href="{{ path('category', {'id': category.id}) }}">{{ category.name }}</a>
                                 {% endfor %}
                             {% endif %}
@@ -152,7 +161,7 @@
 
                 <a class="" href="#">À propos de High-Tech</a>
                 <a class="" href="#">Carrières</a>
-                <a class="" href="{{ path('rgpd') }}">Utilisation des cookies</a>
+                <a class="" href="{{ path('rgpd', {'_fragment' : 'cookies'}) }}">Utilisation des cookies</a>
                 <a class="" href="{{ path('rgpd') }}">Mentions légales</a>
             </div>
 
