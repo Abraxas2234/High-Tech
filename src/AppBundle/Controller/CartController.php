@@ -78,4 +78,24 @@ class CartController extends Controller
             // 'form' => $form->createView()
         ]);
     }
+
+    /**
+     * @Route("delete_cart", name="cartdelete")
+     */
+    public function supprimePanier()
+    {
+        $em = $this
+          ->getDoctrine()
+          ->getManager()
+      ;
+        $listCategories = $em
+          ->getRepository('AppBundle:Category')
+          ->findAll()
+      ;
+
+        unset($_SESSION['panier']);
+        return $this->render('catalog/index.html.twig', [
+            'listCategories' => $listCategories
+        ]);
+    }
 }
