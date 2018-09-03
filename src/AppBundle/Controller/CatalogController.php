@@ -101,11 +101,6 @@ class CatalogController extends Controller
             throw new NotFoundHttpException("Le produit d'id \"$id\" n'existe pas.");
         }
 
-        // $productCategory = $em
-        //     ->getRepository('AppBundle:Product')
-        //     ->findBy(array('id' => $id))
-        // ;
-        
         $productCategory = $em
             ->getRepository('AppBundle:Product')
             ->createQueryBuilder('p')

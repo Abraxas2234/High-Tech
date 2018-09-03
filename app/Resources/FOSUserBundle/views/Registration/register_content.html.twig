@@ -28,7 +28,7 @@
                             <label id="label-box">E-mail</label>
                             <input style="margin-bottom: 0.5rem; font-size: 15px;"
 
-                            {{ form_widget(form.email, { 'attr': {'class': 'form-control' } }) }}
+                            {{ form_widget(form.email, {'attr': {'class': 'form-control' }}) }}
                             {{ form_errors(form.email) }}
 
                             <label id="label-box">Mot de passe</label>
@@ -50,7 +50,7 @@
                             <label id="label-box">Entrez le mot de passe à nouveau</label>
                             <input style="margin-bottom: 0.5rem; font-size: 15px;"
 
-                            {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control' } }) }}
+                            {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
                             {{ form_errors(form.plainPassword.second) }}
 
                             {{ form_rest(form) }}

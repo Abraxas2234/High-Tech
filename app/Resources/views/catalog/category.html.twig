@@ -26,7 +26,7 @@
         </div>
 
         <div class="container">
-            <p>{{ nbProducts }} produit(s) trouvé(s).</p>
+            <span>{{ nbProducts }} produit(s) trouvé(s).</span>
 
             {% for product in listProducts %}
                 <div class="row">
@@ -50,17 +50,19 @@
                                 </div>
 
                                 <span>4/5 (1 avis)</span>
-                            </div>
 
-                            {% for category in listCategories if product.category == category.id %}
-                                <p>Catégorie : {{ category.name }}</p>
-                            {% endfor %}
+                                <br /><br />
+
+                                {% for category in listCategories if product.category == category.id %}
+                                    <span>Catégorie : {{ category.name }}</span>
+                                {% endfor %}
+                            </div>
 
                             <div class="product-price">
                                 <span class="discount">Prix réduit </span>
                                 <span class="full-price">{{ product.price }} EUR</span>
 
-                                <br>
+                                <br />
 
                                 <div class="infos">
                                     <span class="delivery">Livraison gratuite possible (voir fiche produit).</span>
