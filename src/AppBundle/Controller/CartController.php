@@ -17,14 +17,29 @@ class CartController extends Controller
      */
     public function indexAction()
     {
+        if (!isset($_SESSION['panier'])) {
+            $_SESSION['panier']=array();
+            $_SESSION['panier']['idProduit'] = array();
+            $_SESSION['panier']['libelleProduit'] = array();
+            $_SESSION['panier']['qteProduit'] = array();
+            $_SESSION['panier']['prixProduit'] = array();
+            $_SESSION['panier']['verrou'] = false;
+        }
+
         $articlesNames = $_SESSION['panier']['libelleProduit'];
         $articlesQty = $_SESSION['panier']['qteProduit'];
         $articlesPrices = $_SESSION['panier']['prixProduit'];
+        $total = null ;
+
+        foreach ($articlesPrices as $price) {
+            $total += $price;
+        }
 
         return $this->render('cart/index.html.twig', [
             'articlesNames' => $articlesNames,
             'articlesQty' => $articlesQty,
-            'articlesPrices' => $articlesPrices
+            'articlesPrices' => $articlesPrices,
+            'total' => $total
         ]);
     }
 

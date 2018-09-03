@@ -25,7 +25,10 @@
       {% for articlePrice in articlesPrices %}
         {{ articlePrice }}<br>
       {% endfor %}
-    </div><br>
+    </div>Total:
+    {{ total }}
+    <br>
+
     <a href="{{ path('payment') }}">
       <button class="btn btn-primary">
         Valider la commande
