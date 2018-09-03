@@ -252,3 +252,8 @@ input {
       -webkit-transition: ease .3s;
       -o-transition: ease .3s;
       transition: ease .3s; }
+
+.advanced-search {
+  color: #CE0234; }
+  .advanced-search:hover {
+    color: #A6002A; }

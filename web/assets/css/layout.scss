@@ -280,3 +280,11 @@ input {
         }
     }
 }
+
+.advanced-search {
+    color: $red;
+
+    &:hover {
+        color: #A6002A;
+    }
+}

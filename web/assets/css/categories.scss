@@ -29,7 +29,7 @@ body {
 }
 
 .categories .product-box {
-    transition: ease 0.3s;
+    transition: ease 0.2s;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -37,7 +37,7 @@ body {
 
     &:hover {
         background-color: $darkblue;
-        transition: ease 0.3s;
+        transition: ease 0.2s;
         color: $white;
     }
 }
@@ -56,9 +56,9 @@ body {
 }
 
 .light-product-box {
-    background-color: $lightGrey;
+    background-color: $white;
 }
 
 .dark-product-box {
-    background-color: $grey;
+    background-color: $white;
 }
