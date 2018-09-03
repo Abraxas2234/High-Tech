@@ -47,13 +47,14 @@ class CustomUserController extends Controller
         ;
 
         $user = $this->getUser();
-
         /*
-        if (!is_object($user) || !$user instanceof UserInterface) {
-            throw new AccessDeniedException('This user does not have access to this section.');
-        }
+                if (is_object($user) || $user instanceof UserInterface) {
+                    $idClient = $user->getId();
+                    foreach ($detailsClient as $client) {
+                        var_dump($client['id']);
+                    }
+                }
         */
-
         return $this->render('user/index.html.twig', [
             'listCategories' => $listCategories,
             'user'           => $user,
@@ -83,13 +84,11 @@ class CustomUserController extends Controller
 
         $delivery = new Delivery();
         $form     = $this->createForm('AppBundle\Form\DeliveryType', $delivery);
-
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $user   = $this->getUser();
             $tempId = $user->getId();
-
             $delivery->setUser($tempId);
             $em->persist($delivery);
             $em->flush();
@@ -207,7 +206,6 @@ class CustomUserController extends Controller
         ;
 
         $editForm = $this->createForm('AppBundle\Form\DeliveryType', $delivery);
-
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -236,7 +234,6 @@ class CustomUserController extends Controller
      */
     public function editBillingAction(Request $request, Billing $billing)
     {
-
         $em = $this
             ->getDoctrine()
             ->getManager()
@@ -248,7 +245,6 @@ class CustomUserController extends Controller
         ;
 
         $editForm = $this->createForm('AppBundle\Form\BillingType', $billing);
-
         $editForm->handleRequest($request);
 
         if ($editForm->isSubmitted() && $editForm->isValid()) {
@@ -292,7 +288,7 @@ class CustomUserController extends Controller
         if (!$client) {
             throw $this->createNotFoundException("Impossible de trouver l'utilisateur.");
         }
-        
+
         $delivery = $em
             ->getRepository('AppBundle:Delivery')
             ->createQueryBuilder('d')

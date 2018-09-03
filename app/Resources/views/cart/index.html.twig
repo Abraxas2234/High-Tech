@@ -1,0 +1,35 @@
+{% extends 'layout.html.twig' %}
+
+{% block stylesheets %}
+  {{ parent() }}
+
+  <link rel="stylesheet" href="{{ asset('assets/css/categories.css') }}"/>
+{% endblock %}
+
+{% block body %}
+  <div class='cartcontainer'>
+    <div class='cartbox'>
+      <h6>Article</h6>
+      {% for articleName in articlesNames %}
+        {{ articleName }}<br>
+      {% endfor %}
+    </div>
+    <div class='cartbox'>
+      <h6>Quantity</h6>
+      {% for articleNum in articlesQty %}
+        {{ articleNum }}<br>
+      {% endfor %}
+    </div>
+    <div class='cartbox'>
+      <h6>Price</h6>
+      {% for articlePrice in articlesPrices %}
+        {{ articlePrice }}<br>
+      {% endfor %}
+    </div><br>
+    <a href="{{ path('payment') }}">
+      <button class="btn btn-primary">
+        Valider la commande
+      </button>
+    </a>
+  </div>
+{% endblock %}

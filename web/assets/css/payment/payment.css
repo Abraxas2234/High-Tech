@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+}
+
+#name {
+    width: 500px;
+}
+
+#ccNumber {
+    width: 350px;
+}
+
+#ccv {
+    width: 130px;
+    margin-left: 16px;
+}
+
+.textCcv {
+    padding-left: 227px;
+}
+
+.textName, .textCc, .textExpiration {
+    padding-top: 20px;
+    margin-bottom: -12px;
+}
+
+.subBtn {
+    padding-top: 35px;
+    padding-bottom: 50px;
+}
+
+.test {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
