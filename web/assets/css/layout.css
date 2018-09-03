@@ -292,26 +292,27 @@ input {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 20px;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
+  .help a {
+    margin-top: -15px;
+    margin-bottom: -15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: ease .3s;
+    -o-transition: ease .3s;
+    transition: ease .3s; }
+    .help a:hover {
+      color: #CE0234;
+      text-decoration: none;
+      -webkit-transition: ease .3s;
+      -o-transition: ease .3s;
+      transition: ease .3s; }
 
-.help a {
-  margin-top: -15px;
-  margin-bottom: -15px;
-  font-family: "Roboto", sans-serif;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
-  -webkit-transition: ease .3s;
-  -o-transition: ease .3s;
-  transition: ease .3s;
-}
-
-.help a:hover {
-  color: #CE0234;
-  text-decoration: none;
-  -webkit-transition: ease .3s;
-  -o-transition: ease .3s;
-  transition: ease .3s;
+.advanced-search {
+  color: #CE0234; }
+  .advanced-search:hover {
+    color: #A6002A; }
 }
 
 .cartcontainer {
