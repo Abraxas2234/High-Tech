@@ -20,6 +20,15 @@ class CatalogController extends Controller
      */
     public function indexAction(Request $request)
     {
+        if (!isset($_SESSION['panier'])) {
+            $_SESSION['panier']=array();
+            $_SESSION['panier']['idProduit'] = array();
+            $_SESSION['panier']['libelleProduit'] = array();
+            $_SESSION['panier']['qteProduit'] = array();
+            $_SESSION['panier']['prixProduit'] = array();
+            $_SESSION['panier']['verrou'] = false;
+        }
+
         $em = $this
             ->getDoctrine()
             ->getManager()
@@ -34,7 +43,6 @@ class CatalogController extends Controller
             ->getRepository('AppBundle:User')
             ->findAll()
         ;
-
         return $this->render('catalog/index.html.twig', [
             'listCategories' => $listCategories
         ]);
@@ -205,7 +213,7 @@ class CatalogController extends Controller
 
             $listProducts = $em->getRepository('AppBundle:Product');
 
-            if ($categoryForm != NULL) {
+            if ($categoryForm != null) {
                 $qb = $listProducts
                     ->createQueryBuilder('p')
                     ->where('p.name LIKE :name')
@@ -255,7 +263,7 @@ class CatalogController extends Controller
             ->getRepository('AppBundle:Category')
             ->findAll()
         ;
-        
+
         return $this->render('catalog/rgpd.html.twig', [
             'listCategories' => $listCategories
         ]);

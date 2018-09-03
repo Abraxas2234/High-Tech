@@ -73,7 +73,7 @@
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             {% if is_granted("ROLE_ADMIN") %}
-                                <a class="nav-link text-primary" href="{{ path('admin', {'action': 'list', 'entity': 'Category'}) }}">
+                                <a class="nav-link text-primary" href="{{ path('admin', {'action': 'list', 'entity': 'Category'})}}">
                                     <i class="fas fa-user-secret"></i>
                                     Admin
                                 </a>
@@ -110,7 +110,7 @@
                         <li class="nav-item">
                             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                             {% else %}
-                                <a class="nav-link" href="{{ path('fos_user_registration_register') }}">
+                                <a class="nav-link" href="{{path('fos_user_registration_register')}}">
                                     <i class="fas fa-user-plus"></i>
                                     S'inscrire
                                 </a>
@@ -119,13 +119,13 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <i class="fas fa-star"></i></i>
+                                <i class="fas fa-star"></i>
                                 Souhaits
                             </a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="cart">
                                 <i class="fas fa-shopping-cart"></i>
                                 Panier
                             </a>
@@ -137,8 +137,7 @@
     </nav>
 {% endblock %}
 
-{% block body %}
-{% endblock %}
+{% block body %}{% endblock %}
 
 {% block footer %}
     <div class="text-bar">
@@ -156,36 +155,35 @@
                 <a class="" href="{{ path('rgpd') }}">Mentions légales</a>
             </div>
 
-            <div class="sell-out col-lg-3 col-md-6 col-sm-12">
-                <h5>Gagnez de l'argent</h5>
+          <div class="sell-out col-lg-3 col-md-6 col-sm-12">
+              <h5>Gagnez de l'argent</h5>
 
-                <a class="" href="#">Vendez sur High-Tech</a>
-                <a class="" href="#">Devenez Partenaire</a>
-                <a class="" href="#">Vendez vos produits</a>
-            </div>
+              <a class="" href="#">Vendez sur High-Tech</a>
+              <a class="" href="#">Devenez Partenaire</a>
+              <a class="" href="#">Vendez vos produits</a>
+          </div>
 
-            <div class="payment-means col-lg-3 col-md-6 col-sm-12">
-                <h5>Moyens de paiement</h5>
+          <div class="payment-means col-lg-3 col-md-6 col-sm-12">
+              <h5>Moyens de paiement</h5>
 
-                <a class="" href="#">Cartes de paiment</a>
-                <a class="" href="#">Paiement en 4 fois</a>
-                <a class="" href="#">Chèques-cadeaux</a>
-                <a class="" href="#">Paypal</a>
-            </div>
+              <a class="" href="#">Cartes de paiment</a>
+              <a class="" href="#">Paiement en 4 fois</a>
+              <a class="" href="#">Chèques-cadeaux</a>
+              <a class="" href="#">Paypal</a>
+          </div>
 
-            <div class="help col-lg-3 col-md-6 col-sm-12">
-                <h5>Besoin d'aide ?</h5>
+          <div class="help col-lg-3 col-md-6 col-sm-12">
+              <h5>Besoin d'aide ?</h5>
 
-                <a class="" href="#">Suivre vos commandes</a>
-                <a class="" href="#">Options de livraison</a>
-                <a class="" href="#">Retours ou remplacements</a>
-                <a class="" href="#">Informations Marketplace</a>
-                <a class="" href="#">Aide</a>
-            </div>
+              <a class="" href="#">Suivre vos commandes</a>
+              <a class="" href="#">Options de livraison</a>
+              <a class="" href="#">Retours ou remplacements</a>
+              <a class="" href="#">Informations Marketplace</a>
+              <a class="" href="#">Aide</a>
+          </div>
         </div>
     </div>
 {% endblock %}
-
 
 {% block javascripts %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
